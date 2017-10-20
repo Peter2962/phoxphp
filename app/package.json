@@ -1,0 +1,10 @@
+[
+	{
+		"type":"repo",
+		"lib":"public\\controllers"
+	},
+	{
+		"type":"repo",
+		"lib":"public\\models"
+	}
+]

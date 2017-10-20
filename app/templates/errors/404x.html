@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Application Error</title>
+</head>
+
+<style type="text/css">
+	body {
+		-webkit-font-smoothing: antialiased;
+		font-family: sans-serif;
+		box-sizing: border-box;
+		padding: 0px 20px;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	h3 {
+		font-weight: 100;
+		color: #333;
+		margin: 0;
+	}
+	.app_error {
+		width: 100%;
+	}
+	.app_error_title {
+		border-bottom: 1px solid #ddd;
+		border-top: 1px solid #ddd;
+		background-color: #f8f8f8;
+		padding: 20px;
+		width: 100%;
+		color: #333;
+		z-index: 1;
+	}
+	.app_error_title h3 {
+		font-weight: 100;
+		margin: 0;
+	}
+	.app_error_block {
+		padding: 20px;
+		width: 100%;
+		position: relative;
+		top: 56px;		
+	}
+	.app_error_block .content {
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		min-height: 50px;
+		width: 100%;
+		padding: 0px 0px 10px;
+		float: left;
+	}
+	.panel {
+		font-size: 14px;
+		padding: 10px 20px;
+		margin-bottom: 0px;
+		color: #fff;
+		background-color: #e46e65;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+	.stack {
+		padding: 10px 20px;
+		font-size: 14px;
+		background-color: #f8f8f8;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+	h3 span {
+		font-size: 13px;
+		color: #828282;
+		display: block;
+		letter-spacing: 0.3px;
+		margin: 5px 0px;
+		width: 100%;
+		float: left;
+		word-wrap: break-word;
+	}
+	.app_string_stapler {
+		color: #03A9F4;
+	}
+	.apd_info {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-color: #f5f5f5;
+	}
+	.apd_info span {
+		display: block;
+		color: #e46e65;
+		text-align: center;
+		position: absolute;
+		width: 80%;
+		left: 50%;
+		top: 46%;
+		transform: translate(-50%, -50%);
+		font-size: 30px;
+		background: #fff;
+		padding: 40px;
+		border-radius: 5px;
+		border: 1px solid #ddd;
+		box-shadow: 0px 1px 2px #d6d6d6;
+	}
+</style>
+<body>
+	<?php
+		if ($devMode == 'production') {
+	?>
+		<div class="apd_info">
+			<span>
+				<?php echo $productionMessage; ?>
+			</span>
+		</div>
+	<?php }else if($devMode == 'dev') { ?>
+		<div class="app_error">
+			<div class="app_error_title">
+				<h3>Error</h3>
+			</div>
+			<div class="app_error_block">
+				<div class="content">
+					<h3 class="panel"><?php echo $name; ?></h3>
+					<h3 style="font-size: 14px;padding:10px 20px;margin-bottom:0px;color: #6f6f6f;">
+						<b>Error in</b> <?php echo $file; ?> - <b>Message</b> : <?php echo $message; ?> - <b>Line</b> : <?php echo $line; ?>
+					</h3>
+					<h3 class="stack">Stack</h3>
+					<h3 style="padding: 10px 20px;font-size: 14px;">
+						<?php
+							$trace = debug_backtrace();
+							$stackTrace = array();
+							foreach($trace as $i => $val) {
+								$args = array();
+								$class = "";
+								$string = "";
+								$key = $i;
+								$stack = $trace[$i];
+								$file = $stack['file'];
+								$line = $stack['line'];
+								$function = $stack['function'];
+								$argument = array();
+
+								if (isset($stack['args'])) {
+									foreach($stack['args'] as $arg) {
+										if (gettype($arg) == 'string') {
+											$arg = '<i class="app_string_stapler">String</i> '.$arg;
+										}
+
+										if (gettype($arg) == 'array') {
+											if (sizeof($arg) > 1) {
+												$arg = implode(',', $arg);
+											}else{		
+												$arg = 'array(.....)';
+											}
+											$arg = '<i class="app_string_stapler">Array</i> '.$arg;
+										}					
+
+										if (is_object($arg)) {
+											$class = new ReflectionClass($arg);
+											$argument[] = '<i class="app_string_stapler">Object</i> \\'.$class->getName();
+											break;
+										}
+
+										$argument[] = $arg;
+									}
+								}
+
+								$argument = implode(', ', $argument);
+								$string = 'at '.$file.' : ('.$line.') : call ---- '.$function.'('.$argument.')';
+
+								echo '<span>'.$string.'</span>';
+							}
+						?>
+					</h3>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+</body>
+</html>

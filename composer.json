@@ -1,0 +1,30 @@
+{
+	"name":"Phoxphp/Packages",
+	"description":"PhoxPHP Framework Packages",
+	"keywords":["php", "php7"],
+	"author":[
+		{
+			"name":"Peter Taiwo",
+			"email":"taiwop3@gmail.com",
+			"role":"developer"
+		}
+	],
+	"autoload":{
+		"psr-4":{
+			"Package\\DependencyInjection\\": "app/packages/DependencyInjection/src",
+			"Package\\Database\\": "app/packages/Database",
+			"Package\\Cache\\": "app/packages/Cache",
+			"Package\\FileSystem\\": "app/packages/Filesystem",
+			"Package\\Http\\": "app/packages/Http",
+			"Package\\Translation\\": "app/packages/Translation/src",
+			"Package\\View\\": "app/packages/View",
+			"App\\": "app/app",
+			"": "app/packages/ThirdParty"
+		}
+	},
+	"config": {
+		"vendor-dir":"app/packages/ThirdParty",
+		"sort-packages": false,
+		"optimize-autoloader": true
+	}
+}
