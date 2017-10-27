@@ -1,7 +1,8 @@
 <?php
 use Package\Http\Controller;
 
-class defaultController extends Controller {
+class defaultController extends Controller
+{
 
 	/**
 	* @var 		$routeParams
