@@ -17,7 +17,7 @@ include '/vendor/autoload.php';
 
 $app = new AppManager();
 
-$app->configure(function($config){
+$app->configure(function($config) {
 	return array(
 		'sys' => array(
 			'date.timezone' => $config->get('app', 'timezone')

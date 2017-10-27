@@ -5,7 +5,8 @@ use Exception;
 use ReflectionClass;
 use Package\View\ArgResolver;
 
-abstract class BaseException extends Exception {
+abstract class BaseException extends Exception
+{
 
 	/**
 	* @var 		$template
@@ -32,7 +33,8 @@ abstract class BaseException extends Exception {
 	* @access 	public
 	* @return 	void
 	*/
-	public function __construct($message='') {
+	public function __construct($message='')
+	{
 		$message = $message;
 		$line = $this->getLine();
 		$name = $this->getExceptionClass();
@@ -56,7 +58,8 @@ abstract class BaseException extends Exception {
 	* @access 	private
 	* @return 	String
 	*/
-	private function getExceptionClass() {
+	private function getExceptionClass()
+	{
 		return get_class($this);
 	}
 
@@ -65,7 +68,8 @@ abstract class BaseException extends Exception {
 	* @access 	private
 	* @return 	Array
 	*/
-	private function getArrayFromStringLine($string='') {
+	private function getArrayFromStringLine($string='')
+	{
 		(String) $string = $string;
 		(Array) $stringLineArray = [];
 
@@ -81,7 +85,8 @@ abstract class BaseException extends Exception {
 	* @access 	private
 	* @return 	Boolean
 	*/
-	private function isObject($string='') {
+	private function isObject($string='')
+	{
 		$response = false;
 		if (gettype($string) == 'object') {
 			$response = $string;

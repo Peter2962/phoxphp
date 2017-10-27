@@ -34,7 +34,8 @@ use Package\View\ArgResolver;
 use App\Service\Container;
 use Package\DependencyInjection\Injector\InjectorBridge;
 
-class AppManager extends InjectorBridge {
+class AppManager extends InjectorBridge
+{
 
 	/**
 	* @var 		$container
@@ -64,7 +65,8 @@ class AppManager extends InjectorBridge {
 	* @access 	public
 	* @return 	void
 	*/
-	public function __construct() {
+	public function __construct()
+	{
 		$servicesConfig = AppManager::appLibExt('public'.DS.'config'.DS.'services');
 		$service = $this;
 
@@ -82,7 +84,8 @@ class AppManager extends InjectorBridge {
 	* @see App::shutdown
 	* @access 	public
 	*/
-	public function __call($methodName='', $arguments='') {
+	public function __call($methodName='', $arguments='')
+	{
 		if ($methodName !== 'registerResponse') {
 			throw new RuntimeException($this->load('en_msg')->getMessage('invalid_call_method', ['method' => $methodName]));
 		}
@@ -98,7 +101,8 @@ class AppManager extends InjectorBridge {
 	* @access 	public
 	* @return 	Object
 	*/
-	public static function getInstance() {
+	public static function getInstance()
+	{
 		return new self;
 	}
 
@@ -107,8 +111,9 @@ class AppManager extends InjectorBridge {
 	* @access 	public
 	* @return 	String
 	*/
-	public static function appLibExt($file='') {
-		return $file.'.php';
+	public static function appLibExt($file='')
+	{
+		return $file . '.php';
 	}
 
 	/**
@@ -120,7 +125,8 @@ class AppManager extends InjectorBridge {
 	* @access 	public
 	* @return 	void
 	*/
-	public function shutdown($errorNumber, $errorString, $errorFile ='', $errorLine = 0, $context = []) {
+	public function shutdown($errorNumber, $errorString, $errorFile ='', $errorLine = 0, $context = [])
+	{
 		$errorId = \basicHash($errorNumber.'_'.$errorString.'_'.$errorFile.'_'.$errorLine);
 		$errors = [
 			'number'  => $errorNumber,
@@ -136,14 +142,15 @@ class AppManager extends InjectorBridge {
 			/** 
 			* Since we cannot pass any values outside of this method's scope, we will store the
 			* generated errors in a session and display them in the constructor.
-			* @see App::displayErrorsAtRuntime
 			*/
 
 			$this->registerResponse($errors);
 			$site_url = $this->load('config')->get('app_url');
 			$finder = new \App\Finder();
+
 			$errorId = basicHash($errorNumber.'_'.$errorString.'_'.$errorFile.'_'.$errorLine);
 			$devMode = config('app')->get('devMode');
+
 			$productionMessage = config('app')->get('production_error_message');
 			$errorTemplatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates').'default');
 
@@ -156,7 +163,8 @@ class AppManager extends InjectorBridge {
 	* @access 	public
 	* @return 	void
 	*/
-	public function fatalShutdown() {
+	public function fatalShutdown()
+	{
 		$error = @error_get_last();
 		if($error) {
 			$this->shutdown($error["type"], $error["message"], $error["file"], $error["line"], count($error));
@@ -168,7 +176,8 @@ class AppManager extends InjectorBridge {
 	* @access 	public
 	* @return 	void
 	*/
-	public function exceptionShutdown($exception) {
+	public function exceptionShutdown($exception)
+	{
 		return $this->shutdown($exception->getCode(), $exception->getMessage(), $exception->getFile(), $exception->getLine(), debug_backtrace());
 	}
 
@@ -177,7 +186,8 @@ class AppManager extends InjectorBridge {
 	* @access 	public
 	* @return 	void
 	*/
-	public function boot($boot=false) {
+	public function boot($boot=false)
+	{
 
 		if (true === boolval($boot)) {
 
@@ -190,37 +200,46 @@ class AppManager extends InjectorBridge {
 				exit($e->getMessage());
 			}
 
-			$this->beforeBoot();
+			$this->startApplication();
 		}
 	}
 
 	/**
-	* Runs before application boots.
+	* Runs application.
 	*
 	* @access 	private
 	* @return 	void
 	*/
-	private function beforeBoot() {
+	private function startApplication()
+	{
 		$router = new \Package\Http\Router\Factory(new \Package\Http\Request\RequestManager());
 		include $this->load('config')->get('app', 'app_routes');
 		$router->run(AppManager::$errors);
 	}
 
 	/**
+	* Returns an array of generated errors.
+	*
 	* @access 	public
 	* @return 	Array
 	*/
-	public static function getErrors() {
+	public static function getErrors()
+	{
 		return AppManager::$errors;
 	}
 
 	/**
+	* This `configure` method can be used to change php' ini settings(not recommended)
+	* and can also be used to set which configuration you want to be able to access using
+	* `getenv` function.
+	*
 	* @param 	$configurable <Closure>
 	* @param 	$autoloader
 	* @access 	public
 	* @return 	void
 	*/
-	public function configure($configurable, $autoloader) {
+	public function configure($configurable, $autoloader)
+	{
 		if ($configurable instanceof Closure) {
 			$configurable = call_user_func($configurable, $this->load('config'));
 			if (gettype($configurable) !== 'array') {

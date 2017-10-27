@@ -30,7 +30,8 @@ class MethodBag
 	* @access 	public
 	* @return 	void
 	*/
-	public function __construct(ServiceBag $serviceBag, Factory $serviceFactory) {
+	public function __construct(ServiceBag $serviceBag, Factory $serviceFactory)
+	{
 		$this->serviceBag = $serviceBag;
 		$this->serviceFactory = $serviceFactory;
 	}
@@ -40,7 +41,8 @@ class MethodBag
 	* @access 	public
 	* @return 	void
 	*/
-	public function pushMethodToList($serviceId) {
+	public function pushMethodToList($serviceId)
+	{
 		MethodBag::$methodList[$serviceId] = $this->serviceFactory->getCurrentAction();
 	}
 
@@ -49,7 +51,8 @@ class MethodBag
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public static function getMethodById($serviceId) {
+	public static function getMethodById($serviceId)
+	{
 		return (isset(MethodBag::$methodList[$serviceId])) ? MethodBag::$methodList[$serviceId] : false;
 	}
 
