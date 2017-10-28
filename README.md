@@ -4,5 +4,5 @@
 
 **Basic Requirements**
 
-i. PHP 7.0+
-ii. Apache/Nginx Server.
+###### i. PHP 7.0+
+###### ii. Apache/Nginx Server.
