@@ -22,12 +22,12 @@ namespace Package\FileSystem\File;
 * SOFTWARE.
 */
 
-use Package\FileSystem\Permission\Interfaces\Permittable;
-use Package\FileSystem\Permission\PermissionMaker;
-use Package\FileSystem\File\Reader;
-use Package\FileSystem\File\Writer;
 use FileNotFoundException;
 use Package\FileSystem\Converter;
+use Package\FileSystem\File\Reader;
+use Package\FileSystem\File\Writer;
+use Package\FileSystem\Permission\PermissionMaker;
+use Package\FileSystem\Permission\Interfaces\Permittable;
 
 class FileManager implements Permittable {
 

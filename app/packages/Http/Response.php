@@ -58,6 +58,8 @@ class Response {
 	}
 
 	/**
+	* Return the body of a response.
+	*
 	* @param 	$setDecode <Boolean>
 	* @access 	public
 	* @return 	String

@@ -59,7 +59,7 @@ class ComposerStaticInit8b50b0e1b57a2972d1b08a57583196a2
     );
 
     public static $fallbackDirsPsr4 = array (
-        0 => 'C:\\MAMP\\htdocs\\phoxphp-restructure\\app\\packages\\third-party',
+        0 => 'C:\\MAMP\\htdocs\\phoxphp\\app\\packages\\ThirdParty',
     );
 
     public static $classMap = array (
@@ -69,7 +69,14 @@ class ComposerStaticInit8b50b0e1b57a2972d1b08a57583196a2
         'App\\Exceptions\\ControllerNotFoundException' => __DIR__ . '/../../../..' . '/app/app/Exceptions/ControllerNotFoundException.php',
         'App\\Exceptions\\MethodNotFoundException' => __DIR__ . '/../../../..' . '/app/app/Exceptions/MethodNotFoundException.php',
         'App\\Finder' => __DIR__ . '/../../../..' . '/app/app/Finder.php',
+        'ComposerAutoloaderInit8b50b0e1b57a2972d1b08a57583196a2' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInit8b50b0e1b57a2972d1b08a57583196a2' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Package\\Cache\\CacheManager' => __DIR__ . '/../../../..' . '/app/packages/Cache/CacheManager.php',
+        'Package\\Cache\\Driver\\Apc' => __DIR__ . '/../../../..' . '/app/packages/Cache/Drivers/Apc.php',
+        'Package\\Cache\\Drivers\\File' => __DIR__ . '/../../../..' . '/app/packages/Cache/Drivers/File.php',
+        'Package\\Cache\\Exceptions\\InvalidCacheDriverException' => __DIR__ . '/../../../..' . '/app/packages/Cache/Exceptions/InvalidCacheDriverException.php',
+        'Package\\Cache\\Interfaces\\DriverInterface' => __DIR__ . '/../../../..' . '/app/packages/Cache/Interfaces/DriverInterface.php',
         'Package\\Database\\Adapter' => __DIR__ . '/../../../..' . '/app/packages/Database/Adapter.php',
         'Package\\Database\\Adapter\\Interfaces\\AdapterInterface' => __DIR__ . '/../../../..' . '/app/packages/Database/Adapter/Interfaces/AdapterInterface.php',
         'Package\\Database\\Adapter\\Mysqli\\MysqliAdapter' => __DIR__ . '/../../../..' . '/app/packages/Database/Adapter/Mysqli/MysqliAdapter.php',

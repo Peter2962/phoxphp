@@ -25,7 +25,8 @@ use Packagist\Exceptions\InvalidPackageFileException;
 use Packagist\Exceptions\PackageNotFoundException;
 use Packagist\Interfaces\PackagistInterface;
 
-trait Messages {
+trait Messages
+{
 
 	/**
 	* @var 		$undefinedTypeKey
@@ -81,7 +82,8 @@ trait Messages {
 
 }
 
-class Packagist implements PackagistInterface {
+class Packagist implements PackagistInterface
+{
 
 	use Messages;
 
@@ -127,7 +129,8 @@ class Packagist implements PackagistInterface {
 	* @throws 	InvalidPackageFileException
 	* @return 	void
 	*/
-	public function __construct(array $options = []) {
+	public function __construct(array $options = [])
+	{
 		if (isset($options['display_errors']) && intval($options['display_errors']) < 2) {
 			$this->displayErrors = $options['display_errors'];
 		}
@@ -155,7 +158,8 @@ class Packagist implements PackagistInterface {
 	* @access 	public
 	* @return 	void
 	*/
-	public function beginAutoload($verifySSL=true) {
+	public function beginAutoload($verifySSL=true)
+	{
 		$context = [];
 		if (false === boolval($verifySSL)) {
 			$context = [
@@ -195,11 +199,14 @@ class Packagist implements PackagistInterface {
 	}
 
 	/**
+	* Load a directory into the app environment.
+	*
 	* @param 	$package <Object>
 	* @access 	private
 	* @return 	void
 	*/
-	private function autoloadRepository(StdClass $package) {
+	private function autoloadRepository(StdClass $package)
+	{
 		(Array) $packageClasses = [];
 		(Array) $packageObjects = [];
 		(Array) $containables = [];
@@ -209,29 +216,33 @@ class Packagist implements PackagistInterface {
 
 		$this->checkLibrary($path);
 
-		$containables = (isset($package->contain)) ? explode(":", $package->contain) : [];
+		$containables = (isset($package->contain)) ? explode(':', $package->contain) : [];
 
 		clearstatcache();
-		$path = $path.DIRECTORY_SEPARATOR;
+		$path = $path . DIRECTORY_SEPARATOR;
 		$pathGLob = glob("$path*");
 
 		$containableInfo = array_map([$this, 'pathInfo'], $containables);
 
 		(Array) $containQueue = [];
 
-		foreach($pathGLob as $class) {
-
+		foreach($pathGLob as $file) {
 			// If path is not a file, skip process....
-			if (!is_file($class)) {
+			if (!is_file($file)) {
 				continue;
 			}
 
-			$packageClasses[] = $class;
-			$libraryName = $this->pathInfo($class)->filename;
-			$libraryDir = $this->pathInfo($class)->dirname;
-			$libraryExtension = $this->pathInfo($class)->extension;
-			$libraryPath = $libraryDir.DIRECTORY_SEPARATOR.$libraryName.'.'.$libraryExtension;
+			$packageClasses[] = $file;
+			$libraryName = $this->pathInfo($file)->filename;
+			$isSkippedFile = (isset($package->except) && is_array($package->except) && in_array($libraryName, $package->except));
 
+			if ($isSkippedFile) {
+				continue;
+			}
+
+			$libraryDir = $this->pathInfo($file)->dirname;
+			$libraryExtension = $this->pathInfo($file)->extension;
+			$libraryPath = $libraryDir . DIRECTORY_SEPARATOR . $libraryName . '.' . $libraryExtension;
 			if (isset($package->contain) && sizeof($containables) > 0) {
 				if (in_array($libraryName, $containables)) {
 					$packageObjects[] = $libraryPath;
@@ -249,7 +260,8 @@ class Packagist implements PackagistInterface {
 	* @access 	private
 	* @return 	void
 	*/
-	private function autoloadLibrary(StdClass $package) {
+	private function autoloadLibrary(StdClass $package)
+	{
 		$type = $package->type;
 		$library = $this->lib($package->lib);
 		$this->checkLibrary($library);
@@ -267,7 +279,8 @@ class Packagist implements PackagistInterface {
 	* @access 	private
 	* @return 	Boolean
 	*/
-	private function logProcess($processMessage='') {
+	private function logProcess($processMessage='')
+	{
 		$logFile = $this->processLogFile;
 		if (false == is_file($logFile)) {
 			return false;
@@ -277,9 +290,9 @@ class Packagist implements PackagistInterface {
 
 		$dateString = strtotime(date('Y-m-d H:i:s'));
 		$formattedDate = date('Y F i H:i:s', $dateString);
-		$processMessage = sprintf("Process logged on : %s. Message : %s", $formattedDate, $processMessage);
+		$processMessage = sprintf('Process logged on : %s. Message : %s', $formattedDate, $processMessage);
 
-		$writerHandle = fopen($logFile, "a");
+		$writerHandle = fopen($logFile, 'a');
 		fwrite($writerHandle, $processMessage."\n");
 
 		fclose($writerHandle);
@@ -290,7 +303,8 @@ class Packagist implements PackagistInterface {
 	* @access 	private
 	* @return 	String
 	*/
-	private function lib($library='') {
+	private function lib($library='')
+	{
 		return $library.'.php';
 	}
 
@@ -300,19 +314,16 @@ class Packagist implements PackagistInterface {
 	* @access 	private
 	* @return 	Boolean
 	*/
-	private function checkLibrary($library='', $libType='file') {
+	private function checkLibrary($library='', $libType='file')
+	{
 		(String) $message='';
 		(Boolean) $checkCase = null;
 
 		if ($libType == 'file') {
-			$message = $this->getMessage("fileLibCheckMessage", $library);
-		}else{
-			$message = $this->getMessage("repoLibCheckMessage", $library);
-		}
-
-		if ($libType == 'file') {
+			$message = $this->getMessage('fileLibCheckMessage', $library);
 			$checkCase = (file_exists($library) && is_readable($library));
 		}else{
+			$message = $this->getMessage('repoLibCheckMessage', $library);
 			$checkCase = (file_exists($library) && is_dir($library) && is_readable($library));
 		}
 
@@ -330,7 +341,8 @@ class Packagist implements PackagistInterface {
 	* @access 	private
 	* @return 	Boolean
 	*/
-	private function checkObject($package='') {
+	private function checkObject($package='')
+	{
 		$packageName = $this->pathInfo($package)->filename;
 		if ($this->pathInfo($package)->extension == 'php') {
 			if (!class_exists($packageName)) {
@@ -348,7 +360,8 @@ class Packagist implements PackagistInterface {
 	* @access 	private
 	* @return 	Object
 	*/
-	private function pathInfo($path) {
+	private function pathInfo($path)
+	{
 		return (Object) pathinfo($path);
 	}
 
@@ -357,7 +370,8 @@ class Packagist implements PackagistInterface {
 	* @access 	private
 	* @return 	Array
 	*/
-	private function __toArray(StdClass $object) {
+	private function __toArray(StdClass $object)
+	{
 		return (Array) $object;
 	}
 
@@ -367,7 +381,8 @@ class Packagist implements PackagistInterface {
 	* @throws 	PackageNotFoundException
 	* @return 	void
 	*/
-	private function __include($file='') {
+	private function __include($file='')
+	{
 		if (!file_exists($file)) {
 			$this->logProcess($this->getMessage('packageNotFound', $file));
 			if ($this->displayErrors == 1) {

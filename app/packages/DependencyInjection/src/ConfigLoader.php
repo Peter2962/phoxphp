@@ -1,7 +1,8 @@
 <?php
 namespace Package\DependencyInjection;
 
-class ConfigLoader {
+class ConfigLoader
+{
 
 	/**
 	* @param 	$config <String>
@@ -9,7 +10,8 @@ class ConfigLoader {
 	* @access 	public
 	* @return 	Mixed
 	*/
-	public function load($config='', $key='') {
+	public function load($config='', $key='')
+	{
 		$config = 'src/Config/'.$config.'.php';
 		if (!file_exists($config)) {
 			trigger_error(sprintf("Config file %s is not available.", $config));

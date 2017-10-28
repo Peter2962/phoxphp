@@ -1,11 +1,11 @@
 {
-	"name":"Phoxphp/Packages",
-	"description":"PhoxPHP Framework Packages",
+	"name":"PhoxPHP",
+	"description":"PhoxPHP Framework Package",
 	"keywords":["php", "php7"],
 	"author":[
 		{
 			"name":"Peter Taiwo",
-			"email":"taiwop3@gmail.com",
+			"email":"taiwopeter35@gmail.com",
 			"role":"developer"
 		}
 	],

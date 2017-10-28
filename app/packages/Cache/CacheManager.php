@@ -23,11 +23,14 @@
 
 namespace Package\Cache;
 
-use Package\Cache\Exceptions\InvalidCacheDriverException;
-use Package\DependencyInjection\Injector\InjectorBridge;
+use ReflectionClass;
 use Package\Cache\Config;
+use Package\FileSystem\Directory\DirectoryManager;
+use Package\DependencyInjection\Injector\InjectorBridge;
+use Package\Cache\Exceptions\InvalidCacheDriverException;
 
-class CacheManager extends InjectorBridge {
+class CacheManager extends InjectorBridge
+{
 
 	/**
 	* @var 		$makeService
@@ -54,7 +57,8 @@ class CacheManager extends InjectorBridge {
 	* @throws 	InvalidCacheDriverException
 	* @return 	Object
 	*/
-	public function __construct() {
+	public function __construct()
+	{
 		$driver = $this->getConfig()->driver;
 		$driver = ucfirst($driver);
 
@@ -62,10 +66,10 @@ class CacheManager extends InjectorBridge {
 		$interface = $this->getConfig()->driver_interface;
 
 		$storage = $this->getConfig()->storage;
-		$driverClass = $namespace.$driver;
+		$driverClass = $driver;
 
 		if (false === class_exists($driverClass)) {
-			throw new InvalidCacheDriverException($driver);
+			throw new InvalidCacheDriverException(sprintf('Class %s does not exist', $driver));
 		}
 
 		$driver = new ReflectionClass($driverClass);
@@ -74,7 +78,7 @@ class CacheManager extends InjectorBridge {
 			throw new InvalidCacheDriverException('Driver must implement interface');
 		}
 
-		if (Cache::isEnabled()) {
+		if (CacheManager::isEnabled()) {
 
 			if (!$this->storage()->exists()) {
 				$this->storage()->mkdir();
@@ -99,61 +103,80 @@ class CacheManager extends InjectorBridge {
 	* @access 	public
 	* @return 	void
 	*/
-	public function add($key='', $value='', $duration=60) {
+	public function add($key='', $value='', $duration=60)
+	{
 		return $this->driver->add($key, $value, $duration);
 	}
 
 	/**
+	* Return value of a stored cache given it's key.
+	*
 	* @param 	$key <String>
 	* @access 	public
 	* @return 	String
 	*/
-	public function get($key='') {
+	public function get($key='')
+	{
 		return $this->driver->get($key);
 	}
 
 	/**
+	* Check if a cache exists.
+	*
 	* @param 	$key <String>
 	* @access 	public
 	* @return 	void
 	*/
-	public function exists($key) {
+	public function exists($key)
+	{
 		return $this->driver->exists($key);
 	}
 
 	/**
+	* Deletes a cache given the cache key used to store the cache.
+	*
 	* @param 	$key <String>
 	* @access 	public
 	* @return 	void
 	*/
-	public function delete($key) {
+	public function delete($key)
+	{
 		return $this->driver->delete($key);
 	}
 
 	/**
+	* Returns a stored cache's created date.
+	*
 	* @param 	$key <String>
 	* @access 	public
 	* @return 	Integer
 	*/
-	public function getCreatedDate($key='') {
+	public function getCreatedDate($key='')
+	{
 		return $this->driver->getCreatedDate($key);
 	}
 
 	/**
+	* Returns a stored cache's expiration date.
+	*	
 	* @param 	$key <String>
 	* @access 	public
 	* @return 	Integer
 	*/
-	public function getExpirationDate($key='') {
+	public function getExpirationDate($key='')
+	{
 		return $this->driver->getExpirationDate($key);
 	}
 
 	/**
+	* CHeck if a cache has expired.
+	*
 	* @param 	$key <String>
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public function hasExpired($key='') {
+	public function hasExpired($key='')
+	{
 		return $this->driver->hasExpired($key);
 	}	
 
@@ -162,7 +185,8 @@ class CacheManager extends InjectorBridge {
 	* @access 	public
 	* @return 	void
 	*/
-	public function increment($value) {
+	public function increment($value)
+	{
 		return $this->driver->increment($value);
 	}
 
@@ -171,7 +195,8 @@ class CacheManager extends InjectorBridge {
 	* @access 	public
 	* @return 	void
 	*/
-	public function decrement($value) {
+	public function decrement($value)
+	{
 		return $this->driver->decrement($value);
 	}
 
@@ -179,25 +204,32 @@ class CacheManager extends InjectorBridge {
 	* @access 	private
 	* @return 	Object
 	*/
-	private function storage() {
-		return new FileSystem\Directory('app/'.$this->getConfig()->storage);
+	private function storage()
+	{
+		return new DirectoryManager('app/' . $this->getConfig()->storage);
 	}
 
 	/**
+	* Return cache configuration.
+	*
 	* @access 	private
 	* @return 	Object
 	*/
-	protected function getConfig() {
-		return (Object) $this->load('config')->get('cache');
+	protected function getConfig()
+	{
+		return (Object) config()->get('cache');
 	}
 
 	/**
+	* Check if cache is enabled.
+	*
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public static function isEnabled() {
+	public static function isEnabled() : Bool
+	{
 		$response = false;
-		if (boolval($this->load('config')->get('cache', 'enabled')) == true) {
+		if (boolval(config('cache')->get('enabled')) == true) {
 			$response = true;
 		}
 		return $response;

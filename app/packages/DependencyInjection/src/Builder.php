@@ -12,7 +12,8 @@ use Package\DependencyInjection\Factory;
 use ReflectionClass;
 use StdClass;
 
-class Builder {
+class Builder
+{
 
 	/**
 	* @var 		$factory
@@ -38,7 +39,8 @@ class Builder {
 	* @access 	public
 	* @return 	void
 	*/
-	public function __construct(Factory $factory, $serviceId) {
+	public function __construct(Factory $factory, $serviceId)
+	{
 		$this->factory = $factory;
 		$this->serviceId = $serviceId;
 	}
@@ -49,7 +51,8 @@ class Builder {
 	* @access 	public
 	* @return 	void
 	*/
-	public function make(ServiceBag $serviceBag, array $initParameters=array()) {
+	public function make(ServiceBag $serviceBag, array $initParameters=array())
+	{
 		$serviceCallback = $serviceBag->getService($this->serviceId);
 		if (!in_array(gettype($serviceCallback), $this->callbackTypesList)) {
 			throw new InvalidServiceCallbackTypeException(sprintf("Service callback type {%s} not supported.", gettype($serviceCallback)));
@@ -101,7 +104,8 @@ class Builder {
 	* @access 	private
 	* @return 	Mixed
 	*/
-	private function getCallbackType($callback) : StdClass {
+	private function getCallbackType($callback) : StdClass
+	{
 		$responseObject = new StdClass();
 		$__reflect = new ReflectionClass($callback);
 		$responseObject->name = $__reflect->name;

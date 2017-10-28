@@ -1,5 +1,6 @@
 <?php
-namespace Package\Cache\Driver;
+namespace Package\Cache\Drivers;
+
 /**
 * @author 		Peter Taiwo
 * @filesource 	{packages/Cache/Drivers/File.php}
@@ -24,11 +25,11 @@ namespace Package\Cache\Driver;
 */
 
 use Package\Cache;
-use Package\Cache\Driver;
 use Package\FileSystem\File\FileManager;
 use Package\Cache\Interfaces\DriverInterface;
 
-class File implements DriverInterface {
+class File implements DriverInterface
+{
 
 	/**
 	* @var 		$cacheKeyValue
@@ -49,35 +50,26 @@ class File implements DriverInterface {
 	public 		$lang;
 
 	/**
-	* Returns the name of the cache adapter.
-	*
-	* @access 	public
-	* @return 	String
+	* {@inheritDoc}
 	*/
-	public function getName() {
+	public function getName() : String
+	{
 		return 'File';
 	}
 
 	/**
-	* Decieds whether to register the cache adapter or not.
-	*
-	* @access 	public
-	* @return 	Boolean
+	* {@inheritDoc}
 	*/
-	public function register() {
+	public function register() : Bool
+	{
 		return true;
 	}
 
 	/**
-	* Adds/Creates a new cache key.
-	*
-	* @param 	$key <String>
-	* @param 	$value <String>
-	* @param 	$duration <Int>
-	* @access 	public
-	* @return 	void
+	* {@inheritDoc}
 	*/
-	public function add($key='', $value='', $duration=60) {
+	public function add($key='', $value='', $duration=60) : Bool
+	{
 		if ('' == $key || $this->exists($key)) {
 			return;
 		}
@@ -96,18 +88,16 @@ class File implements DriverInterface {
 		}
 
 		$data = serialize($data);
-
 		$file->write($data);
+
+		return true;
 	}
 
 	/**
-	* Returns a cache value using the provided specified key.
-	*
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	String
+	* {@inheritDoc}
 	*/
-	public function get($key='') {
+	public function get($key='')
+	{
 		if (!$this->exists($key)) {
 			return;
 		}
@@ -116,18 +106,15 @@ class File implements DriverInterface {
 	}
 
 	/**
-	* Checks if a cache key exists.
-	*
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	Boolean
+	* {@inheritDoc}
 	*/
-	public function exists($key='') {
+	public function exists($key='') : Bool
+	{
 		$response = false;
 		$key = $this->key($key);
 
 		$file = $this->storage($key);
-		$file = new FileSystem\File($file);
+		$file = new FileManager($file);
 
 		if ($file->exists()) {
 			$response = true;
@@ -137,69 +124,59 @@ class File implements DriverInterface {
 	}
 
 	/**
-	* Deletes a cache with the specified key.
-	*
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	void
+	* {@inheritDoc}
 	*/
-	public function delete($key='') {
+	public function delete($key='') : Bool
+	{
 		if (!$this->exists($key)) {
-			return;
+			return false;
 		}
 
 		$file = new FileManager($this->storage($this->key($key)));
 		$file->delete();
+
+		return true;
 	}
 
 	/**
-	* Returns unixtime when the cache was created.
-	*
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	Integer
+	* {@inheritDoc}
 	*/
-	public function getCreatedDate($key='') {
+	public function getCreatedDate($key='')
+	{
 		if (!$this->exists($key)) {
-			return;
+			return false;
 		}
 
 		return $this->reader($key)->created_at;	
 	}
 
 	/**
-	* Returns the unixtime of the cache's expiration date.
-	*
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	Integer
+	* {@inheritDoc}
 	*/
-	public function getExpirationDate($key='') {
+	public function getExpirationDate($key='')
+	{
 		if (!$this->exists($key)) {
-			return;
+			return false;
 		}
 
 		return $this->reader($key)->expired_at;
 	}
 
 	/**
-	* Checks if a cache has expired or not.
-	*
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	Boolean
+	* {@inheritDoc}
 	*/
-	public function hasExpired($key='') {
+	public function hasExpired($key='') : Bool
+	{
 		$response = false;
 		if (!$this->exists($key)) {
-			return;
+			return false;
 		}
 
 		$createdDate = $this->getCreatedDate($key);
 		$expirationDate = $this->getExpirationDate($key);
 
 		if (!is_int($createdDate) || !is_int($expirationDate)) {
-			return;
+			return false;
 		}
 
 		$cacheTime = bcadd($createdDate, $expirationDate);
@@ -211,21 +188,19 @@ class File implements DriverInterface {
 	}
 
 	/**
-	* @param 	<$value>
-	* @access 	public
-	* @return 	void
+	* {@inheritDoc}
 	*/
-	public function increment($value='') {
-		return null;
+	public function increment($key='', $value='') : Bool
+	{
+		return false;
 	}
 
 	/**
-	* @param 	<$value>
-	* @access 	public
-	* @return 	void
+	* {@inheritDoc}
 	*/
-	public function decrement($value='') {
-		return null;
+	public function decrement($key='', $value='') : Bool
+	{
+		return false;
 	}
 
 	/**
@@ -233,7 +208,8 @@ class File implements DriverInterface {
 	* @access 	private
 	* @return 	String
 	*/
-	private function key($string='') {
+	private function key($string='')
+	{
 		return sha1($string);
 	}
 
@@ -242,7 +218,8 @@ class File implements DriverInterface {
 	* @access 	private
 	* @return 	String
 	*/
-	private function storage($key='') {
+	private function storage($key='')
+	{
 		return 'app/'.config('cache')->get('storage').$key;		
 	}
 
@@ -251,7 +228,8 @@ class File implements DriverInterface {
 	* @access 	private
 	* @return 	Object
 	*/
-	private function reader($key='') {
+	private function reader($key='')
+	{
 		$file = new FileManager($this->storage($this->key($key)));
 		$data = (Object) unserialize($file->read());
 		return $data;

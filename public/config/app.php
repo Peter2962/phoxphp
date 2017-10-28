@@ -1,13 +1,13 @@
 <?php
 #########################################
-#Base application configuration file.
+# Base application configuration file.
 #########################################
 
 return [
 	#########################
 	# App url
 	#########################
-	'app_url' => 'http://server.web/phoxphp-restructure/',
+	'app_url' => 'http://phoxphp.web/',
 
 	#########################
 	# App name

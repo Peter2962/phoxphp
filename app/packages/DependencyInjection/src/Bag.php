@@ -5,7 +5,8 @@ use RuntimeException;
 use ServiceNotFoundException;
 use Package\DependencyInjection\Factory;
 
-class Bag {
+class Bag
+{
 
 	/**
 	* @var 		$serviceList
@@ -21,7 +22,8 @@ class Bag {
 	* @access 	public
 	* @return 	void
 	*/
-	public function pushServiceIdToList(Factory $factory) {
+	public function pushServiceIdToList(Factory $factory)
+	{
 		if (!$this->hasService($factory)) {
 			Bag::$serviceList[$factory->getServiceId()] = $factory->getServiceCallback();
 		}
@@ -32,7 +34,8 @@ class Bag {
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public function hasService(Factory $factory) {
+	public function hasService(Factory $factory)
+	{
 		return isset(Bag::$serviceList[$factory->getServiceId()]) ? true : false;
 	}
 
@@ -41,8 +44,10 @@ class Bag {
 	* @access 	public
 	* @return 	Array
 	*/
-	public function getService($serviceId) {
-		if (!isset(Bag::$serviceList[$serviceId])) {
+	public function getService($serviceId)
+	{
+		if (!isset(Bag::$serviceList[$serviceId]))
+			{
 			throw new RuntimeException(sprintf("Service with id %s does not exist.", $serviceId));
 		}
 

@@ -9,7 +9,8 @@ use Package\DependencyInjection\AccessBag;
 use Package\DependencyInjection\Builder;
 use RuntimeException;
 
-abstract class Factory {
+abstract class Factory
+{
 
 	/**
 	* @var 		$serviceId
@@ -53,7 +54,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	Mixed
 	*/
-	public function config($file='', $key='') {
+	public function config($file='', $key='')
+	{
 		$config = new ConfigLoader();
 		return $config->load($file, $key);
 	}
@@ -62,7 +64,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	String
 	*/
-	public function getReferenceObject() {
+	public function getReferenceObject()
+	{
 		return get_class($this);
 	}
 
@@ -74,7 +77,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	Object
 	*/
-	public function register($serviceId='', $serviceResponse='') : Factory {
+	public function register($serviceId='', $serviceResponse='') : Factory
+	{
 		$this->serviceId = $serviceId;
 		$this->serviceResponse = $serviceResponse;
 
@@ -89,20 +93,23 @@ abstract class Factory {
 	* @access 	public
 	* @return 	Object
 	*/
-	public function setDefaultParameters(...$parameters) : Factory {
+	public function setDefaultParameters(...$parameters) : Factory
+	{
 		$this->passedParameters = $parameters;
 		(new ParameterBag(new ServiceBag(), $this))->pushParameterToList($this->getServiceId());
 		return $this;
 	}
 
 	/**
-	* Adds a method to call from the registered service.
+	* Adds a method to call from the registered service. This is useful when you have 
+	* a specific method that you want to be called in your service class.
 	*
 	* @param 	$method <String>
 	* @access 	public
 	* @return 	Object
 	*/
-	public function setAction($method='') : Factory {
+	public function setAction($method='') : Factory
+	{
 		if (empty($method)) {
 			throw new RuntimeException(sprintf("Unable to set action for %s service.", $this->getServiceId()));
 		}
@@ -117,19 +124,24 @@ abstract class Factory {
 	* @access 	public
 	* @return 	void
 	*/
-	public function setAllow(...$list) : Factory {
+	public function setAllow(...$list) : Factory
+	{
 		$this->accessList = $list;
 		(new AccessBag($this))->pushToAccessList($this->getServiceId());
 		return $this;
 	}
 
 	/**
+	* Loads a registered service given the serviceId and it's parameters if
+	* any is required.
+	*
 	* @param 	$serviceId <String>
 	* @param 	$initParameters <Array> Array of parameters
 	* @access 	public
 	* @return 	Mixed
 	*/
-	public function load($serviceId='', ...$initParameters) {
+	public function load($serviceId='', ...$initParameters)
+	{
 		$service = $this;
 		$config = '/public/config/services.php';
 		include $config;
@@ -142,7 +154,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public function hasMethodCall($serviceId) {
+	public function hasMethodCall($serviceId)
+	{
 		return MethodBag::getMethodById($serviceId);
 	}
 
@@ -152,7 +165,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	String
 	*/
-	public function getServiceId() {
+	public function getServiceId()
+	{
 		return $this->serviceId;
 	}
 
@@ -160,7 +174,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	Mixed
 	*/
-	public function getServiceCallback() {
+	public function getServiceCallback()
+	{
 		return $this->serviceResponse;
 	}
 
@@ -168,7 +183,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	Array
 	*/
-	public function getPassedParameters() {
+	public function getPassedParameters()
+	{
 		return $this->passedParameters;
 	}
 
@@ -176,7 +192,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	String
 	*/
-	public function getCurrentAction() {
+	public function getCurrentAction()
+	{
 		return $this->serviceMethod;
 	}
 
@@ -184,7 +201,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	Array
 	*/
-	public function getAccessList() {
+	public function getAccessList()
+	{
 		return $this->accessList;
 	}
 
@@ -195,7 +213,8 @@ abstract class Factory {
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public function isRegistered($serviceId='') {
+	public function isRegistered($serviceId='')
+	{
 		$this->serviceId = $serviceId;
 		return (new Bag())->hasService($this);
 	}

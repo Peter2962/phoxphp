@@ -3,7 +3,8 @@ namespace Package\DependencyInjection;
 
 use Package\DependencyInjection\Factory;
 
-class AccessBag {
+class AccessBag
+{
 
 	/**
 	* @var 		$factory
@@ -22,7 +23,8 @@ class AccessBag {
 	* @access 	public
 	* @return 	void
 	*/
-	public function __construct(Factory $factory) {
+	public function __construct(Factory $factory)
+	{
 		$this->factory = $factory;
 	}
 
@@ -31,7 +33,8 @@ class AccessBag {
 	* @access 	public
 	* @return 	void
 	*/
-	public function pushToAccessList($serviceId) {
+	public function pushToAccessList($serviceId)
+	{
 		AccessBag::$accessList[$serviceId] = $this->factory->getAccessList();
 	}
 
@@ -40,7 +43,8 @@ class AccessBag {
 	* @access 	public
 	* @return 	Array
 	*/
-	public static function getAccessListById($serviceId) {
+	public static function getAccessListById($serviceId)
+	{
 		if (isset(AccessBag::$accessList[$serviceId])) {
 			return AccessBag::$accessList[$serviceId];
 		}
