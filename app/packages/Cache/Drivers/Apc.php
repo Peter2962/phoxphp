@@ -1,5 +1,5 @@
 <?php
-namespace Package\Cache\Driver;
+namespace Package\Cache\Drivers;
 /**
 * @author 		Peter Taiwo
 * @filesource 	{packages/Cache/Drivers/Memcache.php}
@@ -34,7 +34,8 @@ use Package\Cache\Interfaces\DriverInterface;
 use Package\Cache\Driver;
 use Package\Cache;
 
-class Apc implements DriverInterface {
+class Apc implements DriverInterface
+{
 
 	/**
 	* @var 		$name
@@ -61,120 +62,96 @@ class Apc implements DriverInterface {
 	public 		$lang;
 
 	/**
-	* Returns the name of the cache adapter.
-	*
-	* @access 	public
-	* @return 	String
+	* {@inheritDoc}
 	*/
-	public function getName() {
-		return 'Apc';
+	public function getName() : String
+	{
+		return 'File';
 	}
 
 	/**
-	* Decieds whether to register the cache adapter or not.
-	*
-	* @access 	public
-	* @return 	Boolean
+	* {@inheritDoc}
 	*/
-	public function register() {
+	public function register() : Bool
+	{
 		return true;
 	}
 
 	/**
-	* Adds/Creates a new cache key.
-	*
-	* @param 	$key <String>
-	* @param 	$value <String>
-	* @param 	$duration <Int>
-	* @access 	public
-	* @return 	void
+	* {@inheritDoc}
 	*/
-	public function add($key='', $value='', $duration=60) {
-		return apc_store($key, $value);
+	public function add($key='', $value='', $duration=60) : Bool
+	{
+		return (Boolean) apc_store($key, $value);
 	}
 
 	/**
-	* Returns a cache with the specified key.
-	*
-	* @param 	$key <String>
-	* @access 	public
+	* {@inheritDoc}
 	*/
-	public function get($key='') {
+	public function get($key='')
+	{
 		return apc_fetch($key);
 	}
 
 	/**
-	* Checks if a cache key exists.
-	*
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	Boolean
+	* {@inheritDoc}
 	*/
-	public function exists($key='') {
-		$response=false;
+	public function exists($key='') : Bool
+	{
+		$response = false;
+
 		if (apc_exists($key)) {
-			$response=true;
+			$response = true;
 		}
+
 		return $response;
 	}
 
 	/**
-	* Deletes a cache with the specified key.
-	*
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	void
+	* {@inheritDoc}
 	*/
-	public function delete($key='') {
+	public function delete($key='') : Bool
+	{
 		return apc_delete($key);
 	}
 
 	/**
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	Boolean
+	* {@inheritDoc}
 	*/
-	public function getCreatedDate($key='') {
+	public function getCreatedDate($key='')
+	{
 		return null;
 	}
 
 	/**
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	Boolean
+	* {@inheritDoc}
 	*/
-	public function getExpirationDate($key='') {
+	public function getExpirationDate($key='')
+	{
 		return null;
 	}
 
 	/**
-	* @param 	$key <String>
-	* @access 	public
-	* @return 	void
+	* {@inheritDoc}
 	*/
-	public function hasExpired($key='') {
-		return null;
+	public function hasExpired($key='') : Bool
+	{
+		return false;
 	}
 
 	/**
-	* Increments a cache value by the amount specified.
-	*
-	* @param 	$value
-	* @access 	public
-	* @return 	void
+	* {@inheritDoc}
 	*/
-	public function increment($value='') {
-		return null;
+	public function increment($key='', $value='') : Bool
+	{
+		return (Boolean) apc_inc($key, $value);
 	}
 
 	/**
-	* decrements a cache value by the amount specified.
-	*
-	* @param 	$value
-	* @access 	public
-	* @return 	void
+	* {@inheritDoc}
 	*/
-	public function decrement($value='') {
-		return null;
+	public function decrement($key='', $value='') : Bool
+	{
+		return (Boolean) apc_dec($key, $value);
 	}			
 }

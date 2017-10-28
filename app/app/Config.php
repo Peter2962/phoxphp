@@ -31,7 +31,8 @@ class Config {
 	* @access 	public
 	* @return 	void
 	*/
-	public function __construct($config='') {
+	public function __construct($config='')
+	{
 		$this->config = $config;
 	}
 
@@ -44,7 +45,8 @@ class Config {
 	* @access 	public
 	* @return 	Mixed
 	*/
-	public function get($config='', $key='') {
+	public function get($config='', $key='')
+	{
 		$path = $this->configPath;
 		if ($this->config !== '') {
 			$key = $config;
@@ -60,7 +62,7 @@ class Config {
 			return;
 		}
 
-		return (isset($loadedConfig[$key])) ? $loadedConfig[$key] : $loadedConfig;
+		return ($loadedConfig[$key]) ?? $loadedConfig;
 	}
 
 }
