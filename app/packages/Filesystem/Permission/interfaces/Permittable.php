@@ -1,8 +1,8 @@
 <?php
 namespace Package\FileSystem\Permission\Interfaces;
 
-interface Permittable {
-
+interface Permittable
+{
 	function getPermitted();
 
 }

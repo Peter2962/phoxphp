@@ -8,25 +8,28 @@ namespace Package\FileSystem\File;
 
 use Package\FileSystem\File\FileManager;
 
-class Reader {
+class Reader
+{
 
 	/**
 	* Returns the content of a file.
 	*
-	* @param 	$file FileSystem\File
+	* @param 	$file <Object> Package\FileSystem\File\FileManager
 	* @access 	public
 	* @return 	String
 	*/
-	public static function read(FileManager $file) {
+	public static function read(FileManager $file)
+	{
 		return file_get_contents($file->getFile());
 	}
 
 	/**
-	* @param 	$file FileSystem\File
+	* @param 	$file <Object> Package\FileSystem\File\FileManager
 	* @access 	public
 	* @return 	Array
 	*/
-	public static function readAsArray(FileManager $file) {
+	public static function readAsArray(FileManager $file)
+	{
 		return file($file->getFile());
 	}
 
