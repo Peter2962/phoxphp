@@ -19,11 +19,11 @@
 			"Package\\Translation\\": "app/packages/Translation/src",
 			"Package\\View\\": "app/packages/View",
 			"App\\": "app/app",
-			"": "app/packages/ThirdParty"
+			"": "app/vendor"
 		}
 	},
 	"config": {
-		"vendor-dir":"app/packages/ThirdParty",
+		"vendor-dir":"app/vendor",
 		"sort-packages": false,
 		"optimize-autoloader": true
 	}
