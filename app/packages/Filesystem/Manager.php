@@ -28,7 +28,8 @@ use Package\DependencyInjection\Injector\InjectorBridge;
 use Package\FileSystem\Directory\DirectoryManager;
 use Package\FileSystem\File\FileManager;
 
-class Manager extends InjectorBridge {
+class Manager extends InjectorBridge
+{
 
 	/**
 	* @var 		$pack
@@ -55,7 +56,8 @@ class Manager extends InjectorBridge {
 	* @access 	public
 	* @return 	Object
 	*/
-	public function __construct($resource='') {
+	public function __construct($resource='')
+	{
 		(String) $this->pack = $resource;
 		$this->file = new FileManager($resource);
 		$this->directory = new DirectoryManager($resource);
@@ -68,7 +70,8 @@ class Manager extends InjectorBridge {
 	* @access 	public
 	* @return 	Object
 	*/
-	public function file() {
+	public function file()
+	{
 		return $this->file;
 	}
 
@@ -78,7 +81,8 @@ class Manager extends InjectorBridge {
 	* @access 	public
 	* @return 	Object
 	*/
-	public function directory() {
+	public function directory()
+	{
 		return $this->directory;
 	}
 

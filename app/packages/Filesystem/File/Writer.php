@@ -1,11 +1,12 @@
 <?php
 namespace Package\FileSystem\File;
 
+use StringHelper;
 use BadWriterDataException;
 use Package\FileSystem\File\FileManager;
-use StringHelper;
 
-class Writer {
+class Writer
+{
 
 	/**
 	* @var 		$file
@@ -33,10 +34,12 @@ class Writer {
 
 	/**
 	* Constructor
+	*
 	* @param 	$file
 	* @access 	public
 	*/
-	public function __construct(FileManager $file) {
+	public function __construct(FileManager $file)
+	{
 		$this->file = $file->getFile();
 	}
 
@@ -47,7 +50,8 @@ class Writer {
 	* @access 	public
 	* @return 	void
 	*/
-	public static function setMaximumLength($length=0) {
+	public static function setMaximumLength($length=0)
+	{
 		return (Integer) Writer::$maxStringLength = $length;
 	}
 
@@ -58,7 +62,8 @@ class Writer {
 	* @access 	public
 	* @return 	void
 	*/
-	public static function setMinimumLength($length=0) {
+	public static function setMinimumLength($length=0)
+	{
 		return (Integer) Writer::$minStringLength = $length;
 	}
 
@@ -67,19 +72,19 @@ class Writer {
 	*
 	* @param 	$data <String>
 	* @access 	private
-	* @throws 	BadWriterDataException
+	* @throws 	RuntimeException
 	* @return 	void.
 	*/
 	private static function validateDataLength($data) {
 		if (null !== Writer::$minStringLength && Writer::$minStringLength > 0 && ctype_digit(Writer::$minStringLength)) {
 			if (strlen($data) < Writer::$minStringLength) {
-				throw new BadWriterDataException('Unable to write data into file. Data length is lower than required length.');
+				throw new RuntimeException('Unable to write data into file. Data length is lower than required length.');
 			}
 		}
 
 		if (null !== Writer::$maxStringLength && Writer::$maxStringLength > 0 && is_integer((Integer) Writer::$maxStringLength)) {
 			if (strlen($data) > Writer::$maxStringLength) {
-				throw new BadWriterDataException('Unable to write data into file. Data length is higher than required length.');
+				throw new RuntimeException('Unable to write data into file. Data length is higher than required length.');
 			}
 		}
 
@@ -91,7 +96,8 @@ class Writer {
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public static function toNewLine() {
+	public static function toNewLine()
+	{
 		return (Boolean) Writer::$toNewLine = true;
 	}
 
@@ -104,7 +110,8 @@ class Writer {
 	* @access 	public
 	* @return 	void
 	*/
-	public function write($data='') {
+	public function write($data='')
+	{
 		Writer::validateDataLength($data);
 
 		if (true == boolval(Writer::$toNewLine)) {

@@ -4,7 +4,8 @@
 ################################################
 namespace Package\Http\Request;
 
-class ProxyManager {
+class ProxyManager
+{
 
 	/**
 	* @var 		$proxies
@@ -39,7 +40,8 @@ class ProxyManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public static function createProxy($name='', $address='', $port='') {
+	public static function createProxy($name='', $address='', $port='')
+	{
 		(Array) ProxyManager::$proxies[$name] = ['address' => $address, 'port' => $port];
 		(Boolean) ProxyManager::$status = true;
 	}
@@ -48,7 +50,8 @@ class ProxyManager {
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public static function getStatus() {
+	public static function getStatus()
+	{
 		return (Boolean) ProxyManager::$status;
 	}
 
@@ -57,7 +60,8 @@ class ProxyManager {
 	* @access 	public
 	* @return 	Mixed
 	*/
-	public static function getProxy($name='') {
+	public static function getProxy($name='')
+	{
 		$response = null;
 		if (ProxyManager::exists($name)) {
 			$response = ProxyManager::$proxies[$name];
@@ -71,7 +75,8 @@ class ProxyManager {
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public static function exists($name='') {
+	public static function exists($name='')
+	{
 		$response = false;
 		if (isset(ProxyManager::$proxies[$name])) {
 			$response = true;

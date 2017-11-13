@@ -28,21 +28,24 @@ namespace Package\FileSystem\Permission;
 * @package 	FileSystem.Permission.PermissionMaker
 */
 
-use FileSystem\Permission\Interfaces\PermittableInterface;
 use BadPermissionException;
+use Package\FileSystem\Exceptions\BadPermissionException;
+use Package\FileSystem\Permission\Interfaces\Permittable;
 
-class PermissionMaker {
+class PermissionMaker
+{
 
 	/**
 	* Changes a file or directory's group permission.
 	*
-	* @param 	$permittable | <Interface> Permittable
-	* @param 	$group  	 | <String>
+	* @param 	$permittable <Interface> Package\FileSystem\Permission\Interfaces\Permittable
+	* @param 	$group <String>
 	* @access 	public
 	* @throws 	BadPermissionException
 	* @return 	void
 	*/
-	public function changeGroup(PermittableInterface $permittable, $group='') {
+	public function changeGroup(Permittable $permittable, $group='')
+	{
 		if (!function_exists('chgrp')) {
 			return;
 		}
@@ -51,13 +54,14 @@ class PermissionMaker {
 	/**
 	* Changes a file or directory's owner permission.
 	*
-	* @param 	$permittable | <Interface> Permittable
-	* @param 	$owner 		 | <String>
+	* @param 	$permittable <Interface> Package\FileSystem\Permission\Interfaces\Permittable
+	* @param 	$owner <String>
 	* @access 	public
 	* @throws 	BadPermissionException
 	* @return 	Boolean
 	*/
-	public function changeOwner(PermittableInterface $permittable, $owner='') {
+	public function changeOwner(Permittable $permittable, $owner='')
+	{
 		if (!function_exists('chown')) {
 			return false;
 		}
@@ -72,13 +76,14 @@ class PermissionMaker {
 	/**
 	* Changes a file or directory's mode.
 	*
-	* @param 	$permittable | <Interface> Permittable
-	* @param 	$mode 		 | <Integer>
+	* @param 	$permittable <Interface> Package\FileSystem\Permission\Interfaces\Permittable
+	* @param 	$mode <Integer>
 	* @access 	public
 	* @throws 	BadPermissionException
 	* @return 	Boolean
 	*/
-	public function changeMode(PermittableInterface $permittable, $mode=0644) {
+	public function changeMode(Permittable $permittable, $mode=0644)
+	{
 		if (!function_exists('chmod')) {
 			return false;
 		}
