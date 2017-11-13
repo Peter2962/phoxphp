@@ -4,13 +4,14 @@
 ################################################
 namespace Package\Http\Request;
 
-use Package\Http\Request\Exceptions\InvalidAuthenticationTypeException;
-use Package\Http\Request\ProxyManager;
-use Package\Http\Response;
-use Exception;
 use StdClass;
+use Exception;
+use Package\Http\Response;
+use Package\Http\Request\ProxyManager;
+use Package\Http\Request\Exceptions\InvalidAuthenticationTypeException;
 
-class RequestManager {
+class RequestManager
+{
 
 	/**
 	* @var 		$timeout
@@ -172,8 +173,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public function __construct() {
-		// Initialize properties....
+	public function __construct()
+	{
 		$this->get = $_GET;
 		$this->post = $_POST;
 		$this->put = $_POST;
@@ -186,7 +187,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Mixed
 	*/
-	public function __get($property) {
+	public function __get($property)
+	{
 		if (!property_exists($this, $property)) {
 			$pregInputRetrieve = preg_match("/get.*[A-Za-z]/", $property);
 
@@ -214,7 +216,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public function __call($method, $parameters) {
+	public function __call($method, $parameters)
+	{
 		if (!method_exists($this, $method)) {
 			$pregMethodTest = preg_match("/is.*[A-Za-z]/", $method);
 
@@ -236,7 +239,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Response
 	*/
-	public function get($url) {
+	public function get($url)
+	{
 		$this->url = $url;
 		$this->method = $this->requestMethods['get'];
 
@@ -251,7 +255,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Response
 	*/
-	public function put($url) {
+	public function put($url)
+	{
 		$this->url = $url;
 		$this->method = $this->requestMethods['put'];
 
@@ -266,7 +271,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Response
 	*/
-	public function delete($url) {
+	public function delete($url)
+	{
 		$this->url = $url;
 		$this->method = $this->requestMethod['delete'];
 
@@ -328,7 +334,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Array
 	*/
-	public function uri() {	
+	public function uri()
+	{
 		return $this->server()->REQUEST_URI;
 	}
 
@@ -338,7 +345,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Object
 	*/
-	public function input() {
+	public function input()
+	{
 		return (Object) $_POST;
 	}
 
@@ -348,7 +356,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Object
 	*/
-	public function server() {
+	public function server()
+	{
 		return (Object) $_SERVER;
 	}
 
@@ -358,7 +367,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	String
 	*/
-	public function requestMethod() {
+	public function requestMethod()
+	{
 		return $this->server()->REQUEST_METHOD;
 	}
 
@@ -371,7 +381,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	String
 	*/
-	public function pathinfo($appendQueryString = false) {
+	public function pathinfo($appendQueryString = false)
+	{
 		$uri = $this->getCleanUrl($this->server()->REQUEST_URI);
 
 		if (boolval($appendQueryString) == true) {
@@ -399,7 +410,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Boolean
 	*/
-	public function matches($path='', $option = RequestManager::PARTIAL_PATH) {
+	public function matches($path='', $option = RequestManager::PARTIAL_PATH)
+	{
 		$response = false;
 		switch ($option) {
 			case RequestManager::PARTIAL_PATH:
@@ -426,7 +438,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public static function disableSSL() {
+	public static function disableSSL()
+	{
 		RequestManager::$disableSSL = true;
 	}
 
@@ -436,7 +449,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public static function useFGC() {
+	public static function useFGC()
+	{
 		RequestManager::$curlRequest = false;
 	}
 
@@ -446,7 +460,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public static function useCURL() {
+	public static function useCURL()
+	{
 		RequestManager::$curlRequest = true;
 	}
 
@@ -456,7 +471,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Array
 	*/
-	public function proxy($proxyName='', $tunnelProxy = false) {
+	public function proxy($proxyName='', $tunnelProxy = false)
+	{
 		$this->tunnelProxy = (Integer) $tunnelProxy;
 		$this->proxyRequest = true;
 
@@ -476,7 +492,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public function authorize($username='', $password='', $authenticationType='basic') {
+	public function authorize($username='', $password='', $authenticationType='basic')
+	{
 		RequestManager::$authentication['username'] = $username;
 		RequestManager::$authentication['password'] = $password;
 		try {
@@ -499,7 +516,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public function setHeader($key=null, $value=null) {
+	public function setHeader($key=null, $value=null)
+	{
 		$this->headers[$key] = $value;
 	}
 
@@ -511,7 +529,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public static function setWrapperForFGC($wrapper=null) {
+	public static function setWrapperForFGC($wrapper=null)
+	{
 		RequestManager::$requestWrapper = $wrapper;
 	}
 
@@ -523,7 +542,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public function setUrlParameters($parameter=null, $value=null) {
+	public function setUrlParameters($parameter=null, $value=null)
+	{
 		$this->requestParameters[$parameter] = $value;
 	}
 
@@ -534,7 +554,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	void
 	*/
-	public function setTimeout($time=60) {
+	public function setTimeout($time=60)
+	{
 		if (ctype_digit($time) && !$time < 0) {
 			$this->timeout = $time;
 		}	
@@ -546,7 +567,8 @@ class RequestManager {
 	* @return 	Object
 	* @deprecated
 	*/
-	public function getReponse(Response $response) : Response {
+	public function getReponse(Response $response) : Response
+	{
 		return $this->response = $response;
 	}
 
@@ -556,7 +578,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	String
 	*/
-	public function getError() {
+	public function getError()
+	{
 		return $this->error;
 	}
 
@@ -566,7 +589,8 @@ class RequestManager {
 	* @access 	public
 	* @return 	Integer
 	*/
-	public function getErrorNo() {
+	public function getErrorNo()
+	{
 		return $this->errorNo;
 	}
 
@@ -575,7 +599,8 @@ class RequestManager {
 	* @access 	private
 	* @return 	String
 	*/
-	private function getConfig($key='') {
+	private function getConfig($key='')
+	{
 		$config = [
 			'proxy' 		  	=> CURLOPT_PROXY,
 			'proxy_port' 	  	=> CURLOPT_PROXYPORT,
@@ -600,7 +625,8 @@ class RequestManager {
 	* @access 	private
 	* @return 	Object|Boolean
 	*/
-	private function getAuthConfig($key='', $authInfo='') {
+	private function getAuthConfig($key='', $authInfo='')
+	{
 		$config = [
 			'basic' => ['option' => $this->getConfig('auth_basic'), 'value' => "Authorization: Basic ".base64_encode($authInfo)],
 			'digest' => ['option' => $this->getConfig('auth_digest'), 'value' => $authInfo]
@@ -618,7 +644,8 @@ class RequestManager {
 	* @access 	private
 	* @return 	\Http\Response
 	*/
-	private function doRequest() : Response {
+	private function doRequest() : Response
+	{
 		if (!in_array($this->method, array_values($this->requestMethods))) {
 			throw new Exception(sprintf("Unresolved method %s", $this->method));
 		}
@@ -740,7 +767,8 @@ class RequestManager {
 	* @access 	private
 	* @return 	void
 	*/
-	private function doFileRequest() {
+	private function doFileRequest()
+	{
 		$requestWrappers = ['http'];
 		if (!in_array(RequestManager::$requestWrapper, $requestWrappers)) {
 			throw new Exception(sprintf("Http wrapper %s not accecpted.", RequestManager::$requestWrapper));
@@ -806,7 +834,8 @@ class RequestManager {
 	* @access 	private
 	* @return 	String
 	*/
-	private function buildUrl($url, array $parameters = []) {
+	private function buildUrl($url, array $parameters = [])
+	{
 		$parameters = http_build_query($parameters);
 		return $url.'?'.$parameters;
 	}
@@ -816,7 +845,8 @@ class RequestManager {
 	* @access 	private
 	* @return 	Array
 	*/
-	private function resolveHeaders($fgc=false) {
+	private function resolveHeaders($fgc=false)
+	{
 		(Array) $headers = [];
 		$headerValue = array_values($this->headers);
 		foreach(array_keys($this->headers) as $i => $key) {
@@ -837,7 +867,8 @@ class RequestManager {
 	* @access 	private
 	* @return 	String
 	*/
-	private function getCleanUrl($url='') {
+	private function getCleanUrl($url='')
+	{
 		$preg=preg_match("/\?(.*?)/", $url, $match);
 		if ($preg) {
 			$queryPipePosition = strpos($url, '?');
@@ -857,7 +888,8 @@ class RequestManager {
 	* @access 	private
 	* @return 	String
 	*/
-	private function createProxy($protocol='tcp', $ip='', $port='') {
+	private function createProxy($protocol='tcp', $ip='', $port='')
+	{
 		return $protocol.'://'.$ip.':'.$port;
 	}
 
