@@ -6,7 +6,7 @@ include 'App\Helper.php';
 #################################
 # Load packages via composer.
 ################################
-include '/vendor/autoload.php';
+include 'vendor/autoload.php';
 
 #########################################
 # Create new AppManager instance
