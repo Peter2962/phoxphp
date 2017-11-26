@@ -6,9 +6,3 @@
 _____
 ###### **i.** PHP 7.0+
 ###### **ii.** Apache/Nginx Server.
-
-**Todo:**
-_____
-###### **i.** Replace `Database Package` with `Glider` ORM [Here](https://github.com/PhoxPHP/Glider)
-###### **ii.** Fix `Coding standards`. 
-###### **iii.** Install/Add `PHPUnit` to project.
