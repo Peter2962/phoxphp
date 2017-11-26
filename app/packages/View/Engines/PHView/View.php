@@ -165,7 +165,7 @@ class View implements PHViewContract
 	public function setLayout($layout) : View
 	{
 		if (gettype($layout) !== 'string' || !$layout instanceof Layout) {
-			throw new RuntimeException();
+			throw new RuntimeException('Layout can either be string or instance of PHView\\Layout');
 		}
 
 		$this->layout = $layout;
