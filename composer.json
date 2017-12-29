@@ -1,30 +1,25 @@
 {
-	"name":"PhoxPHP",
-	"description":"PhoxPHP Framework Package",
-	"keywords":["php", "php7"],
-	"author":[
+	"name": "PhoxPHP",
+	"description": "PhoxPHP Framework Package",
+	"keywords": ["php", "php7"],
+	"author": [
 		{
 			"name":"Peter Taiwo",
 			"email":"taiwopeter35@gmail.com",
 			"role":"developer"
 		}
 	],
-	"autoload":{
-		"psr-4":{
-			"Package\\DependencyInjection\\": "app/packages/DependencyInjection/src",
-			"Package\\Database\\": "app/packages/Database",
-			"Package\\Cache\\": "app/packages/Cache",
-			"Package\\FileSystem\\": "app/packages/Filesystem",
-			"Package\\Http\\": "app/packages/Http",
-			"Package\\Translation\\": "app/packages/Translation/src",
-			"Package\\View\\": "app/packages/View",
-			"App\\": "app/app",
-			"": "app/vendor"
+	"autoload": {
+		"psr-4": {
+			"PhoxPHP\\": "app/packages/"
 		}
 	},
 	"config": {
-		"vendor-dir":"app/vendor",
+		"vendor-dir": "app/vendor",
 		"sort-packages": false,
 		"optimize-autoloader": true
+	},
+	"require": {
+		"phoxphp/glider": "v1.0.0"
 	}
 }

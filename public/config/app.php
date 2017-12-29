@@ -7,7 +7,7 @@ return [
 	#########################
 	# App url
 	#########################
-	'app_url' => 'http://phoxphp.web/',
+	'app_url' => 'http://phoxphp.site/',
 
 	#########################
 	# App name
