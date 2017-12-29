@@ -1,1 +1,36 @@
-[]
+[
+    {
+        "name": "phoxphp/glider",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/Glider.git",
+            "reference": "d2511ce45a1e1aa43baec026ab482bdaf597194b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/d2511ce45a1e1aa43baec026ab482bdaf597194b",
+            "reference": "d2511ce45a1e1aa43baec026ab482bdaf597194b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.6"
+        },
+        "time": "2017-12-29T08:05:34+00:00",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Glider\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "Glider",
+        "keywords": [
+            "PHP7",
+            "database",
+            "php"
+        ]
+    }
+]

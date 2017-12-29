@@ -23,7 +23,7 @@ namespace App;
 *
 */
 
-use Package\FileSystem\File\FileManager;
+use PhoxPHP\FileSystem\File\FileManager;
 
 class Finder {
 
