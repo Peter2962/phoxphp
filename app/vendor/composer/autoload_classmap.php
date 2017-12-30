@@ -55,6 +55,7 @@ return array(
     'Kit\\Glider\\Events\\Subscribers\\BuildEventsSubscriber' => $vendorDir . '/phoxphp/glider/src/Events/Subscribers/BuildEventsSubscriber.php',
     'Kit\\Glider\\Events\\Subscribers\\ConnectionAttemptSubscriber' => $vendorDir . '/phoxphp/glider/src/Events/Subscribers/ConnectionAttemptSubscriber.php',
     'Kit\\Glider\\Exceptions\\ConnectionFailedException' => $vendorDir . '/phoxphp/glider/src/Exceptions/ConnectionFailedException.php',
+    'Kit\\Glider\\Factory' => $vendorDir . '/phoxphp/glider/src/Factory.php',
     'Kit\\Glider\\Platform\\Contract\\PlatformProvider' => $vendorDir . '/phoxphp/glider/src/Platform/Contract/PlatformProvider.php',
     'Kit\\Glider\\Platform\\Mysqli\\MysqliProvider' => $vendorDir . '/phoxphp/glider/src/Platform/Mysqli/MysqliProvider.php',
     'Kit\\Glider\\Processor\\AbstractProcessorProvider' => $vendorDir . '/phoxphp/glider/src/Processor/AbstractProcessorProvider.php',

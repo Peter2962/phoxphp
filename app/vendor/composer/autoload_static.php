@@ -108,6 +108,7 @@ class ComposerStaticInit5c034679a27fe2a81fe5578f738ebba7
         'Kit\\Glider\\Events\\Subscribers\\BuildEventsSubscriber' => __DIR__ . '/..' . '/phoxphp/glider/src/Events/Subscribers/BuildEventsSubscriber.php',
         'Kit\\Glider\\Events\\Subscribers\\ConnectionAttemptSubscriber' => __DIR__ . '/..' . '/phoxphp/glider/src/Events/Subscribers/ConnectionAttemptSubscriber.php',
         'Kit\\Glider\\Exceptions\\ConnectionFailedException' => __DIR__ . '/..' . '/phoxphp/glider/src/Exceptions/ConnectionFailedException.php',
+        'Kit\\Glider\\Factory' => __DIR__ . '/..' . '/phoxphp/glider/src/Factory.php',
         'Kit\\Glider\\Platform\\Contract\\PlatformProvider' => __DIR__ . '/..' . '/phoxphp/glider/src/Platform/Contract/PlatformProvider.php',
         'Kit\\Glider\\Platform\\Mysqli\\MysqliProvider' => __DIR__ . '/..' . '/phoxphp/glider/src/Platform/Mysqli/MysqliProvider.php',
         'Kit\\Glider\\Processor\\AbstractProcessorProvider' => __DIR__ . '/..' . '/phoxphp/glider/src/Processor/AbstractProcessorProvider.php',
