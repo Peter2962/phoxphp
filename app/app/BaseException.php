@@ -3,7 +3,7 @@ namespace App;
 
 use Exception;
 use ReflectionClass;
-use Package\View\ArgResolver;
+use Kit\View\ArgResolver;
 
 abstract class BaseException extends Exception
 {
@@ -74,7 +74,9 @@ abstract class BaseException extends Exception
 		(Array) $stringLineArray = [];
 
 		foreach(explode("\n", $string) as $linedString) {
+
 			$stringLineArray[] = $linedString;
+		
 		}
 
 		return $stringLineArray;
@@ -88,9 +90,12 @@ abstract class BaseException extends Exception
 	private function isObject($string='')
 	{
 		$response = false;
+		
 		if (gettype($string) == 'object') {
+		
 			$response = $string;
 		}
+
 		return $response;
 	}
 

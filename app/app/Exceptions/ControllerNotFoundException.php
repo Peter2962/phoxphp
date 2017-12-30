@@ -3,7 +3,8 @@ namespace App\Exceptions;
 
 use App\BaseException;
 
-class ControllerNotFoundException extends BaseException {
+class ControllerNotFoundException extends BaseException
+{
 
 	/**
 	* @var 		$template
@@ -15,7 +16,8 @@ class ControllerNotFoundException extends BaseException {
 	* @param 	$message String
 	* @access 	public
 	*/
-	public function __construct($message='') {
+	public function __construct($message='')
+	{
 		parent::__construct($message);
 	}
 	

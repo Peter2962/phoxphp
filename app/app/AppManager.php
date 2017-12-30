@@ -277,8 +277,11 @@ class AppManager extends InjectorBridge
 					if (config()->get($config) && isArray(config()->get($config))) {
 
 						$configArray = config()->get($config);
+						
 						foreach(array_keys($configArray) as $configKey) {
+
 							putenv($configKey . "=" . $configArray[$configKey]);
+						
 						}
 
 					}

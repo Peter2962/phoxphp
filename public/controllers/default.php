@@ -1,5 +1,5 @@
 <?php
-use Package\Http\Controller;
+use Kit\Http\Controller;
 
 class defaultController extends Controller
 {
@@ -14,7 +14,8 @@ class defaultController extends Controller
 	* @access 	public
 	* @return 	void
 	*/
-	public function index() {
+	public function index()
+	{
 		$this->setVariable('site_url', config('app')->get('app_url'));
 		$this->render('templates/default/index');
 	}
