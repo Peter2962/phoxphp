@@ -136,40 +136,6 @@
         ]
     },
     {
-        "name": "phoxphp/translation",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhoxPHP/Translation.git",
-            "reference": "79e72db2580b6833b0c2ecb5812369fe9e4a1c2d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Translation/zipball/79e72db2580b6833b0c2ecb5812369fe9e4a1c2d",
-            "reference": "79e72db2580b6833b0c2ecb5812369fe9e4a1c2d",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=7.0.6"
-        },
-        "time": "2017-12-30T00:15:15+00:00",
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kit\\Translation\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP Translation Component",
-        "keywords": [
-            "PHP7",
-            "php",
-            "translation"
-        ]
-    },
-    {
         "name": "phoxphp/view",
         "version": "dev-develop",
         "version_normalized": "dev-develop",
@@ -204,24 +170,58 @@
         ]
     },
     {
+        "name": "phoxphp/translation",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/Translation.git",
+            "reference": "feb0b827b255db2cc8572fc88449dc5416e37cd1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/Translation/zipball/feb0b827b255db2cc8572fc88449dc5416e37cd1",
+            "reference": "feb0b827b255db2cc8572fc88449dc5416e37cd1",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.6"
+        },
+        "time": "2017-12-30T01:12:14+00:00",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kit\\Translation\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP Translation Component",
+        "keywords": [
+            "PHP7",
+            "php",
+            "translation"
+        ]
+    },
+    {
         "name": "phoxphp/http",
         "version": "dev-develop",
         "version_normalized": "dev-develop",
         "source": {
             "type": "git",
             "url": "https://github.com/PhoxPHP/Http.git",
-            "reference": "5e072d67ca05fb0e4ce2d03a965fa0f030deaa47"
+            "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/5e072d67ca05fb0e4ce2d03a965fa0f030deaa47",
-            "reference": "5e072d67ca05fb0e4ce2d03a965fa0f030deaa47",
+            "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/823838cb691ce45b08e04d38b2754b6137a1f60f",
+            "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f",
             "shasum": ""
         },
         "require": {
             "php": ">=7.0.6"
         },
-        "time": "2017-12-30T01:01:31+00:00",
+        "time": "2017-12-30T01:01:48+00:00",
         "type": "project",
         "installation-source": "source",
         "autoload": {

@@ -140,12 +140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "5e072d67ca05fb0e4ce2d03a965fa0f030deaa47"
+                "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/5e072d67ca05fb0e4ce2d03a965fa0f030deaa47",
-                "reference": "5e072d67ca05fb0e4ce2d03a965fa0f030deaa47",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/823838cb691ce45b08e04d38b2754b6137a1f60f",
+                "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
                 "http",
                 "php"
             ],
-            "time": "2017-12-30 01:01:31"
+            "time": "2017-12-30 01:01:48"
         },
         {
             "name": "phoxphp/translation",
@@ -172,12 +172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Translation.git",
-                "reference": "79e72db2580b6833b0c2ecb5812369fe9e4a1c2d"
+                "reference": "feb0b827b255db2cc8572fc88449dc5416e37cd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Translation/zipball/79e72db2580b6833b0c2ecb5812369fe9e4a1c2d",
-                "reference": "79e72db2580b6833b0c2ecb5812369fe9e4a1c2d",
+                "url": "https://api.github.com/repos/PhoxPHP/Translation/zipball/feb0b827b255db2cc8572fc88449dc5416e37cd1",
+                "reference": "feb0b827b255db2cc8572fc88449dc5416e37cd1",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +196,7 @@
                 "php",
                 "translation"
             ],
-            "time": "2017-12-30 00:15:15"
+            "time": "2017-12-30 01:12:14"
         },
         {
             "name": "phoxphp/view",

@@ -147,6 +147,7 @@ return array(
     'Kit\\Translation\\Locale\\Interfaces\\MessageInterface' => $vendorDir . '/phoxphp/translation/src/Locale/Interfaces/MessageInterface.php',
     'Kit\\Translation\\Locale\\Interfaces\\ResourceParserInterface' => $vendorDir . '/phoxphp/translation/src/Locale/Interfaces/ResourceParserInterface.php',
     'Kit\\Translation\\Locale\\LocaleManager' => $vendorDir . '/phoxphp/translation/src/Locale/LocaleManager.php',
+    'Kit\\Translation\\Locale\\Message' => $vendorDir . '/phoxphp/translation/src/Locale/Message.php',
     'Kit\\Translation\\Locale\\ResourceParser' => $vendorDir . '/phoxphp/translation/src/Locale/ResourceParser.php',
     'Kit\\View\\ArgResolver' => $vendorDir . '/phoxphp/view/src/ArgResolver.php',
     'Kit\\View\\Engines\\Lite\\Compiler' => $vendorDir . '/phoxphp/view/src/Engines/Lite/Compiler.php',

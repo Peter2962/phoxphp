@@ -200,6 +200,7 @@ class ComposerStaticInit5c034679a27fe2a81fe5578f738ebba7
         'Kit\\Translation\\Locale\\Interfaces\\MessageInterface' => __DIR__ . '/..' . '/phoxphp/translation/src/Locale/Interfaces/MessageInterface.php',
         'Kit\\Translation\\Locale\\Interfaces\\ResourceParserInterface' => __DIR__ . '/..' . '/phoxphp/translation/src/Locale/Interfaces/ResourceParserInterface.php',
         'Kit\\Translation\\Locale\\LocaleManager' => __DIR__ . '/..' . '/phoxphp/translation/src/Locale/LocaleManager.php',
+        'Kit\\Translation\\Locale\\Message' => __DIR__ . '/..' . '/phoxphp/translation/src/Locale/Message.php',
         'Kit\\Translation\\Locale\\ResourceParser' => __DIR__ . '/..' . '/phoxphp/translation/src/Locale/ResourceParser.php',
         'Kit\\View\\ArgResolver' => __DIR__ . '/..' . '/phoxphp/view/src/ArgResolver.php',
         'Kit\\View\\Engines\\Lite\\Compiler' => __DIR__ . '/..' . '/phoxphp/view/src/Engines/Lite/Compiler.php',
