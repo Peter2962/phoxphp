@@ -1,0 +1,252 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5d0336d60334312b14b16294a55a0b02",
+    "packages": [
+        {
+            "name": "phoxphp/cache",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/Cache.git",
+                "reference": "6fadc4b7c71ff497e3cfc01df89ab30a53225e38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/6fadc4b7c71ff497e3cfc01df89ab30a53225e38",
+                "reference": "6fadc4b7c71ff497e3cfc01df89ab30a53225e38",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\Cache\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP Cache Component",
+            "keywords": [
+                "PHP7",
+                "cache",
+                "php"
+            ],
+            "time": "2017-12-29 22:06:18"
+        },
+        {
+            "name": "phoxphp/dependency-injection",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/DependencyInjection.git",
+                "reference": "35817144853ebbca2a6e67ac9dbf585d89a6d612"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/35817144853ebbca2a6e67ac9dbf585d89a6d612",
+                "reference": "35817144853ebbca2a6e67ac9dbf585d89a6d612",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\DependencyInjection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP DependencyInjection Component",
+            "keywords": [
+                "PHP7",
+                "dependencyinjection",
+                "php"
+            ],
+            "time": "2017-12-29 22:24:25"
+        },
+        {
+            "name": "phoxphp/filesystem",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/FileSystem.git",
+                "reference": "5f26b4f8253cf62df83bce9508c23e7961936275"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/5f26b4f8253cf62df83bce9508c23e7961936275",
+                "reference": "5f26b4f8253cf62df83bce9508c23e7961936275",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\FileSystem\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP Filesystem Component",
+            "keywords": [
+                "PHP7",
+                "filesystem",
+                "php"
+            ],
+            "time": "2017-12-29 22:32:56"
+        },
+        {
+            "name": "phoxphp/glider",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/Glider.git",
+                "reference": "9cb2d3431c6bc7f7b4049e250c940b09cc7d8640"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/9cb2d3431c6bc7f7b4049e250c940b09cc7d8640",
+                "reference": "9cb2d3431c6bc7f7b4049e250c940b09cc7d8640",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\Glider\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP Database Component",
+            "keywords": [
+                "PHP7",
+                "database",
+                "php"
+            ],
+            "time": "2017-12-29 22:42:54"
+        },
+        {
+            "name": "phoxphp/http",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/Http.git",
+                "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/823838cb691ce45b08e04d38b2754b6137a1f60f",
+                "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\Http\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP Http Component",
+            "keywords": [
+                "PHP7",
+                "http",
+                "php"
+            ],
+            "time": "2017-12-30 01:01:48"
+        },
+        {
+            "name": "phoxphp/translation",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/Translation.git",
+                "reference": "feb0b827b255db2cc8572fc88449dc5416e37cd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/Translation/zipball/feb0b827b255db2cc8572fc88449dc5416e37cd1",
+                "reference": "feb0b827b255db2cc8572fc88449dc5416e37cd1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\Translation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP Translation Component",
+            "keywords": [
+                "PHP7",
+                "php",
+                "translation"
+            ],
+            "time": "2017-12-30 01:12:14"
+        },
+        {
+            "name": "phoxphp/view",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/View.git",
+                "reference": "62d42cfa66f6420a40a4fc4d0b3640c181747b27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/View/zipball/62d42cfa66f6420a40a4fc4d0b3640c181747b27",
+                "reference": "62d42cfa66f6420a40a4fc4d0b3640c181747b27",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\View\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP View Component",
+            "keywords": [
+                "PHP7",
+                "php",
+                "view"
+            ],
+            "time": "2017-12-30 00:49:55"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "phoxphp/cache": 20,
+        "phoxphp/glider": 20,
+        "phoxphp/filesystem": 20,
+        "phoxphp/http": 20,
+        "phoxphp/translation": 20,
+        "phoxphp/view": 20,
+        "phoxphp/dependency-injection": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.0.1"
+    },
+    "platform-dev": []
+}

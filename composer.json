@@ -1,7 +1,9 @@
 {
 	"name": "PhoxPHP",
 	"description": "PhoxPHP Framework Package",
-	"keywords": ["php", "php7"],
+	"type":"project",
+	"keywords": ["php", "php7", "framework"],
+	"homepage": "https://phoxphp.com",
 	"author": [
 		{
 			"name":"Peter Taiwo",
@@ -11,7 +13,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"PhoxPHP\\": "app/packages/"
+			"App\\": "app/app"
 		}
 	},
 	"config": {
@@ -20,6 +22,13 @@
 		"optimize-autoloader": true
 	},
 	"require": {
-		"phoxphp/glider": "v1.0.0"
+		"phoxphp/cache": "dev-develop",
+		"phoxphp/glider": "dev-develop",
+		"phoxphp/filesystem": "dev-develop",
+		"phoxphp/http": "dev-develop",
+		"phoxphp/translation": "dev-develop",
+		"phoxphp/view": "dev-develop",
+		"phoxphp/dependency-injection": "dev-develop",
+		"php": ">=7.0.1"
 	}
 }

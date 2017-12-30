@@ -6,7 +6,8 @@ namespace App;
 
 use App\AppManager;
 
-class Config {
+class Config
+{
 
 	/**
 	* @var 		$app
@@ -48,18 +49,27 @@ class Config {
 	public function get($config='', $key='')
 	{
 		$path = $this->configPath;
+		
 		if ($this->config !== '') {
+
 			$key = $config;
+			
 			$config = $this->config;
+		
 		}
 
 		if (!file_exists(AppManager::appLibExt($path.$config))) {
+
 			return;
+		
 		}
 		
 		$loadedConfig = include AppManager::appLibExt($path.$config);
+
 		if (gettype($loadedConfig) !== 'array') {
+		
 			return;
+		
 		}
 
 		return ($loadedConfig[$key]) ?? $loadedConfig;

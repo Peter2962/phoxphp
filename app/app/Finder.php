@@ -23,9 +23,10 @@ namespace App;
 *
 */
 
-use Package\FileSystem\File\FileManager;
+use Kit\FileSystem\File\FileManager;
 
-class Finder {
+class Finder
+{
 
 	const DS 	= DIRECTORY_SEPARATOR; 
 
@@ -39,11 +40,14 @@ class Finder {
 	* @access 	public
 	* @return 	void
 	*/
-	public function __construct() {
+	public function __construct()
+	{
 		$file = new FileManager('public/config/finder.php');
 
 		if (!$file->exists()) {
+
 			trigger_error('Unable to load finder file.');
+		
 		}
 
 		$this->finder = include $file->getFile();
@@ -54,7 +58,8 @@ class Finder {
 	* @access 	public
 	* @return 	Mixed
 	*/
-	public function get($path='') {
+	public function get($path='')
+	{
 		return (isset($this->finder[$path])) ? $this->finder[$path] : null;
 	}
 

@@ -30,9 +30,9 @@ namespace App;
 
 use App\Config;
 use View\Manager;
-use Package\View\ArgResolver;
 use App\Service\Container;
-use Package\DependencyInjection\Injector\InjectorBridge;
+use Kit\View\ArgResolver;
+use Kit\DependencyInjection\Injector\InjectorBridge;
 
 class AppManager extends InjectorBridge
 {
@@ -72,6 +72,7 @@ class AppManager extends InjectorBridge
 
 		// loading configured services...
 		include $servicesConfig;
+		
 		register_shutdown_function([$this, 'fatalShutdown']);
 		set_error_handler([$this, 'shutdown'], E_ALL);
 		set_exception_handler([$this, 'exceptionShutdown']);
@@ -167,7 +168,9 @@ class AppManager extends InjectorBridge
 	{
 		$error = @error_get_last();
 		if($error) {
+
 			$this->shutdown($error["type"], $error["message"], $error["file"], $error["line"], count($error));
+
 		}
 	}
 
@@ -192,12 +195,17 @@ class AppManager extends InjectorBridge
 		if (true === boolval($boot)) {
 
 			try {
+				
 				if (boolval(AppManager::$init) == true) {
 					throw new Exception("Application is already running.");
 				}
+
 				AppManager::$init = true;
+
 			}catch(Exception $e) {
+
 				exit($e->getMessage());
+
 			}
 
 			$this->startApplication();
@@ -212,9 +220,11 @@ class AppManager extends InjectorBridge
 	*/
 	private function startApplication()
 	{
-		$router = new \Package\Http\Router\Factory(new \Package\Http\Request\RequestManager());
+
+		$router = new \Kit\Http\Router\Factory(new \Kit\Http\Request\RequestManager());
 		include $this->load('config')->get('app', 'app_routes');
 		$router->run(AppManager::$errors);
+
 	}
 
 	/**
@@ -241,29 +251,43 @@ class AppManager extends InjectorBridge
 	public function configure($configurable, $autoloader)
 	{
 		if ($configurable instanceof Closure) {
+
 			$configurable = call_user_func($configurable, $this->load('config'));
+			
 			if (gettype($configurable) !== 'array') {
 				throw new RuntimeException('Unable to set application configurations');
 			}
 
 			$configurable = (Object) $configurable;
+			
 			if (isset($configurable->sys) && sizeof($configurable->sys) > 0) {
+				
 				array_map(function($k) use ($configurable) {
 					if (!is_numeric($k)) {
 						ini_set($k, $configurable->sys[$k]);
 					}
 				}, array_keys($configurable->sys));
+
 			}
 
 			if (isArray($configurable->env_push)) {
+				
 				array_map(function($config){
+				
 					if (config()->get($config) && isArray(config()->get($config))) {
+
 						$configArray = config()->get($config);
+						
 						foreach(array_keys($configArray) as $configKey) {
+
 							putenv($configKey . "=" . $configArray[$configKey]);
+						
 						}
+
 					}
+				
 				}, $configurable->env_push);
+
 			}
 		}
 

@@ -6,13 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
-    'Package\\View\\' => array($baseDir . '/app/packages/View'),
-    'Package\\Translation\\' => array($baseDir . '/app/packages/Translation/src'),
-    'Package\\Http\\' => array($baseDir . '/app/packages/Http'),
-    'Package\\FileSystem\\' => array($baseDir . '/app/packages/Filesystem'),
-    'Package\\DependencyInjection\\' => array($baseDir . '/app/packages/DependencyInjection/src'),
-    'Package\\Database\\' => array($baseDir . '/app/packages/Database'),
-    'Package\\Cache\\' => array($baseDir . '/app/packages/Cache'),
+    'Kit\\View\\' => array($vendorDir . '/phoxphp/view/src'),
+    'Kit\\Translation\\' => array($vendorDir . '/phoxphp/translation/src'),
+    'Kit\\Http\\' => array($vendorDir . '/phoxphp/http/src'),
+    'Kit\\Glider\\' => array($vendorDir . '/phoxphp/glider/src'),
+    'Kit\\FileSystem\\' => array($vendorDir . '/phoxphp/filesystem/src'),
+    'Kit\\DependencyInjection\\' => array($vendorDir . '/phoxphp/dependency-injection/src'),
+    'Kit\\Cache\\' => array($vendorDir . '/phoxphp/cache/src'),
     'App\\' => array($baseDir . '/app/app'),
-    '' => array($vendorDir . ''),
 );
