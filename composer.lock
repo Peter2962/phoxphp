@@ -108,12 +108,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
-                "reference": "a51db1b9a461c19671168270b3c6813f55a1d7d5"
+                "reference": "f7b96eef78f2dfdffca60f5fba0f6bc368932014"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/a51db1b9a461c19671168270b3c6813f55a1d7d5",
-                "reference": "a51db1b9a461c19671168270b3c6813f55a1d7d5",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/f7b96eef78f2dfdffca60f5fba0f6bc368932014",
+                "reference": "f7b96eef78f2dfdffca60f5fba0f6bc368932014",
                 "shasum": ""
             },
             "require": {
@@ -132,7 +132,7 @@
                 "database",
                 "php"
             ],
-            "time": "2018-01-05 08:47:33"
+            "time": "2018-01-05 08:50:00"
         },
         {
             "name": "phoxphp/http",
@@ -204,12 +204,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/View.git",
-                "reference": "62d42cfa66f6420a40a4fc4d0b3640c181747b27"
+                "reference": "06dd1ee8ac437b707b3e03175630f23948e02b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/View/zipball/62d42cfa66f6420a40a4fc4d0b3640c181747b27",
-                "reference": "62d42cfa66f6420a40a4fc4d0b3640c181747b27",
+                "url": "https://api.github.com/repos/PhoxPHP/View/zipball/06dd1ee8ac437b707b3e03175630f23948e02b94",
+                "reference": "06dd1ee8ac437b707b3e03175630f23948e02b94",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +228,7 @@
                 "php",
                 "view"
             ],
-            "time": "2017-12-30 00:49:55"
+            "time": "2018-01-05 20:15:28"
         }
     ],
     "packages-dev": [],
