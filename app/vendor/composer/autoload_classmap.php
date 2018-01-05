@@ -81,6 +81,8 @@ return array(
     'Kit\\Glider\\Result\\ResultMapper' => $vendorDir . '/phoxphp/glider/src/Result/ResultMapper.php',
     'Kit\\Glider\\Schema\\Column' => $vendorDir . '/phoxphp/glider/src/Schema/Column.php',
     'Kit\\Glider\\Schema\\Column\\Index' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Index.php',
+    'Kit\\Glider\\Schema\\Column\\Index\\Contract\\IndexContract' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Index/Contract/IndexContract.php',
+    'Kit\\Glider\\Schema\\Column\\Index\\MysqliIndex' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Index/MysqliIndex.php',
     'Kit\\Glider\\Schema\\Column\\Type' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Type.php',
     'Kit\\Glider\\Schema\\Column\\Type\\BaseType' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Type/BaseType.php',
     'Kit\\Glider\\Schema\\Column\\Type\\BigInt' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Type/BigInt.php',

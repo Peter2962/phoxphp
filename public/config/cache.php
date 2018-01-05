@@ -17,12 +17,12 @@ return [
 	#################################
 	# Cache driver 					#
 	#################################
-	'driver' => \Package\Cache\Drivers\File::class,
+	'driver' => \Kit\Cache\Drivers\File::class,
 
 	#################################
 	# Cache driver interface 		#
 	#################################
-	'driver_interface' => \Package\Cache\Interfaces\DriverInterface::class,
+	'driver_interface' => \Kit\Cache\Interfaces\DriverInterface::class,
 
 	#################################
 	# Cache duration period(in seconds)#

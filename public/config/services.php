@@ -1,7 +1,7 @@
 <?php
 #####################################################################################
 # Application services configuration file. All your services should be placed in here.
-# Do not change the variable {$app} as this is being used by the core app object.
+# Do not change the variable `$service` as this is being used by the core app object.
 #####################################################################################
 
 $service->register('cache', Kit\Cache\CacheManager::class);
