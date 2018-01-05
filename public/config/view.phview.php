@@ -14,6 +14,6 @@ return [
 	##########################
 	# Template files directory
 	##########################
-	'repository_directory' => 'public/views/'
+	'repository_directory' => dirname(__DIR__) . '/views/'
 
 ];
