@@ -17,7 +17,7 @@ class defaultController extends Controller
 	public function index()
 	{
 		$this->setVariable('site_url', config('app')->get('app_url'));
-		$this->render('templates/default/index');
+		$this->render('default', 'default');
 	}
 
 }
