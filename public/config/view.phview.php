@@ -14,6 +14,6 @@ return [
 	##########################
 	# Template files directory
 	##########################
-	'repository_directory' => 'public/views/phview/'
+	'repository_directory' => 'public/views/'
 
 ];
