@@ -79,7 +79,6 @@ return array(
     'Kit\\Glider\\Result\\Platforms\\MysqliResult' => $vendorDir . '/phoxphp/glider/src/Result/Platforms/MysqliResult.php',
     'Kit\\Glider\\Result\\ResultMapper' => $vendorDir . '/phoxphp/glider/src/Result/ResultMapper.php',
     'Kit\\Glider\\Schema\\Column\\Contract\\ColumnContract' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Contract/ColumnContract.php',
-    'Kit\\Glider\\Schema\\Column\\Index' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Index.php',
     'Kit\\Glider\\Schema\\Column\\Index\\Contract\\IndexContract' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Index/Contract/IndexContract.php',
     'Kit\\Glider\\Schema\\Column\\Index\\MysqliIndex' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Index/MysqliIndex.php',
     'Kit\\Glider\\Schema\\Column\\Platform\\MysqliColumn' => $vendorDir . '/phoxphp/glider/src/Schema/Column/Platform/MysqliColumn.php',

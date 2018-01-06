@@ -132,7 +132,6 @@ class ComposerStaticInit5c034679a27fe2a81fe5578f738ebba7
         'Kit\\Glider\\Result\\Platforms\\MysqliResult' => __DIR__ . '/..' . '/phoxphp/glider/src/Result/Platforms/MysqliResult.php',
         'Kit\\Glider\\Result\\ResultMapper' => __DIR__ . '/..' . '/phoxphp/glider/src/Result/ResultMapper.php',
         'Kit\\Glider\\Schema\\Column\\Contract\\ColumnContract' => __DIR__ . '/..' . '/phoxphp/glider/src/Schema/Column/Contract/ColumnContract.php',
-        'Kit\\Glider\\Schema\\Column\\Index' => __DIR__ . '/..' . '/phoxphp/glider/src/Schema/Column/Index.php',
         'Kit\\Glider\\Schema\\Column\\Index\\Contract\\IndexContract' => __DIR__ . '/..' . '/phoxphp/glider/src/Schema/Column/Index/Contract/IndexContract.php',
         'Kit\\Glider\\Schema\\Column\\Index\\MysqliIndex' => __DIR__ . '/..' . '/phoxphp/glider/src/Schema/Column/Index/MysqliIndex.php',
         'Kit\\Glider\\Schema\\Column\\Platform\\MysqliColumn' => __DIR__ . '/..' . '/phoxphp/glider/src/Schema/Column/Platform/MysqliColumn.php',
