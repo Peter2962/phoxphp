@@ -17,7 +17,7 @@ return [
 	#################################
 	# Cache driver interface 		#
 	#################################
-	'driver_interface' => \Kit\Cache\Interfaces\DriverInterface::class,
+	'driver_interface' => \Kit\Cache\Contract\CacheDriverContract::class,
 
 	#################################
 	# Cache duration period(in seconds)#

@@ -210,18 +210,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/PhoxPHP/Cache.git",
-            "reference": "bbc869f6cc0b1fe32517e735ee0abb3aeb1f1dc9"
+            "reference": "c27f29957d30d3bbaf0f4bfcd7420eeb6b8942c5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/bbc869f6cc0b1fe32517e735ee0abb3aeb1f1dc9",
-            "reference": "bbc869f6cc0b1fe32517e735ee0abb3aeb1f1dc9",
+            "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/c27f29957d30d3bbaf0f4bfcd7420eeb6b8942c5",
+            "reference": "c27f29957d30d3bbaf0f4bfcd7420eeb6b8942c5",
             "shasum": ""
         },
         "require": {
             "php": ">=7.0.6"
         },
-        "time": "2018-01-08T22:15:11+00:00",
+        "time": "2018-01-08T22:22:24+00:00",
         "type": "project",
         "installation-source": "source",
         "autoload": {
