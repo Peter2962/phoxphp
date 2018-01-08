@@ -22,7 +22,7 @@
 		"optimize-autoloader": true
 	},
 	"require": {
-		"phoxphp/cache": "dev-develop",
+		"phoxphp/cache": "v1.0.0",
 		"phoxphp/glider": "dev-develop",
 		"phoxphp/filesystem": "dev-develop",
 		"phoxphp/http": "dev-develop",
