@@ -12,15 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Cache.git",
-                "reference": "c27f29957d30d3bbaf0f4bfcd7420eeb6b8942c5"
+                "reference": "ee8960f6c135a5ba591f306636f32d4d5829f809"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/c27f29957d30d3bbaf0f4bfcd7420eeb6b8942c5",
-                "reference": "c27f29957d30d3bbaf0f4bfcd7420eeb6b8942c5",
+                "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/ee8960f6c135a5ba591f306636f32d4d5829f809",
+                "reference": "ee8960f6c135a5ba591f306636f32d4d5829f809",
                 "shasum": ""
             },
             "require": {
+                "phoxphp/filesystem": "dev-develop",
                 "php": ">=7.0.6"
             },
             "type": "project",
@@ -36,7 +37,7 @@
                 "cache",
                 "php"
             ],
-            "time": "2018-01-08 22:22:24"
+            "time": "2018-01-08 22:40:51"
         },
         {
             "name": "phoxphp/dependency-injection",

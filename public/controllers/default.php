@@ -16,8 +16,6 @@ class defaultController extends Controller
 	*/
 	public function index()
 	{
-		$cache = app()->load('cache');
-		
 		$this->setVariable('site_url', config('app')->get('app_url'));
 		$this->render('default', 'default');
 	}

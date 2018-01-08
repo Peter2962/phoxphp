@@ -27,6 +27,6 @@ return [
 	#################################
 	# Cache storage location 		#
 	#################################
-	'storage' => 'storage/cache/'
+	'storage' => 'app/storage/cache/'
 
 ];
