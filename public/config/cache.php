@@ -10,11 +10,6 @@ return [
 	'enabled' => 1,
 
 	#################################
-	# Cache driver namespace 		#
-	#################################	
-	'namespace' => 'Cache\\Driver\\',
-
-	#################################
 	# Cache driver 					#
 	#################################
 	'driver' => \Kit\Cache\Drivers\File::class,
