@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "phoxphp/cache",
-            "version": "v1.0",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Cache.git",
-                "reference": "1f6565a13238608ca651287bc9ef8ebff744c024"
+                "reference": "95dcaa2cb29ac08d995b98ca0a1ec50133115b2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/1f6565a13238608ca651287bc9ef8ebff744c024",
-                "reference": "1f6565a13238608ca651287bc9ef8ebff744c024",
+                "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/95dcaa2cb29ac08d995b98ca0a1ec50133115b2b",
+                "reference": "95dcaa2cb29ac08d995b98ca0a1ec50133115b2b",
                 "shasum": ""
             },
             "require": {
@@ -37,7 +37,7 @@
                 "cache",
                 "php"
             ],
-            "time": "2018-01-08T23:15:26+00:00"
+            "time": "2018-01-09T05:38:35+00:00"
         },
         {
             "name": "phoxphp/dependency-injection",
