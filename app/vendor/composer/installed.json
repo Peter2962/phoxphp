@@ -34,40 +34,6 @@
         ]
     },
     {
-        "name": "phoxphp/filesystem",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhoxPHP/FileSystem.git",
-            "reference": "5f26b4f8253cf62df83bce9508c23e7961936275"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/5f26b4f8253cf62df83bce9508c23e7961936275",
-            "reference": "5f26b4f8253cf62df83bce9508c23e7961936275",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=7.0.6"
-        },
-        "time": "2017-12-29T22:32:56+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kit\\FileSystem\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP Filesystem Component",
-        "keywords": [
-            "PHP7",
-            "filesystem",
-            "php"
-        ]
-    },
-    {
         "name": "phoxphp/translation",
         "version": "dev-develop",
         "version_normalized": "dev-develop",
@@ -235,6 +201,40 @@
         "keywords": [
             "PHP7",
             "cache",
+            "php"
+        ]
+    },
+    {
+        "name": "phoxphp/filesystem",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/FileSystem.git",
+            "reference": "85c2bc58ce84cc95e82f9d6f96f411504db13028"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/85c2bc58ce84cc95e82f9d6f96f411504db13028",
+            "reference": "85c2bc58ce84cc95e82f9d6f96f411504db13028",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.6"
+        },
+        "time": "2018-01-11T16:19:03+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kit\\FileSystem\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP Filesystem Component",
+        "keywords": [
+            "PHP7",
+            "filesystem",
             "php"
         ]
     }

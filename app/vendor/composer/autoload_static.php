@@ -89,7 +89,7 @@ class ComposerStaticInit5c034679a27fe2a81fe5578f738ebba7
         'Kit\\FileSystem\\File\\Reader' => __DIR__ . '/..' . '/phoxphp/filesystem/src/File/Reader.php',
         'Kit\\FileSystem\\File\\Writer' => __DIR__ . '/..' . '/phoxphp/filesystem/src/File/Writer.php',
         'Kit\\FileSystem\\Manager' => __DIR__ . '/..' . '/phoxphp/filesystem/src/Manager.php',
-        'Kit\\FileSystem\\Permission\\Interfaces\\Permittable' => __DIR__ . '/..' . '/phoxphp/filesystem/src/Permission/interfaces/Permittable.php',
+        'Kit\\FileSystem\\Permission\\Contracts\\Permittable' => __DIR__ . '/..' . '/phoxphp/filesystem/src/Permission/Contracts/Permittable.php',
         'Kit\\FileSystem\\Permission\\PermissionMaker' => __DIR__ . '/..' . '/phoxphp/filesystem/src/Permission/PermissionMaker.php',
         'Kit\\Glider\\ClassLoader' => __DIR__ . '/..' . '/phoxphp/glider/src/ClassLoader.php',
         'Kit\\Glider\\Configurator' => __DIR__ . '/..' . '/phoxphp/glider/src/Configurator.php',

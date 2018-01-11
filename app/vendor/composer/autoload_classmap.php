@@ -36,7 +36,7 @@ return array(
     'Kit\\FileSystem\\File\\Reader' => $vendorDir . '/phoxphp/filesystem/src/File/Reader.php',
     'Kit\\FileSystem\\File\\Writer' => $vendorDir . '/phoxphp/filesystem/src/File/Writer.php',
     'Kit\\FileSystem\\Manager' => $vendorDir . '/phoxphp/filesystem/src/Manager.php',
-    'Kit\\FileSystem\\Permission\\Interfaces\\Permittable' => $vendorDir . '/phoxphp/filesystem/src/Permission/interfaces/Permittable.php',
+    'Kit\\FileSystem\\Permission\\Contracts\\Permittable' => $vendorDir . '/phoxphp/filesystem/src/Permission/Contracts/Permittable.php',
     'Kit\\FileSystem\\Permission\\PermissionMaker' => $vendorDir . '/phoxphp/filesystem/src/Permission/PermissionMaker.php',
     'Kit\\Glider\\ClassLoader' => $vendorDir . '/phoxphp/glider/src/ClassLoader.php',
     'Kit\\Glider\\Configurator' => $vendorDir . '/phoxphp/glider/src/Configurator.php',

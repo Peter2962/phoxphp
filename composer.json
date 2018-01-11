@@ -29,6 +29,7 @@
 		"phoxphp/translation": "dev-develop",
 		"phoxphp/view": "dev-develop",
 		"phoxphp/dependency-injection": "dev-develop",
+		"phoxphp/log": "dev-develop",
 		"php": ">=7.0.1"
 	}
 }
