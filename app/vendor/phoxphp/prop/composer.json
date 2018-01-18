@@ -1,0 +1,19 @@
+{
+	"name": "phoxphp/prop",
+	"description": "PhoxPHP Support Packages",
+	"keywords": ["php", "php7", "support"],
+	"author": [
+		{
+			"name": "Peter Taiwo",
+			"email": "taiwopeter35@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7.0.6"
+	},
+	"autoload": {
+		"psr-4": {
+			"Kit\\Prop\\": "src"
+		}
+	}
+}

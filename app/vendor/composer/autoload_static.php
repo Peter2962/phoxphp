@@ -11,6 +11,8 @@ class ComposerStaticInit5c034679a27fe2a81fe5578f738ebba7
         array (
             'Kit\\View\\' => 9,
             'Kit\\Translation\\' => 16,
+            'Kit\\Prop\\' => 9,
+            'Kit\\Log\\' => 8,
             'Kit\\Http\\' => 9,
             'Kit\\Glider\\' => 11,
             'Kit\\FileSystem\\' => 15,
@@ -31,6 +33,14 @@ class ComposerStaticInit5c034679a27fe2a81fe5578f738ebba7
         'Kit\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/phoxphp/translation/src',
+        ),
+        'Kit\\Prop\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phoxphp/prop/src',
+        ),
+        'Kit\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phoxphp/log/src',
         ),
         'Kit\\Http\\' => 
         array (
@@ -195,6 +205,13 @@ class ComposerStaticInit5c034679a27fe2a81fe5578f738ebba7
         'Kit\\Http\\Session\\Drivers\\NativeDriver' => __DIR__ . '/..' . '/phoxphp/http/src/Session/Drivers/NativeDriver.php',
         'Kit\\Http\\Session\\Drivers\\NativeDriverCommand' => __DIR__ . '/..' . '/phoxphp/http/src/Session/Drivers/NativeDriver.php',
         'Kit\\Http\\Session\\Factory' => __DIR__ . '/..' . '/phoxphp/http/src/Session/Factory.php',
+        'Kit\\Log\\Adapters\\FileLogger' => __DIR__ . '/..' . '/phoxphp/log/src/Adapters/FileLogger.php',
+        'Kit\\Log\\Contract\\LogContract' => __DIR__ . '/..' . '/phoxphp/log/src/Contract/LogContract.php',
+        'Kit\\Log\\Formats\\Contract\\AbstractFormatContract' => __DIR__ . '/..' . '/phoxphp/log/src/Formats/Contract/AbstractFormatContract.php',
+        'Kit\\Log\\Formats\\JsonFormat' => __DIR__ . '/..' . '/phoxphp/log/src/Formats/JsonFormat.php',
+        'Kit\\Log\\Formats\\TextFormat' => __DIR__ . '/..' . '/phoxphp/log/src/Formats/TextFormat.php',
+        'Kit\\Log\\Logger' => __DIR__ . '/..' . '/phoxphp/log/src/Logger.php',
+        'Kit\\Prop\\ClassLoader' => __DIR__ . '/..' . '/phoxphp/prop/src/ClassLoader.php',
         'Kit\\Translation\\Exceptions\\BadConfigurationSourceException' => __DIR__ . '/..' . '/phoxphp/translation/src/Exceptions/BadConfigurationSourceException.php',
         'Kit\\Translation\\Exceptions\\MissingParameterException' => __DIR__ . '/..' . '/phoxphp/translation/src/Exceptions/MissingParameterException.php',
         'Kit\\Translation\\Exceptions\\ResourceNotFoundException' => __DIR__ . '/..' . '/phoxphp/translation/src/Exceptions/ResourceNotFoundException.php',

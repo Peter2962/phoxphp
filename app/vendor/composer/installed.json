@@ -170,27 +170,60 @@
         ]
     },
     {
-        "name": "phoxphp/cache",
+        "name": "phoxphp/filesystem",
         "version": "v1.0.0",
         "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/PhoxPHP/Cache.git",
-            "reference": "95dcaa2cb29ac08d995b98ca0a1ec50133115b2b"
+            "url": "https://github.com/PhoxPHP/FileSystem.git",
+            "reference": "06e6e84b75655f0be0feacfe282cab1490ba7409"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/95dcaa2cb29ac08d995b98ca0a1ec50133115b2b",
-            "reference": "95dcaa2cb29ac08d995b98ca0a1ec50133115b2b",
+            "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/06e6e84b75655f0be0feacfe282cab1490ba7409",
+            "reference": "06e6e84b75655f0be0feacfe282cab1490ba7409",
             "shasum": ""
         },
         "require": {
-            "phoxphp/filesystem": "dev-develop",
             "php": ">=7.0.6"
         },
-        "time": "2018-01-09T05:38:35+00:00",
-        "type": "project",
+        "time": "2018-01-18T11:20:44+00:00",
+        "type": "library",
         "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kit\\FileSystem\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP Filesystem Component",
+        "keywords": [
+            "PHP7",
+            "filesystem",
+            "php"
+        ]
+    },
+    {
+        "name": "phoxphp/cache",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/Cache.git",
+            "reference": "1d216b038867c23687db12842258d4e729d54fa5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/1d216b038867c23687db12842258d4e729d54fa5",
+            "reference": "1d216b038867c23687db12842258d4e729d54fa5",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.6"
+        },
+        "time": "2018-01-18T16:58:33+00:00",
+        "type": "project",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Kit\\Cache\\": "src"
@@ -205,36 +238,72 @@
         ]
     },
     {
-        "name": "phoxphp/filesystem",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
+        "name": "phoxphp/prop",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/PhoxPHP/FileSystem.git",
-            "reference": "85c2bc58ce84cc95e82f9d6f96f411504db13028"
+            "url": "https://github.com/PhoxPHP/Prop.git",
+            "reference": "9589eaa20acf7f00c0a910f025d59d37105ecf71"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/85c2bc58ce84cc95e82f9d6f96f411504db13028",
-            "reference": "85c2bc58ce84cc95e82f9d6f96f411504db13028",
+            "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/9589eaa20acf7f00c0a910f025d59d37105ecf71",
+            "reference": "9589eaa20acf7f00c0a910f025d59d37105ecf71",
             "shasum": ""
         },
         "require": {
             "php": ">=7.0.6"
         },
-        "time": "2018-01-11T16:19:03+00:00",
+        "time": "2018-01-17T18:38:16+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Kit\\Prop\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP Support Packages",
+        "keywords": [
+            "PHP7",
+            "php",
+            "support"
+        ]
+    },
+    {
+        "name": "phoxphp/log",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/Log.git",
+            "reference": "272e9c64a3bfd020f02db71898f86d7b077ecd0e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/272e9c64a3bfd020f02db71898f86d7b077ecd0e",
+            "reference": "272e9c64a3bfd020f02db71898f86d7b077ecd0e",
+            "shasum": ""
+        },
+        "require": {
+            "phoxphp/filesystem": "~1.0.0",
+            "phoxphp/prop": "~1.0.0",
+            "php": ">=7.0.6"
+        },
+        "time": "2018-01-18T21:23:36+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {
             "psr-4": {
-                "Kit\\FileSystem\\": "src"
+                "Kit\\Log\\": "src"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP Filesystem Component",
+        "description": "PhoxPHP Log Component",
         "keywords": [
             "PHP7",
-            "filesystem",
+            "log",
             "php"
         ]
     }
