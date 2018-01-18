@@ -22,14 +22,16 @@
 		"optimize-autoloader": true
 	},
 	"require": {
-		"phoxphp/cache": "v1.0.0",
+		"phoxphp/cache": "^1.0.1",
 		"phoxphp/glider": "dev-develop",
-		"phoxphp/filesystem": "dev-develop",
+		"phoxphp/filesystem": "^1.0.0",
 		"phoxphp/http": "dev-develop",
 		"phoxphp/translation": "dev-develop",
 		"phoxphp/view": "dev-develop",
 		"phoxphp/dependency-injection": "dev-develop",
-		"phoxphp/log": "dev-develop",
+		"phoxphp/log": "dev-master",
 		"php": ">=7.0.1"
-	}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }

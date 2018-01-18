@@ -4,24 +4,23 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0243d9d3a62c4a90d94aa8510beeb0ce",
+    "content-hash": "87710f9ef995c5b822125d6f6f790fd8",
     "packages": [
         {
             "name": "phoxphp/cache",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Cache.git",
-                "reference": "95dcaa2cb29ac08d995b98ca0a1ec50133115b2b"
+                "reference": "1d216b038867c23687db12842258d4e729d54fa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/95dcaa2cb29ac08d995b98ca0a1ec50133115b2b",
-                "reference": "95dcaa2cb29ac08d995b98ca0a1ec50133115b2b",
+                "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/1d216b038867c23687db12842258d4e729d54fa5",
+                "reference": "1d216b038867c23687db12842258d4e729d54fa5",
                 "shasum": ""
             },
             "require": {
-                "phoxphp/filesystem": "dev-develop",
                 "php": ">=7.0.6"
             },
             "type": "project",
@@ -37,7 +36,7 @@
                 "cache",
                 "php"
             ],
-            "time": "2018-01-09T05:38:35+00:00"
+            "time": "2018-01-18T16:58:33+00:00"
         },
         {
             "name": "phoxphp/dependency-injection",
@@ -73,16 +72,16 @@
         },
         {
             "name": "phoxphp/filesystem",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/FileSystem.git",
-                "reference": "85c2bc58ce84cc95e82f9d6f96f411504db13028"
+                "reference": "06e6e84b75655f0be0feacfe282cab1490ba7409"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/85c2bc58ce84cc95e82f9d6f96f411504db13028",
-                "reference": "85c2bc58ce84cc95e82f9d6f96f411504db13028",
+                "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/06e6e84b75655f0be0feacfe282cab1490ba7409",
+                "reference": "06e6e84b75655f0be0feacfe282cab1490ba7409",
                 "shasum": ""
             },
             "require": {
@@ -101,7 +100,7 @@
                 "filesystem",
                 "php"
             ],
-            "time": "2018-01-11 16:19:03"
+            "time": "2018-01-18T11:20:44+00:00"
         },
         {
             "name": "phoxphp/glider",
@@ -166,6 +165,72 @@
                 "php"
             ],
             "time": "2017-12-30 01:01:48"
+        },
+        {
+            "name": "phoxphp/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/Log.git",
+                "reference": "272e9c64a3bfd020f02db71898f86d7b077ecd0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/272e9c64a3bfd020f02db71898f86d7b077ecd0e",
+                "reference": "272e9c64a3bfd020f02db71898f86d7b077ecd0e",
+                "shasum": ""
+            },
+            "require": {
+                "phoxphp/filesystem": "~1.0.0",
+                "phoxphp/prop": "~1.0.0",
+                "php": ">=7.0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\Log\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP Log Component",
+            "keywords": [
+                "PHP7",
+                "log",
+                "php"
+            ],
+            "time": "2018-01-18 21:23:36"
+        },
+        {
+            "name": "phoxphp/prop",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/Prop.git",
+                "reference": "9589eaa20acf7f00c0a910f025d59d37105ecf71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/9589eaa20acf7f00c0a910f025d59d37105ecf71",
+                "reference": "9589eaa20acf7f00c0a910f025d59d37105ecf71",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\Prop\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP Support Packages",
+            "keywords": [
+                "PHP7",
+                "php",
+                "support"
+            ],
+            "time": "2018-01-17T18:38:16+00:00"
         },
         {
             "name": "phoxphp/translation",
@@ -234,16 +299,16 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "phoxphp/glider": 20,
-        "phoxphp/filesystem": 20,
         "phoxphp/http": 20,
         "phoxphp/translation": 20,
         "phoxphp/view": 20,
-        "phoxphp/dependency-injection": 20
+        "phoxphp/dependency-injection": 20,
+        "phoxphp/log": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.0.1"
