@@ -280,18 +280,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/PhoxPHP/DependencyInjection.git",
-            "reference": "8b411bd958dff2b93dfd05673b79ffb4266f3019"
+            "reference": "c556e8bde9210e1dca6b755bd93e23a3f009f9a9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/8b411bd958dff2b93dfd05673b79ffb4266f3019",
-            "reference": "8b411bd958dff2b93dfd05673b79ffb4266f3019",
+            "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/c556e8bde9210e1dca6b755bd93e23a3f009f9a9",
+            "reference": "c556e8bde9210e1dca6b755bd93e23a3f009f9a9",
             "shasum": ""
         },
         "require": {
             "php": ">=7.0.6"
         },
-        "time": "2018-01-19T19:05:34+00:00",
+        "time": "2018-01-19T20:00:53+00:00",
         "type": "project",
         "installation-source": "source",
         "autoload": {
