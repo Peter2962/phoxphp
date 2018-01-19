@@ -21,12 +21,13 @@
 */
 
 define('DS', DIRECTORY_SEPARATOR);
-define('BOOTSTRAP', 'app'.DS.'bootstrap.php');
-define('AUTOLOADER', 'app'.DS.'autoloader'.DS.'autoload.php');
+define('BOOTSTRAP', 'app' . DS . 'bootstrap.php');
+define('AUTOLOADER', 'app' . DS . 'autoloader' . DS . 'autoload.php');
 
 if(file_exists(BOOTSTRAP)){
 	require(BOOTSTRAP);
 }else{
+	echo 'Unable to load bootstrap file ' . BOOTSTRAP;
 	if(function_exists("http_response_code")){
 		http_response_code(500);
 		exit;

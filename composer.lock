@@ -44,12 +44,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/DependencyInjection.git",
-                "reference": "35817144853ebbca2a6e67ac9dbf585d89a6d612"
+                "reference": "65621b76c02da724a2a3406eeb7572e9e1252957"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/35817144853ebbca2a6e67ac9dbf585d89a6d612",
-                "reference": "35817144853ebbca2a6e67ac9dbf585d89a6d612",
+                "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/65621b76c02da724a2a3406eeb7572e9e1252957",
+                "reference": "65621b76c02da724a2a3406eeb7572e9e1252957",
                 "shasum": ""
             },
             "require": {
@@ -68,7 +68,7 @@
                 "dependencyinjection",
                 "php"
             ],
-            "time": "2017-12-29 22:24:25"
+            "time": "2018-01-19 19:05:21"
         },
         {
             "name": "phoxphp/filesystem",
@@ -140,12 +140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "31627fe14dd0892a4a5a83e6f5ae5489ad2ea6ea"
+                "reference": "dd2e4c389b4791809c38edd01d5298f431313e88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/31627fe14dd0892a4a5a83e6f5ae5489ad2ea6ea",
-                "reference": "31627fe14dd0892a4a5a83e6f5ae5489ad2ea6ea",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/dd2e4c389b4791809c38edd01d5298f431313e88",
+                "reference": "dd2e4c389b4791809c38edd01d5298f431313e88",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-01-19 16:47:03"
+            "time": "2018-01-19 16:48:00"
         },
         {
             "name": "phoxphp/log",
