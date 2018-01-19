@@ -1,11 +1,11 @@
 [
 	{
 		"type": "repo",
-		"lib": "public\\controllers"
+		"lib": "public/controllers"
 	},
 	{
 		"type": "repo",
-		"lib": "public\\models",
+		"lib": "public/models",
 		"except": ["empty"] 
 	}
 ]

@@ -43,10 +43,11 @@ class Config
 	*
 	* @param 	$config <String>
 	* @param 	$key <String>
+	* @param 	$parameters <Array>
 	* @access 	public
 	* @return 	Mixed
 	*/
-	public function get($config='', $key='')
+	public function get($config='', $key='', Array $parameters=[])
 	{
 		$path = $this->configPath;
 		
@@ -58,13 +59,23 @@ class Config
 		
 		}
 
-		if (!file_exists(AppManager::appLibExt($path.$config))) {
+		if (!file_exists(AppManager::appLibExt($path . $config))) {
 
 			return;
 		
 		}
+
+		if (sizeof(array_keys($parameters)) > 0) {
+
+			foreach(array_keys($parameters) as $key) {
+
+				$$key = $parameters[$key];
+
+			}
+
+		}
 		
-		$loadedConfig = include AppManager::appLibExt($path.$config);
+		$loadedConfig = include AppManager::appLibExt($path . $config);
 
 		if (gettype($loadedConfig) !== 'array') {
 		
