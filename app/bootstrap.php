@@ -1,7 +1,7 @@
 <?php
 use App\AppManager;
 
-include 'App\Helper.php';
+include 'app/Helper.php';
 
 #################################
 # Load packages via composer.
