@@ -39,11 +39,11 @@ return [
 	# Few parts of the framework reacts differently to the mode set.
 	# Accepts [dev] or [production]
 	################################################################
-	'devMode' => 'dev',
+	'devMode' => 'production',
 
 	##################################
 	# Message to return if the devMode
 	# is set to production.
 	##################################
-	'production_error_message' => 'Not sure what happened. Please try again.'
+	'production_error_message' => 'Site not available'
 ];

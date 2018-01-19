@@ -1,5 +1,5 @@
 {
-	"name": "PhoxPHP",
+	"name": "phoxphp/phoxphp",
 	"description": "PhoxPHP Framework Package",
 	"type":"project",
 	"keywords": ["php", "php7", "framework"],
