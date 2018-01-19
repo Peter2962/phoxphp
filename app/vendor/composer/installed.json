@@ -68,40 +68,6 @@
         ]
     },
     {
-        "name": "phoxphp/http",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhoxPHP/Http.git",
-            "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/823838cb691ce45b08e04d38b2754b6137a1f60f",
-            "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=7.0.6"
-        },
-        "time": "2017-12-30T01:01:48+00:00",
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kit\\Http\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP Http Component",
-        "keywords": [
-            "PHP7",
-            "http",
-            "php"
-        ]
-    },
-    {
         "name": "phoxphp/view",
         "version": "dev-develop",
         "version_normalized": "dev-develop",
@@ -272,18 +238,52 @@
         ]
     },
     {
+        "name": "phoxphp/http",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/Http.git",
+            "reference": "31627fe14dd0892a4a5a83e6f5ae5489ad2ea6ea"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/31627fe14dd0892a4a5a83e6f5ae5489ad2ea6ea",
+            "reference": "31627fe14dd0892a4a5a83e6f5ae5489ad2ea6ea",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.6"
+        },
+        "time": "2018-01-19T16:47:03+00:00",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kit\\Http\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP Http Component",
+        "keywords": [
+            "PHP7",
+            "http",
+            "php"
+        ]
+    },
+    {
         "name": "phoxphp/log",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/PhoxPHP/Log.git",
-            "reference": "272e9c64a3bfd020f02db71898f86d7b077ecd0e"
+            "reference": "0e34659f05a9c8dcb51b76765d74e7da9c06798c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/272e9c64a3bfd020f02db71898f86d7b077ecd0e",
-            "reference": "272e9c64a3bfd020f02db71898f86d7b077ecd0e",
+            "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/0e34659f05a9c8dcb51b76765d74e7da9c06798c",
+            "reference": "0e34659f05a9c8dcb51b76765d74e7da9c06798c",
             "shasum": ""
         },
         "require": {
@@ -291,7 +291,7 @@
             "phoxphp/prop": "~1.0.0",
             "php": ">=7.0.6"
         },
-        "time": "2018-01-18T21:23:36+00:00",
+        "time": "2018-01-19T07:42:05+00:00",
         "type": "library",
         "installation-source": "source",
         "autoload": {

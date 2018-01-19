@@ -29,26 +29,27 @@ abstract class BaseException extends Exception
 	protected 	$name;
 
 	/**
-	* @param 	$message <String>
 	* @access 	public
 	* @return 	void
 	*/
-	public function __construct($message='')
+	public function __construct()
 	{
-		$message = $message;
+		$message = $this->getExceptionMessage();
 		$line = $this->getLine();
+
 		$name = $this->getExceptionClass();
 		$file = $this->getFile();
-		$template = $this->template;
+
+		$template = $this->getView();
 		$finder = new Finder();
 
 		$response = app()->load('response');
 		$devMode = config('app')->get('devMode');
+
 		$productionMessage = config('app')->get('production_error_message');
-		$response->setResponseCode($this->code);
+		$response->setResponseCode($this->getExceptionCode());
 
-		$templatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates').$template);
-
+		$templatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates'). $template);
 		include $templatePath;
 
 		exit;

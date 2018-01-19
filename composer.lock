@@ -140,12 +140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f"
+                "reference": "31627fe14dd0892a4a5a83e6f5ae5489ad2ea6ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/823838cb691ce45b08e04d38b2754b6137a1f60f",
-                "reference": "823838cb691ce45b08e04d38b2754b6137a1f60f",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/31627fe14dd0892a4a5a83e6f5ae5489ad2ea6ea",
+                "reference": "31627fe14dd0892a4a5a83e6f5ae5489ad2ea6ea",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
                 "http",
                 "php"
             ],
-            "time": "2017-12-30 01:01:48"
+            "time": "2018-01-19 16:47:03"
         },
         {
             "name": "phoxphp/log",
@@ -172,12 +172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Log.git",
-                "reference": "272e9c64a3bfd020f02db71898f86d7b077ecd0e"
+                "reference": "0e34659f05a9c8dcb51b76765d74e7da9c06798c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/272e9c64a3bfd020f02db71898f86d7b077ecd0e",
-                "reference": "272e9c64a3bfd020f02db71898f86d7b077ecd0e",
+                "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/0e34659f05a9c8dcb51b76765d74e7da9c06798c",
+                "reference": "0e34659f05a9c8dcb51b76765d74e7da9c06798c",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
                 "log",
                 "php"
             ],
-            "time": "2018-01-18 21:23:36"
+            "time": "2018-01-19 07:42:05"
         },
         {
             "name": "phoxphp/prop",
