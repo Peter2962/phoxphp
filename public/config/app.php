@@ -17,12 +17,12 @@ return [
 	#########################
 	# Routes file path
 	#########################
-	'app_routes' => 'public\\config\\routes.php',
+	'app_routes' => 'public/config/routes.php',
 
 	#########################
 	# Services file path
 	#########################
-	'app_services' => 'public\\config\\services.php',
+	'app_services' => 'public/config/services.php',
 
 	#########################
 	# Default layout
