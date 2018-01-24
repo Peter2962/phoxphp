@@ -152,7 +152,7 @@ class AppManager extends InjectorBridge
 			$errorId = basicHash($errorNumber . '_' . $errorString . '_' . $errorFile . '_' . $errorLine);
 			$devMode = config('app')->get('devMode');
 
-			if ($devMode == 'producttion') {
+			if ($devMode == 'production') {
 
 				$errorString = config('app')->get('production_error_message');
 
