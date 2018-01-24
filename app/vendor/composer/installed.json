@@ -176,12 +176,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/PhoxPHP/Prop.git",
-            "reference": "9589eaa20acf7f00c0a910f025d59d37105ecf71"
+            "reference": "0e7f069e67afb25985ec72f9c696d4feeb8a9cbd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/9589eaa20acf7f00c0a910f025d59d37105ecf71",
-            "reference": "9589eaa20acf7f00c0a910f025d59d37105ecf71",
+            "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/0e7f069e67afb25985ec72f9c696d4feeb8a9cbd",
+            "reference": "0e7f069e67afb25985ec72f9c696d4feeb8a9cbd",
             "shasum": ""
         },
         "require": {
@@ -201,42 +201,6 @@
             "PHP7",
             "php",
             "support"
-        ]
-    },
-    {
-        "name": "phoxphp/log",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhoxPHP/Log.git",
-            "reference": "0e34659f05a9c8dcb51b76765d74e7da9c06798c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/0e34659f05a9c8dcb51b76765d74e7da9c06798c",
-            "reference": "0e34659f05a9c8dcb51b76765d74e7da9c06798c",
-            "shasum": ""
-        },
-        "require": {
-            "phoxphp/filesystem": "~1.0.0",
-            "phoxphp/prop": "~1.0.0",
-            "php": ">=7.0.6"
-        },
-        "time": "2018-01-19T07:42:05+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kit\\Log\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP Log Component",
-        "keywords": [
-            "PHP7",
-            "log",
-            "php"
         ]
     },
     {
@@ -304,6 +268,42 @@
         "keywords": [
             "PHP7",
             "dependencyinjection",
+            "php"
+        ]
+    },
+    {
+        "name": "phoxphp/log",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/Log.git",
+            "reference": "5636130826ce5e567d74919d22097db52bcf55c4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/5636130826ce5e567d74919d22097db52bcf55c4",
+            "reference": "5636130826ce5e567d74919d22097db52bcf55c4",
+            "shasum": ""
+        },
+        "require": {
+            "phoxphp/filesystem": "~1.0.0",
+            "phoxphp/prop": "~1.0.0",
+            "php": ">=7.0.6"
+        },
+        "time": "2018-01-24T05:38:28+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kit\\Log\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP Log Component",
+        "keywords": [
+            "PHP7",
+            "log",
             "php"
         ]
     }
