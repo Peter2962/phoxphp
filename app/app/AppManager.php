@@ -128,7 +128,7 @@ class AppManager extends InjectorBridge
 	*/
 	public function shutdown($errorNumber, $errorString, $errorFile ='', $errorLine = 0, $context = [])
 	{
-		$errorId = \basicHash($errorNumber.'_'.$errorString.'_'.$errorFile.'_'.$errorLine);
+		$errorId = \basicHash($errorNumber . '_' . $errorString . '_' . $errorFile . '_' . $errorLine);
 		$errors = [
 			'number'  => $errorNumber,
 			'message' => $errorString,
@@ -149,13 +149,26 @@ class AppManager extends InjectorBridge
 			$site_url = $this->load('config')->get('app_url');
 			$finder = new \App\Finder();
 
-			$errorId = basicHash($errorNumber.'_'.$errorString.'_'.$errorFile.'_'.$errorLine);
+			$errorId = basicHash($errorNumber . '_' . $errorString . '_' . $errorFile . '_' . $errorLine);
 			$devMode = config('app')->get('devMode');
 
-			$productionMessage = config('app')->get('production_error_message');
-			$errorTemplatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates').'default');
+			if ($devMode == 'producttion') {
+
+				$errorString = config('app')->get('production_error_message');
+
+			}
+
+			$errorTemplatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates') . 'default');
 
 			include $errorTemplatePath;
+
+			$logger = getLogger('FileLogger', [
+				'extension' => 'log',
+				'file' => config('app')->get('log_path') . 'app'
+			]);
+
+			$logger->log($errorString);
+
 			$this->load('response')->setResponseCode(500);
 		}
 	}

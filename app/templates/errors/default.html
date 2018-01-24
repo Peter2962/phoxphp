@@ -142,7 +142,7 @@
 	?>
 	<div class="apd_info">
 		<span>
-			<?php echo $productionMessage; ?>
+			<?php echo $errorString; ?>
 		</span>
 	</div>
 	<?php }elseif ($devMode == 'dev') { ?>
@@ -205,8 +205,8 @@
 							$argument = implode(', ', $argument);
 							$line = (isset($val['line'])) ? $val['line'] : '';
 
-							$string = 'at '.$val['file'].' : ('.$line.') : call ---- '.$function.'('.$argument.')';
-							echo '<span>'.$string.'</span>';
+							$string = 'at '. $val['file'] .' : (' . $line . ') : call ---- ' . $function . '(' . $argument . ')';
+							echo '<span>' . $string . '</span>';
 						}
 
 					?>

@@ -34,7 +34,7 @@ abstract class BaseException extends Exception
 	*/
 	public function __construct()
 	{
-		$message = $this->getExceptionMessage();
+		$errorString = $message = $this->getExceptionMessage();
 		$line = $this->getLine();
 
 		$name = $this->getExceptionClass();

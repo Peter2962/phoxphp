@@ -1,5 +1,7 @@
 <?php
 use App\AppManager;
+use Kit\Log\Logger;
+
 ##############################
 # Application helper functions
 ##############################
@@ -113,5 +115,16 @@ if (!function_exists('isArray')) {
 	function isArray(array $array=array())
 	{
 		return isset($array) && !empty($array);
+	}
+}
+
+if (!function_exists('getLogger')) {
+	/**
+	* @param 	$options <Array>
+	* @return 	Object
+	*/
+	function getLogger(String $logger, Array $options=[])
+	{
+		return Logger::getLogger($logger, $options);
 	}
 }
