@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "87710f9ef995c5b822125d6f6f790fd8",
+    "content-hash": "599cb249b52072c92c9567f76068960c",
     "packages": [
         {
             "name": "phoxphp/cache",
@@ -172,12 +172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Log.git",
-                "reference": "0e34659f05a9c8dcb51b76765d74e7da9c06798c"
+                "reference": "5636130826ce5e567d74919d22097db52bcf55c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/0e34659f05a9c8dcb51b76765d74e7da9c06798c",
-                "reference": "0e34659f05a9c8dcb51b76765d74e7da9c06798c",
+                "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/5636130826ce5e567d74919d22097db52bcf55c4",
+                "reference": "5636130826ce5e567d74919d22097db52bcf55c4",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
                 "log",
                 "php"
             ],
-            "time": "2018-01-19 07:42:05"
+            "time": "2018-01-24 05:38:28"
         },
         {
             "name": "phoxphp/prop",
@@ -206,12 +206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Prop.git",
-                "reference": "9589eaa20acf7f00c0a910f025d59d37105ecf71"
+                "reference": "0e7f069e67afb25985ec72f9c696d4feeb8a9cbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/9589eaa20acf7f00c0a910f025d59d37105ecf71",
-                "reference": "9589eaa20acf7f00c0a910f025d59d37105ecf71",
+                "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/0e7f069e67afb25985ec72f9c696d4feeb8a9cbd",
+                "reference": "0e7f069e67afb25985ec72f9c696d4feeb8a9cbd",
                 "shasum": ""
             },
             "require": {
