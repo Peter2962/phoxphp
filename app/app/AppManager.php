@@ -122,11 +122,11 @@ class AppManager extends InjectorBridge
 	* @param 	$errorString <String>
 	* @param 	$errorFile 	 <String>
 	* @param 	$errorLine 	 <Integer>
-	* @param 	$context 	 <Array>
+	* @param 	$context 	<Object>
 	* @access 	public
 	* @return 	void
 	*/
-	public function shutdown($errorNumber, $errorString, $errorFile ='', $errorLine = 0, $context = [])
+	public function shutdown($errorNumber, $errorString, $errorFile ='', $errorLine = 0, $isException=false, $context)
 	{
 		$errorId = \basicHash($errorNumber . '_' . $errorString . '_' . $errorFile . '_' . $errorLine);
 		$errors = [
@@ -158,18 +158,30 @@ class AppManager extends InjectorBridge
 
 			}
 
-			$errorTemplatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates') . 'default');
-
-			include $errorTemplatePath;
-
 			$logger = getLogger('FileLogger', [
 				'extension' => 'log',
 				'file' => config('app')->get('log_path') . 'app'
 			]);
 
-			$logger->log($errorString);
+			$responseCode = 500;
 
-			$this->load('response')->setResponseCode(500);
+			if ($isException == true) {
+				$responseCode = $errorNumber;
+			}
+
+			ob_start();
+			debug_print_backtrace();
+
+			$trace = ob_get_clean();
+			if ($isException == true) {
+				$trace = $context->getTraceAsString();
+			}
+			$logger->log($errorString . "\n" . 'Debug Trace: ' . "\n" . $trace);
+
+			$errorTemplatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates') . 'default');
+			include $errorTemplatePath;
+
+			$this->load('response')->setResponseCode($responseCode);
 		}
 	}
 
@@ -182,7 +194,7 @@ class AppManager extends InjectorBridge
 		$error = @error_get_last();
 		if($error) {
 
-			$this->shutdown($error["type"], $error["message"], $error["file"], $error["line"], count($error));
+			$this->shutdown($error["type"], $error["message"], $error["file"], $error["line"], false, $error);
 
 		}
 	}
@@ -194,7 +206,14 @@ class AppManager extends InjectorBridge
 	*/
 	public function exceptionShutdown($exception)
 	{
-		return $this->shutdown($exception->getCode(), $exception->getMessage(), $exception->getFile(), $exception->getLine(), debug_backtrace());
+		return $this->shutdown(
+			$exception->getCode(),
+			$exception->getMessage(),
+			$exception->getFile(),
+			$exception->getLine(),
+			true,
+			$exception
+		);
 	}
 
 	/**
