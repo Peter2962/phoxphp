@@ -30,11 +30,12 @@ namespace App;
 
 use App\Config;
 use View\Manager;
-use App\Service\Container;
+use RuntimeException;
 use Kit\View\ArgResolver;
-use Kit\DependencyInjection\Injector\InjectorBridge;
+use App\Service\Container;
+use Kit\DependencyInjection\Factory as ContainerRepository;
 
-class AppManager extends InjectorBridge
+class AppManager extends ContainerRepository
 {
 
 	/**
@@ -60,6 +61,12 @@ class AppManager extends InjectorBridge
 	* @access 	private
 	*/
 	private static $init = false;
+
+	/**
+	* @var 		$responseCode
+	* @access 	protected
+	*/
+	protected 	$responseCode = 500;
 
 	/**
 	* @access 	public
@@ -126,7 +133,7 @@ class AppManager extends InjectorBridge
 	* @access 	public
 	* @return 	void
 	*/
-	public function shutdown($errorNumber, $errorString, $errorFile ='', $errorLine = 0, $isException=false, $context)
+	public function shutdown($errorNumber, $errorString, $errorFile ='', $errorLine = 0, $isException=false, $context=null)
 	{
 		$errorId = \basicHash($errorNumber . '_' . $errorString . '_' . $errorFile . '_' . $errorLine);
 		$errors = [

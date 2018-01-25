@@ -30,6 +30,8 @@ if (!function_exists('phpFile')) {
 
 if (!function_exists('app')) {
 	/**
+	* Returns application instance. 
+	*
 	* @return 	Object
 	*/
 	function app()
