@@ -1,9 +1,9 @@
 <?php
 namespace App;
 
-use Kit\Glider\Factory;
+use Kit\Glider\Repository;
 
-class Database extends Factory
+class Database extends Repository
 {
 
 	//
