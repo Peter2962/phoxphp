@@ -34,25 +34,7 @@ abstract class BaseException extends Exception
 	*/
 	public function __construct()
 	{
-		$errorString = $message = $this->getExceptionMessage();
-		$line = $this->getLine();
-
-		$name = $this->getExceptionClass();
-		$file = $this->getFile();
-
-		$template = $this->getView();
-		$finder = new Finder();
-
-		$response = app()->load('response');
-		$devMode = config('app')->get('devMode');
-
-		$productionMessage = config('app')->get('production_error_message');
-		$response->setResponseCode($this->getExceptionCode());
-
-		$templatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates'). $template);
-		include $templatePath;
-
-		exit;
+		trigger_error($this->getExceptionClass() . ': ' . $this->getMessage(), E_USER_ERROR);
 	}
 
 	/**
