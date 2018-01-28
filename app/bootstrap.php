@@ -1,7 +1,16 @@
 <?php
+
 use App\AppManager;
 
 include 'app/Helper.php';
+
+$time = microtime();
+$time = explode(' ', $time);
+$time = $time[1] + $time[0];
+$startTime = $time;
+
+// Application initialization time.
+define('APP_INIT_TIME', $startTime);
 
 #################################
 # Load packages via composer.
@@ -25,7 +34,6 @@ $app->configure(function($config) {
 		'env_push' => array('app', 'cache')
 	);
 }, AUTOLOADER);
-
 
 ##################################################################################
 # We're booting our application now.
