@@ -180,7 +180,7 @@ class AppManager extends ContainerRepository
 			debug_print_backtrace();
 
 			$trace = ob_get_clean();
-			if ($isException == true) {
+			if ($isException == true && $context !== null) {
 				$trace = $context->getTraceAsString();
 			}
 			$logger->log($errorString . "\n" . 'Debug Trace: ' . "\n" . $trace);
