@@ -108,12 +108,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
-                "reference": "599c20fcd0904084e05c449ec0da90e76f0984a7"
+                "reference": "8bbdfb201b3df9661af24fd85de2dbd925f33120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/599c20fcd0904084e05c449ec0da90e76f0984a7",
-                "reference": "599c20fcd0904084e05c449ec0da90e76f0984a7",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/8bbdfb201b3df9661af24fd85de2dbd925f33120",
+                "reference": "8bbdfb201b3df9661af24fd85de2dbd925f33120",
                 "shasum": ""
             },
             "require": {
@@ -132,7 +132,7 @@
                 "database",
                 "php"
             ],
-            "time": "2018-01-28 07:20:10"
+            "time": "2018-01-30 23:38:18"
         },
         {
             "name": "phoxphp/http",
