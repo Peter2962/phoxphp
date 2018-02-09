@@ -280,18 +280,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/PhoxPHP/Http.git",
-            "reference": "a4893be12bdc4d59991401687038d74da3ee5c83"
+            "reference": "a6c856e26a924f7520732ce0536c9120b7b3e94c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/a4893be12bdc4d59991401687038d74da3ee5c83",
-            "reference": "a4893be12bdc4d59991401687038d74da3ee5c83",
+            "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/a6c856e26a924f7520732ce0536c9120b7b3e94c",
+            "reference": "a6c856e26a924f7520732ce0536c9120b7b3e94c",
             "shasum": ""
         },
         "require": {
             "php": ">=7.0.6"
         },
-        "time": "2018-02-09T06:03:48+00:00",
+        "time": "2018-02-09T06:26:22+00:00",
         "type": "project",
         "installation-source": "source",
         "autoload": {
