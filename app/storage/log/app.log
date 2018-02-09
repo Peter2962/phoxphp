@@ -142,3 +142,54 @@ Debug Trace:
 #2 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
 #3 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
 #4 {main}
+[notice][2018-02-09 06:23:47]syntax error, unexpected 'namespace' (T_NAMESPACE)
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('C:\\MAMP\\htdocs\\...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('Kit\\Http\\Router...')
+#2 C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Builder.php(162): spl_autoload_call('Kit\\Http\\Router...')
+#3 C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Factory.php(368): Kit\Http\Router\Builder->buildRoute(Object(Kit\Http\Router\Factory))
+#4 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(265): Kit\Http\Router\Factory->run(Array)
+#5 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#6 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#7 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#8 {main}
+[notice][2018-02-09 06:23:48]syntax error, unexpected 'namespace' (T_NAMESPACE)
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('C:\\MAMP\\htdocs\\...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('Kit\\Http\\Router...')
+#2 C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Builder.php(162): spl_autoload_call('Kit\\Http\\Router...')
+#3 C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Factory.php(368): Kit\Http\Router\Builder->buildRoute(Object(Kit\Http\Router\Factory))
+#4 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(265): Kit\Http\Router\Factory->run(Array)
+#5 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#6 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#7 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#8 {main}
+[notice][2018-02-09 06:24:56]Kit\Http\Router\Exceptions\RouteNotFoundException: Route favicon.ico not registered.
+Debug Trace: 
+#0  App\AppManager->shutdown(256, Kit\Http\Router\Exceptions\RouteNotFoundException: Route favicon.ico not registered., C:\MAMP\htdocs\phoxphp\app\app\BaseException.php, 37, Array ())
+#1  trigger_error(Kit\Http\Router\Exceptions\RouteNotFoundException: Route favicon.ico not registered., 256) called at [C:\MAMP\htdocs\phoxphp\app\app\BaseException.php:37]
+#2  App\BaseException->__construct() called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Exceptions\RouteNotFoundException.php:39]
+#3  Kit\Http\Router\Exceptions\RouteNotFoundException->__construct(Route favicon.ico not registered.) called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Factory.php:375]
+#4  Kit\Http\Router\Factory->run(Array ()) called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:265]
+#5  App\AppManager->startApplication() called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:250]
+#6  App\AppManager->boot(1) called at [C:\MAMP\htdocs\phoxphp\app\bootstrap.php:44]
+#7  require(C:\MAMP\htdocs\phoxphp\app\bootstrap.php) called at [C:\MAMP\htdocs\phoxphp\index.php:28]
+
+[notice][2018-02-09 06:24:56]Route favicon.ico not registered.
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(265): Kit\Http\Router\Factory->run(Array)
+#1 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#2 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#3 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#4 {main}
+[notice][2018-02-09 06:28:45]syntax error, unexpected 'namespace' (T_NAMESPACE)
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('C:\\MAMP\\htdocs\\...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('Kit\\Http\\Router...')
+#2 C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Builder.php(162): spl_autoload_call('Kit\\Http\\Router...')
+#3 C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Factory.php(368): Kit\Http\Router\Builder->buildRoute(Object(Kit\Http\Router\Factory))
+#4 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(265): Kit\Http\Router\Factory->run(Array)
+#5 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#6 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#7 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#8 {main}
