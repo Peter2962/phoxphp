@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "599cb249b52072c92c9567f76068960c",
+    "content-hash": "f972cbf0f63ce528168cd5e7429734a5",
     "packages": [
         {
             "name": "phoxphp/cache",
@@ -136,7 +136,7 @@
         },
         {
             "name": "phoxphp/http",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
@@ -164,7 +164,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-02-10 21:04:13"
+            "time": "2018-02-10T21:04:13+00:00"
         },
         {
             "name": "phoxphp/log",
@@ -302,7 +302,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "phoxphp/glider": 20,
-        "phoxphp/http": 20,
         "phoxphp/translation": 20,
         "phoxphp/view": 20,
         "phoxphp/dependency-injection": 20,
