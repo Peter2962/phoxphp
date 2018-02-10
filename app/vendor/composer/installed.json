@@ -275,8 +275,8 @@
     },
     {
         "name": "phoxphp/http",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/PhoxPHP/Http.git",
