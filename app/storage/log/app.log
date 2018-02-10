@@ -241,3 +241,57 @@ Debug Trace:
 #1 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
 #2 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
 #3 {main}
+[notice][2018-02-10 20:44:43]Kit\Http\Router\Exceptions\RouteNotFoundException: Route favicon.ico not registered.
+Debug Trace: 
+#0  App\AppManager->shutdown(256, Kit\Http\Router\Exceptions\RouteNotFoundException: Route favicon.ico not registered., C:\MAMP\htdocs\phoxphp\app\app\BaseException.php, 37, Array ())
+#1  trigger_error(Kit\Http\Router\Exceptions\RouteNotFoundException: Route favicon.ico not registered., 256) called at [C:\MAMP\htdocs\phoxphp\app\app\BaseException.php:37]
+#2  App\BaseException->__construct() called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Exceptions\RouteNotFoundException.php:39]
+#3  Kit\Http\Router\Exceptions\RouteNotFoundException->__construct(Route favicon.ico not registered.) called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Repository.php:387]
+#4  Kit\Http\Router\Repository->run(Array ()) called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:265]
+#5  App\AppManager->startApplication() called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:250]
+#6  App\AppManager->boot(1) called at [C:\MAMP\htdocs\phoxphp\app\bootstrap.php:44]
+#7  require(C:\MAMP\htdocs\phoxphp\app\bootstrap.php) called at [C:\MAMP\htdocs\phoxphp\index.php:28]
+
+[notice][2018-02-10 20:44:43]Route favicon.ico not registered.
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(265): Kit\Http\Router\Repository->run(Array)
+#1 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#2 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#3 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#4 {main}
+[notice][2018-02-10 20:44:45]Kit\Http\Router\Exceptions\RouteNotFoundException: Route a not registered.
+Debug Trace: 
+#0  App\AppManager->shutdown(256, Kit\Http\Router\Exceptions\RouteNotFoundException: Route a not registered., C:\MAMP\htdocs\phoxphp\app\app\BaseException.php, 37, Array ())
+#1  trigger_error(Kit\Http\Router\Exceptions\RouteNotFoundException: Route a not registered., 256) called at [C:\MAMP\htdocs\phoxphp\app\app\BaseException.php:37]
+#2  App\BaseException->__construct() called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Exceptions\RouteNotFoundException.php:39]
+#3  Kit\Http\Router\Exceptions\RouteNotFoundException->__construct(Route a not registered.) called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Repository.php:387]
+#4  Kit\Http\Router\Repository->run(Array ()) called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:265]
+#5  App\AppManager->startApplication() called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:250]
+#6  App\AppManager->boot(1) called at [C:\MAMP\htdocs\phoxphp\app\bootstrap.php:44]
+#7  require(C:\MAMP\htdocs\phoxphp\app\bootstrap.php) called at [C:\MAMP\htdocs\phoxphp\index.php:28]
+
+[notice][2018-02-10 20:44:45]Route a not registered.
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(265): Kit\Http\Router\Repository->run(Array)
+#1 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#2 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#3 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#4 {main}
+[notice][2018-02-10 20:45:37]Undefined index: homepage
+Debug Trace: 
+#0  App\AppManager->shutdown(8, Undefined index: homepage, C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Alias.php, 91, Array ([alias] => homepage)) called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Alias.php:91]
+#1  Kit\Http\Router\Alias::hasAlias(homepage) called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Repository.php:349]
+#2  Kit\Http\Router\Repository->alias(homepage) called at [C:\MAMP\htdocs\phoxphp\public\config\routes.php:24]
+#3  include(C:\MAMP\htdocs\phoxphp\public\config\routes.php) called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:264]
+#4  App\AppManager->startApplication() called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:250]
+#5  App\AppManager->boot(1) called at [C:\MAMP\htdocs\phoxphp\app\bootstrap.php:44]
+#6  require(C:\MAMP\htdocs\phoxphp\app\bootstrap.php) called at [C:\MAMP\htdocs\phoxphp\index.php:28]
+
+[notice][2018-02-10 20:45:37]Call to undefined method Kit\Http\Router\Alias::createNewAliasFromFactory()
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\public\config\routes.php(24): Kit\Http\Router\Repository->alias('homepage')
+#1 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(264): include('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#3 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#4 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#5 {main}
