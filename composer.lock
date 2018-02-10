@@ -140,12 +140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "a6c856e26a924f7520732ce0536c9120b7b3e94c"
+                "reference": "d4064fbb63842c5b663ee9b71c4fa716fd2bd9f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/a6c856e26a924f7520732ce0536c9120b7b3e94c",
-                "reference": "a6c856e26a924f7520732ce0536c9120b7b3e94c",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/d4064fbb63842c5b663ee9b71c4fa716fd2bd9f8",
+                "reference": "d4064fbb63842c5b663ee9b71c4fa716fd2bd9f8",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-02-09 06:26:22"
+            "time": "2018-02-10 20:20:39"
         },
         {
             "name": "phoxphp/log",

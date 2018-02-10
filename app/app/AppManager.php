@@ -260,7 +260,7 @@ class AppManager extends ContainerRepository
 	private function startApplication()
 	{
 
-		$router = new \Kit\Http\Router\Factory(new \Kit\Http\Request\RequestManager());
+		$router = new \Kit\Http\Router\Repository(new \Kit\Http\Request\RequestManager());
 		include $this->load('config')->get('app', 'app_routes');
 		$router->run(AppManager::$errors);
 

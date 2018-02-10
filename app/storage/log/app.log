@@ -193,3 +193,51 @@ Debug Trace:
 #6 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
 #7 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
 #8 {main}
+[notice][2018-02-10 20:22:50]Class 'Kit\Http\Router\Repository' not found
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#1 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#2 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+[notice][2018-02-10 20:22:50]Class 'Kit\Http\Router\Repository' not found
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#1 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#2 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+[notice][2018-02-10 20:23:31]Class 'Kit\Http\Router\Repository' not found
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#1 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#2 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+[notice][2018-02-10 20:23:31]Class 'Kit\Http\Router\Repository' not found
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#1 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#2 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+[notice][2018-02-10 20:23:32]Class 'Kit\Http\Router\Repository' not found
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#1 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#2 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+[notice][2018-02-10 20:23:32]Class 'Kit\Http\Router\Repository' not found
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#1 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#2 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+[notice][2018-02-10 20:28:32]Class 'Kit\Http\Router\Repository' not found
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#1 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#2 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+[notice][2018-02-10 20:28:32]Class 'Kit\Http\Router\Repository' not found
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#1 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#2 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
