@@ -26,7 +26,7 @@
 		"phoxphp/glider": "dev-develop",
 		"phoxphp/filesystem": "^1.0.0",
 		"phoxphp/http": "^1.0.0",
-		"phoxphp/translation": "dev-develop",
+		"phoxphp/translation": "1.0.0",
 		"phoxphp/view": "dev-develop",
 		"phoxphp/dependency-injection": "dev-develop",
 		"phoxphp/log": "dev-master",
