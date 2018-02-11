@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d58118311931c8196ccc54ce8c239de",
+    "content-hash": "939fc341a95b3c4a6b723111b3271b63",
     "packages": [
         {
             "name": "phoxphp/cache",
@@ -266,16 +266,16 @@
         },
         {
             "name": "phoxphp/view",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/View.git",
-                "reference": "06dd1ee8ac437b707b3e03175630f23948e02b94"
+                "reference": "2429e6177e22a06812ffb4f3daee408c140a6a2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/View/zipball/06dd1ee8ac437b707b3e03175630f23948e02b94",
-                "reference": "06dd1ee8ac437b707b3e03175630f23948e02b94",
+                "url": "https://api.github.com/repos/PhoxPHP/View/zipball/2429e6177e22a06812ffb4f3daee408c140a6a2b",
+                "reference": "2429e6177e22a06812ffb4f3daee408c140a6a2b",
                 "shasum": ""
             },
             "require": {
@@ -294,7 +294,7 @@
                 "php",
                 "view"
             ],
-            "time": "2018-01-05 20:15:28"
+            "time": "2018-02-11T20:02:40+00:00"
         }
     ],
     "packages-dev": [],
@@ -302,7 +302,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "phoxphp/glider": 20,
-        "phoxphp/view": 20,
         "phoxphp/dependency-injection": 20,
         "phoxphp/log": 20
     },
