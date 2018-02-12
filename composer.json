@@ -29,7 +29,7 @@
 		"phoxphp/translation": "1.0.0",
 		"phoxphp/view": "1.0.0",
 		"phoxphp/dependency-injection": "~1.0.0",
-		"phoxphp/log": "dev-master",
+		"phoxphp/log": "1.0.0",
 		"php": ">=7.0.1"
 	},
 	"minimum-stability": "dev",

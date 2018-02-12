@@ -102,42 +102,6 @@
         ]
     },
     {
-        "name": "phoxphp/log",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhoxPHP/Log.git",
-            "reference": "5636130826ce5e567d74919d22097db52bcf55c4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/5636130826ce5e567d74919d22097db52bcf55c4",
-            "reference": "5636130826ce5e567d74919d22097db52bcf55c4",
-            "shasum": ""
-        },
-        "require": {
-            "phoxphp/filesystem": "~1.0.0",
-            "phoxphp/prop": "~1.0.0",
-            "php": ">=7.0.6"
-        },
-        "time": "2018-01-24T05:38:28+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kit\\Log\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP Log Component",
-        "keywords": [
-            "PHP7",
-            "log",
-            "php"
-        ]
-    },
-    {
         "name": "phoxphp/glider",
         "version": "dev-develop",
         "version_normalized": "dev-develop",
@@ -304,6 +268,42 @@
         "keywords": [
             "PHP7",
             "dependencyinjection",
+            "php"
+        ]
+    },
+    {
+        "name": "phoxphp/log",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/Log.git",
+            "reference": "4991daffc64ea395736b29995d64633445dfb49f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/4991daffc64ea395736b29995d64633445dfb49f",
+            "reference": "4991daffc64ea395736b29995d64633445dfb49f",
+            "shasum": ""
+        },
+        "require": {
+            "phoxphp/filesystem": "~1.0.0",
+            "phoxphp/prop": "~1.0.0",
+            "php": ">=7.0.6"
+        },
+        "time": "2018-02-12T11:35:45+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kit\\Log\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP Log Component",
+        "keywords": [
+            "PHP7",
+            "log",
             "php"
         ]
     }
