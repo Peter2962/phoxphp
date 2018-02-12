@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "939fc341a95b3c4a6b723111b3271b63",
+    "content-hash": "ffd962d0a2ebfdc154ba1517e279e620",
     "packages": [
         {
             "name": "phoxphp/cache",
@@ -40,16 +40,16 @@
         },
         {
             "name": "phoxphp/dependency-injection",
-            "version": "dev-develop",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/DependencyInjection.git",
-                "reference": "c556e8bde9210e1dca6b755bd93e23a3f009f9a9"
+                "reference": "5344f6c14013d734d3ecb62306bb534ce77cab41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/c556e8bde9210e1dca6b755bd93e23a3f009f9a9",
-                "reference": "c556e8bde9210e1dca6b755bd93e23a3f009f9a9",
+                "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/5344f6c14013d734d3ecb62306bb534ce77cab41",
+                "reference": "5344f6c14013d734d3ecb62306bb534ce77cab41",
                 "shasum": ""
             },
             "require": {
@@ -68,7 +68,7 @@
                 "dependencyinjection",
                 "php"
             ],
-            "time": "2018-01-19 20:00:53"
+            "time": "2018-02-12T06:35:45+00:00"
         },
         {
             "name": "phoxphp/filesystem",
@@ -302,7 +302,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "phoxphp/glider": 20,
-        "phoxphp/dependency-injection": 20,
         "phoxphp/log": 20
     },
     "prefer-stable": true,

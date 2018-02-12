@@ -102,40 +102,6 @@
         ]
     },
     {
-        "name": "phoxphp/dependency-injection",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhoxPHP/DependencyInjection.git",
-            "reference": "c556e8bde9210e1dca6b755bd93e23a3f009f9a9"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/c556e8bde9210e1dca6b755bd93e23a3f009f9a9",
-            "reference": "c556e8bde9210e1dca6b755bd93e23a3f009f9a9",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=7.0.6"
-        },
-        "time": "2018-01-19T20:00:53+00:00",
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kit\\DependencyInjection\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP DependencyInjection Component",
-        "keywords": [
-            "PHP7",
-            "dependencyinjection",
-            "php"
-        ]
-    },
-    {
         "name": "phoxphp/log",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -305,6 +271,40 @@
             "PHP7",
             "php",
             "view"
+        ]
+    },
+    {
+        "name": "phoxphp/dependency-injection",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/DependencyInjection.git",
+            "reference": "5344f6c14013d734d3ecb62306bb534ce77cab41"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/5344f6c14013d734d3ecb62306bb534ce77cab41",
+            "reference": "5344f6c14013d734d3ecb62306bb534ce77cab41",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.6"
+        },
+        "time": "2018-02-12T06:35:45+00:00",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kit\\DependencyInjection\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP DependencyInjection Component",
+        "keywords": [
+            "PHP7",
+            "dependencyinjection",
+            "php"
         ]
     }
 ]
