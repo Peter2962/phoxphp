@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffd962d0a2ebfdc154ba1517e279e620",
+    "content-hash": "6bf795858932292d67c1a5e31a4ce2c5",
     "packages": [
         {
             "name": "phoxphp/cache",
@@ -168,16 +168,16 @@
         },
         {
             "name": "phoxphp/log",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Log.git",
-                "reference": "5636130826ce5e567d74919d22097db52bcf55c4"
+                "reference": "4991daffc64ea395736b29995d64633445dfb49f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/5636130826ce5e567d74919d22097db52bcf55c4",
-                "reference": "5636130826ce5e567d74919d22097db52bcf55c4",
+                "url": "https://api.github.com/repos/PhoxPHP/Log/zipball/4991daffc64ea395736b29995d64633445dfb49f",
+                "reference": "4991daffc64ea395736b29995d64633445dfb49f",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
                 "log",
                 "php"
             ],
-            "time": "2018-01-24 05:38:28"
+            "time": "2018-02-12T11:35:45+00:00"
         },
         {
             "name": "phoxphp/prop",
@@ -301,8 +301,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "phoxphp/glider": 20,
-        "phoxphp/log": 20
+        "phoxphp/glider": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
