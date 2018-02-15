@@ -21,4 +21,4 @@
 # Application route configuration file
 ######################################
 
-$router->get('/', 'default@index');
+$router->get('/', 'Common\\Controllers\\DefaultController@index');

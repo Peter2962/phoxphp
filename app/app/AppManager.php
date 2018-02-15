@@ -333,4 +333,62 @@ class AppManager extends ContainerRepository
 		include $autoloader;
 	}
 
+	/**
+	* Checks if a controller class exists.
+	*
+	* @param 	$controllerName <String>
+	* @access 	public
+	* @return 	Boolean
+	*/
+	public function hasController(String $controllerName=null) : Bool
+	{
+		$namespace = config('app')->get('controller_namespace');
+		if (class_exists($namespace . $controllerName)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	* Checks if a model class exists.
+	*
+	* @param 	$modelName <String>
+	* @access 	public
+	* @return 	Boolean
+	*/
+	public function hasModel(String $modelName=null) : Bool
+	{
+		$namespace = config('app')->get('model_namespace');
+		if (class_exists($namespace . $modelName)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	* Returns string name of a controller class with it's namespace.
+	*
+	* @param 	$controllerName <String>
+	* @access 	public
+	* @return 	String
+	*/
+	public function getControllerClassName(String $controllerName) : String
+	{
+		return config('app')->get('controller_namespace') . $controllerName;
+	}
+
+	/**
+	* Returns string name of a model class with it's namespace.
+	*
+	* @param 	$modelName <String>
+	* @access 	public
+	* @return 	String
+	*/
+	public function getModelClassName(String $modelName) : String
+	{
+		return config('app')->get('model_namespace') . $modelName;
+	}
+
 }
