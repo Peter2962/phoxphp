@@ -1,7 +1,6 @@
 <?php
 ##########################################
 # application database configuration file.
-# Note: PDO not available.
 ##########################################
 
 return [
@@ -14,11 +13,13 @@ return [
 		'database' => 'test',
 		'charset' => 'utf8',
 		'collation' => '',
-		'domain' => 'example.com',
+		'domain' => ['phoxphp.site'],
 		'auto_commit' => false,
-		'alt' => 'dev'
+		'prefix' => '',
+		'alt' => null
 	],
-	'dev' => [		'provider' => Kit\Glider\Platform\Pdo\PdoProvider::class,
+	'dev' => [
+		'provider' => Kit\Glider\Platform\Pdo\PdoProvider::class,
 		'host' => 'localhost',
 		'alias' => 'pdo',
 		'username' => 'root',
@@ -26,8 +27,15 @@ return [
 		'database' => 'test',
 		'charset' => 'utf8',
 		'collation' => 'utf8',
-		'domain' => 'http://server.web/',
+		'domain' => ['phoxphp.site'],
+		'prefix' => '',
 		'auto_commit' => true,
-		'alt' => null
+		'alt' => null,
+		'persistent' => true,
+		'options' => [
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_CASE => PDO::CASE_NATURAL,
+			PDO::ATTR_PERSISTENT => true
+		]
 	]
 ];

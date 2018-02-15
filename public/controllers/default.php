@@ -1,7 +1,7 @@
 <?php
-use Kit\Http\Controller;
+namespace Common\Controllers;
 
-class defaultController extends Controller
+class DefaultController extends \Kit\Http\Controller
 {
 
 	/**
@@ -18,6 +18,14 @@ class defaultController extends Controller
 	{
 		$this->setVariable('site_url', config('app')->get('app_url'));
 		$this->render('default', 'default');
+	}
+
+	/**
+	* {@inheritDOc}
+	*/
+	public function registerModel()
+	{
+		return \Common\Models\DefaultModel::class;
 	}
 
 }
