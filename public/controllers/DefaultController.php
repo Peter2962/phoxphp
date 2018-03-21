@@ -20,8 +20,6 @@ class DefaultController extends Controller
 	{
 		$this->setVariable('site_url', config('app')->get('app_url'));
 		$this->render('default', 'default');
-
-		pre(new \Common\Models\DefaultModel);
 	}
 
 	/**

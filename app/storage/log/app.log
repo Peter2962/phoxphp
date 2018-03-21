@@ -1,0 +1,18 @@
+[notice][2018-03-21 19:56:13]Kit\Http\Router\Exceptions\RouteNotFoundException: Route favicon.ico not registered.
+Debug Trace: 
+#0  App\AppManager->shutdown(256, Kit\Http\Router\Exceptions\RouteNotFoundException: Route favicon.ico not registered., C:\MAMP\htdocs\phoxphp\app\app\BaseException.php, 37, Array ())
+#1  trigger_error(Kit\Http\Router\Exceptions\RouteNotFoundException: Route favicon.ico not registered., 256) called at [C:\MAMP\htdocs\phoxphp\app\app\BaseException.php:37]
+#2  App\BaseException->__construct() called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Exceptions\RouteNotFoundException.php:63]
+#3  Kit\Http\Router\Exceptions\RouteNotFoundException->__construct(Route favicon.ico not registered.) called at [C:\MAMP\htdocs\phoxphp\app\vendor\phoxphp\http\src\Router\Repository.php:386]
+#4  Kit\Http\Router\Repository->run(Array ()) called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:265]
+#5  App\AppManager->startApplication() called at [C:\MAMP\htdocs\phoxphp\app\app\AppManager.php:250]
+#6  App\AppManager->boot(1) called at [C:\MAMP\htdocs\phoxphp\app\bootstrap.php:44]
+#7  require(C:\MAMP\htdocs\phoxphp\app\bootstrap.php) called at [C:\MAMP\htdocs\phoxphp\index.php:28]
+
+[notice][2018-03-21 19:56:13]Route favicon.ico not registered.
+Debug Trace: 
+#0 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(265): Kit\Http\Router\Repository->run(Array)
+#1 C:\MAMP\htdocs\phoxphp\app\app\AppManager.php(250): App\AppManager->startApplication()
+#2 C:\MAMP\htdocs\phoxphp\app\bootstrap.php(44): App\AppManager->boot(true)
+#3 C:\MAMP\htdocs\phoxphp\index.php(28): require('C:\\MAMP\\htdocs\\...')
+#4 {main}
