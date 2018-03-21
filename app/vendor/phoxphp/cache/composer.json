@@ -1,0 +1,20 @@
+{
+	"name": "phoxphp/cache",
+	"description": "PhoxPHP Cache Component",
+	"type": "project",
+	"keywords": ["php", "php7", "cache"],
+	"author": [
+		{
+			"name": "Peter Taiwo",
+			"email": "taiwopeter35@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7.0.6"
+	},
+	"autoload": {
+		"psr-4": {
+			"Kit\\Cache\\": "src"
+		}
+	}
+}

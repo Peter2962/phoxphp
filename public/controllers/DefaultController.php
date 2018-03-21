@@ -1,7 +1,9 @@
 <?php
 namespace Common\Controllers;
 
-class DefaultController extends \Kit\Http\Controller
+use App\Controller;
+
+class DefaultController extends Controller
 {
 
 	/**
@@ -18,6 +20,8 @@ class DefaultController extends \Kit\Http\Controller
 	{
 		$this->setVariable('site_url', config('app')->get('app_url'));
 		$this->render('default', 'default');
+
+		pre(new \Common\Models\DefaultModel);
 	}
 
 	/**

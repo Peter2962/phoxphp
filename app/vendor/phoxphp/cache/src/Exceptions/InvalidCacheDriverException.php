@@ -1,10 +1,9 @@
 <?php
-namespace App\Exceptions;
+namespace Kit\Cache\Exceptions;
 
 use App\BaseException;
 
-class MethodNotFoundException extends BaseException
-{
+class InvalidCacheDriverException extends BaseException {
 
 	/**
 	* @var 		$template
@@ -13,12 +12,12 @@ class MethodNotFoundException extends BaseException
 	protected 	$template = '404x';
 
 	/**
-	* @param 	$message String
+	* @param 	$message <String>
 	* @access 	public
+	* @return 	void
 	*/
-	public function __construct($message='')
-	{
+	public function __construct($message='') {
 		parent::__construct($message);
 	}
-	
+
 }

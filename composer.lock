@@ -108,12 +108,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
-                "reference": "1c378ad930920fd64a505269ddbb2bbaaa6bda2e"
+                "reference": "cde933898cfbc1b86640ecfa643438288eeeb8a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/1c378ad930920fd64a505269ddbb2bbaaa6bda2e",
-                "reference": "1c378ad930920fd64a505269ddbb2bbaaa6bda2e",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/cde933898cfbc1b86640ecfa643438288eeeb8a7",
+                "reference": "cde933898cfbc1b86640ecfa643438288eeeb8a7",
                 "shasum": ""
             },
             "require": {
@@ -132,7 +132,7 @@
                 "database",
                 "php"
             ],
-            "time": "2018-02-14 07:27:48"
+            "time": "2018-03-07 22:36:27"
         },
         {
             "name": "phoxphp/http",
@@ -140,12 +140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "dbd672b0f82d453c7d394509815591bb83caae9c"
+                "reference": "8918727f4ead378f2247e7a352a0ab848f8ca7c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/dbd672b0f82d453c7d394509815591bb83caae9c",
-                "reference": "dbd672b0f82d453c7d394509815591bb83caae9c",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/8918727f4ead378f2247e7a352a0ab848f8ca7c3",
+                "reference": "8918727f4ead378f2247e7a352a0ab848f8ca7c3",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-02-15 08:32:53"
+            "time": "2018-02-15 09:17:49"
         },
         {
             "name": "phoxphp/log",
