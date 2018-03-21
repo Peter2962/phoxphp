@@ -1,7 +1,7 @@
 <?php
 namespace Common\Models;
 
-class DefaultModel extends \App\Database
+class DefaultModel extends \App\Model
 {
 
 	//

@@ -206,40 +206,6 @@
         ]
     },
     {
-        "name": "phoxphp/glider",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhoxPHP/Glider.git",
-            "reference": "1c378ad930920fd64a505269ddbb2bbaaa6bda2e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/1c378ad930920fd64a505269ddbb2bbaaa6bda2e",
-            "reference": "1c378ad930920fd64a505269ddbb2bbaaa6bda2e",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=7.0.6"
-        },
-        "time": "2018-02-14T07:27:48+00:00",
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kit\\Glider\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP Database Component",
-        "keywords": [
-            "PHP7",
-            "database",
-            "php"
-        ]
-    },
-    {
         "name": "phoxphp/translation",
         "version": "v1.0.2",
         "version_normalized": "1.0.2.0",
@@ -274,24 +240,58 @@
         ]
     },
     {
+        "name": "phoxphp/glider",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/Glider.git",
+            "reference": "cde933898cfbc1b86640ecfa643438288eeeb8a7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/cde933898cfbc1b86640ecfa643438288eeeb8a7",
+            "reference": "cde933898cfbc1b86640ecfa643438288eeeb8a7",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.6"
+        },
+        "time": "2018-03-07T22:36:27+00:00",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kit\\Glider\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP Database Component",
+        "keywords": [
+            "PHP7",
+            "database",
+            "php"
+        ]
+    },
+    {
         "name": "phoxphp/http",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/PhoxPHP/Http.git",
-            "reference": "dbd672b0f82d453c7d394509815591bb83caae9c"
+            "reference": "8918727f4ead378f2247e7a352a0ab848f8ca7c3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/dbd672b0f82d453c7d394509815591bb83caae9c",
-            "reference": "dbd672b0f82d453c7d394509815591bb83caae9c",
+            "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/8918727f4ead378f2247e7a352a0ab848f8ca7c3",
+            "reference": "8918727f4ead378f2247e7a352a0ab848f8ca7c3",
             "shasum": ""
         },
         "require": {
             "php": ">=7.0.6"
         },
-        "time": "2018-02-15T08:32:53+00:00",
+        "time": "2018-02-15T09:17:49+00:00",
         "type": "project",
         "installation-source": "source",
         "autoload": {

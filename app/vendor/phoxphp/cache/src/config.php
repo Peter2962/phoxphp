@@ -1,7 +1,4 @@
 <?php
-######################################
-# Application cache configuration file 
-######################################
 return [
 
 	#################################
@@ -17,7 +14,7 @@ return [
 	#################################
 	# Cache driver interface 		#
 	#################################
-	'driver_interface' => \Kit\Cache\Contract\CacheDriverContract::class,
+	'driver_interface' => \Kit\Cache\Interfaces\DriverInterface::class,
 
 	#################################
 	# Cache duration period(in seconds)#
@@ -27,6 +24,6 @@ return [
 	#################################
 	# Cache storage location 		#
 	#################################
-	'storage' => 'app/storage/cache/'
+	'storage' => 'storage/'
 
 ];
