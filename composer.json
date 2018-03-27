@@ -27,7 +27,7 @@
 		"phoxphp/filesystem": "^1.0.0",
 		"phoxphp/http": "dev-master",
 		"phoxphp/translation": "1.0.2",
-		"phoxphp/view": "1.0.0",
+		"phoxphp/view": ">=1.0.0",
 		"phoxphp/dependency-injection": "~1.0.0",
 		"phoxphp/log": "1.0.0",
 		"php": ">=7.0.1"

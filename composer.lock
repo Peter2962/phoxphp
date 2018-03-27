@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "953b776f5d9ca44d5b901d64f21a9b7d",
+    "content-hash": "badc6565f264723fe3421091f8af9933",
     "packages": [
         {
             "name": "phoxphp/cache",
@@ -266,16 +266,16 @@
         },
         {
             "name": "phoxphp/view",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/View.git",
-                "reference": "2429e6177e22a06812ffb4f3daee408c140a6a2b"
+                "reference": "b68d418cb464f20bcafbbeaf335fc7a2c70b018e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/View/zipball/2429e6177e22a06812ffb4f3daee408c140a6a2b",
-                "reference": "2429e6177e22a06812ffb4f3daee408c140a6a2b",
+                "url": "https://api.github.com/repos/PhoxPHP/View/zipball/b68d418cb464f20bcafbbeaf335fc7a2c70b018e",
+                "reference": "b68d418cb464f20bcafbbeaf335fc7a2c70b018e",
                 "shasum": ""
             },
             "require": {
@@ -294,7 +294,7 @@
                 "php",
                 "view"
             ],
-            "time": "2018-02-11T20:02:40+00:00"
+            "time": "2018-03-27T05:44:42+00:00"
         }
     ],
     "packages-dev": [],
