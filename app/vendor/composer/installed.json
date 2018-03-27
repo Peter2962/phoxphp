@@ -102,40 +102,6 @@
         ]
     },
     {
-        "name": "phoxphp/view",
-        "version": "v1.0.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhoxPHP/View.git",
-            "reference": "2429e6177e22a06812ffb4f3daee408c140a6a2b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/View/zipball/2429e6177e22a06812ffb4f3daee408c140a6a2b",
-            "reference": "2429e6177e22a06812ffb4f3daee408c140a6a2b",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=7.0.6"
-        },
-        "time": "2018-02-11T20:02:40+00:00",
-        "type": "project",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kit\\View\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP View Component",
-        "keywords": [
-            "PHP7",
-            "php",
-            "view"
-        ]
-    },
-    {
         "name": "phoxphp/dependency-injection",
         "version": "v1.0.0",
         "version_normalized": "1.0.0.0",
@@ -305,6 +271,40 @@
             "PHP7",
             "database",
             "php"
+        ]
+    },
+    {
+        "name": "phoxphp/view",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/View.git",
+            "reference": "b68d418cb464f20bcafbbeaf335fc7a2c70b018e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/View/zipball/b68d418cb464f20bcafbbeaf335fc7a2c70b018e",
+            "reference": "b68d418cb464f20bcafbbeaf335fc7a2c70b018e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.6"
+        },
+        "time": "2018-03-27T05:44:42+00:00",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kit\\View\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP View Component",
+        "keywords": [
+            "PHP7",
+            "php",
+            "view"
         ]
     }
 ]
