@@ -34,40 +34,6 @@
         ]
     },
     {
-        "name": "phoxphp/cache",
-        "version": "v1.0.1",
-        "version_normalized": "1.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhoxPHP/Cache.git",
-            "reference": "1d216b038867c23687db12842258d4e729d54fa5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/1d216b038867c23687db12842258d4e729d54fa5",
-            "reference": "1d216b038867c23687db12842258d4e729d54fa5",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=7.0.6"
-        },
-        "time": "2018-01-18T16:58:33+00:00",
-        "type": "project",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Kit\\Cache\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "description": "PhoxPHP Cache Component",
-        "keywords": [
-            "PHP7",
-            "cache",
-            "php"
-        ]
-    },
-    {
         "name": "phoxphp/prop",
         "version": "v1.0.0",
         "version_normalized": "1.0.0.0",
@@ -305,6 +271,40 @@
             "PHP7",
             "php",
             "view"
+        ]
+    },
+    {
+        "name": "phoxphp/cache",
+        "version": "v1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhoxPHP/Cache.git",
+            "reference": "a059e810b1223fb45bfb87180dbeb0204f5533db"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/a059e810b1223fb45bfb87180dbeb0204f5533db",
+            "reference": "a059e810b1223fb45bfb87180dbeb0204f5533db",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.6"
+        },
+        "time": "2018-04-01T06:50:21+00:00",
+        "type": "project",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Kit\\Cache\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "description": "PhoxPHP Cache Component",
+        "keywords": [
+            "PHP7",
+            "cache",
+            "php"
         ]
     }
 ]

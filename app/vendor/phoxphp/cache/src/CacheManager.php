@@ -1,4 +1,4 @@
-<?php
+*-<?php
 /**
 * @author 		Peter Taiwo
 * @version 		1.0.0
@@ -26,7 +26,6 @@ namespace Kit\Cache;
 use ReflectionClass;
 use Kit\Cache\Configuration;
 use Kit\FileSystem\Directory\DirectoryManager;
-use Kit\DependencyInjection\Injector\InjectorBridge;
 use Kit\Cache\Exceptions\InvalidCacheDriverException;
 
 class CacheManager

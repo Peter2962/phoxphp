@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "badc6565f264723fe3421091f8af9933",
+    "content-hash": "7fe5f876bd46a422ffd9c97cf66e485b",
     "packages": [
         {
             "name": "phoxphp/cache",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Cache.git",
-                "reference": "1d216b038867c23687db12842258d4e729d54fa5"
+                "reference": "a059e810b1223fb45bfb87180dbeb0204f5533db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/1d216b038867c23687db12842258d4e729d54fa5",
-                "reference": "1d216b038867c23687db12842258d4e729d54fa5",
+                "url": "https://api.github.com/repos/PhoxPHP/Cache/zipball/a059e810b1223fb45bfb87180dbeb0204f5533db",
+                "reference": "a059e810b1223fb45bfb87180dbeb0204f5533db",
                 "shasum": ""
             },
             "require": {
@@ -36,7 +36,7 @@
                 "cache",
                 "php"
             ],
-            "time": "2018-01-18T16:58:33+00:00"
+            "time": "2018-04-01T06:50:21+00:00"
         },
         {
             "name": "phoxphp/dependency-injection",
