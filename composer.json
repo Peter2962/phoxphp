@@ -32,8 +32,10 @@
 		"phoxphp/log": "1.0.0",
 		"php": ">=7.0.1"
 	},
-	"post-install-cmd" : {
-		"composer update --prefer-dist"
+	"scripts": {
+		"post-install-cmd" : [
+			"composer update --prefer-dist"
+		]
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true
