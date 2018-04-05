@@ -23,7 +23,7 @@
 	},
 	"require": {
 		"phoxphp/cache": ">=1.0.2",
-		"phoxphp/glider": "1.0.0",
+		"phoxphp/glider": "dev-master",
 		"phoxphp/filesystem": "^1.0.0",
 		"phoxphp/http": "dev-master",
 		"phoxphp/translation": "1.0.2",
@@ -31,6 +31,14 @@
 		"phoxphp/dependency-injection": "~1.0.0",
 		"phoxphp/log": "1.0.0",
 		"php": ">=7.0.1"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"Kit\\Glider\\Configurator::fixConfiguration"
+		],
+		"post-update-cmd": [
+			"Kit\\Glider\\Configurator::fixConfiguration"
+		]
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true

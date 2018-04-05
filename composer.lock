@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7a5f110b038b01bcc107f646341ee48",
+    "content-hash": "efe71e8aff7baab1e7c08a7d6c642603",
     "packages": [
         {
             "name": "phoxphp/cache",
@@ -104,16 +104,16 @@
         },
         {
             "name": "phoxphp/glider",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
-                "reference": "aa499a8392dc27da37d46a8c96c1ef62a500f1a5"
+                "reference": "d3bd53dcf28109bfef71692eb6fedee199c2bdbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/aa499a8392dc27da37d46a8c96c1ef62a500f1a5",
-                "reference": "aa499a8392dc27da37d46a8c96c1ef62a500f1a5",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/d3bd53dcf28109bfef71692eb6fedee199c2bdbb",
+                "reference": "d3bd53dcf28109bfef71692eb6fedee199c2bdbb",
                 "shasum": ""
             },
             "require": {
@@ -132,7 +132,7 @@
                 "database",
                 "php"
             ],
-            "time": "2018-04-04T01:30:34+00:00"
+            "time": "2018-04-05T22:46:41+00:00"
         },
         {
             "name": "phoxphp/http",
@@ -164,7 +164,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-02-15 09:17:49"
+            "time": "2018-02-15T09:17:49+00:00"
         },
         {
             "name": "phoxphp/log",
@@ -301,6 +301,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "phoxphp/glider": 20,
         "phoxphp/http": 20
     },
     "prefer-stable": true,
