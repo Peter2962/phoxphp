@@ -23,7 +23,7 @@
 	},
 	"require": {
 		"phoxphp/cache": ">=1.0.2",
-		"phoxphp/glider": "dev-master",
+		"phoxphp/glider": ">=1.0.1",
 		"phoxphp/filesystem": "^1.0.0",
 		"phoxphp/http": "dev-master",
 		"phoxphp/translation": "1.0.2",
