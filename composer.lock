@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e2f709335c57c336d20b2624fb67606",
+    "content-hash": "b75e7f346629ee3da09b58e03836e337",
     "packages": [
         {
             "name": "phoxphp/cache",
@@ -136,16 +136,16 @@
         },
         {
             "name": "phoxphp/http",
-            "version": "dev-master",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "8918727f4ead378f2247e7a352a0ab848f8ca7c3"
+                "reference": "6fcfc497d4ef79f9a1bc1ae548eb0501a116c56d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/8918727f4ead378f2247e7a352a0ab848f8ca7c3",
-                "reference": "8918727f4ead378f2247e7a352a0ab848f8ca7c3",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/6fcfc497d4ef79f9a1bc1ae548eb0501a116c56d",
+                "reference": "6fcfc497d4ef79f9a1bc1ae548eb0501a116c56d",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-02-15T09:17:49+00:00"
+            "time": "2018-04-06T08:56:55+00:00"
         },
         {
             "name": "phoxphp/log",
@@ -300,9 +300,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "phoxphp/http": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
