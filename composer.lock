@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b75e7f346629ee3da09b58e03836e337",
+    "content-hash": "c213b33084a1c196499020bf12ea2cb4",
     "packages": [
         {
             "name": "phoxphp/cache",
@@ -72,16 +72,16 @@
         },
         {
             "name": "phoxphp/filesystem",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/FileSystem.git",
-                "reference": "06e6e84b75655f0be0feacfe282cab1490ba7409"
+                "reference": "3543b401fed6d535159e21efd04517e54dce847e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/06e6e84b75655f0be0feacfe282cab1490ba7409",
-                "reference": "06e6e84b75655f0be0feacfe282cab1490ba7409",
+                "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/3543b401fed6d535159e21efd04517e54dce847e",
+                "reference": "3543b401fed6d535159e21efd04517e54dce847e",
                 "shasum": ""
             },
             "require": {
@@ -100,7 +100,7 @@
                 "filesystem",
                 "php"
             ],
-            "time": "2018-01-18T11:20:44+00:00"
+            "time": "2018-04-07T15:03:55+00:00"
         },
         {
             "name": "phoxphp/glider",
@@ -168,7 +168,7 @@
         },
         {
             "name": "phoxphp/log",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Log.git",
@@ -300,7 +300,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "phoxphp/log": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

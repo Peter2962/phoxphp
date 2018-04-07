@@ -24,12 +24,12 @@
 	"require": {
 		"phoxphp/cache": ">=1.0.2",
 		"phoxphp/glider": ">=1.0.1",
-		"phoxphp/filesystem": "^1.0.0",
+		"phoxphp/filesystem": "^1.0.1",
 		"phoxphp/http": "1.0.2",
 		"phoxphp/translation": "1.0.2",
 		"phoxphp/view": ">=1.0.0",
 		"phoxphp/dependency-injection": "~1.0.0",
-		"phoxphp/log": "1.0.0",
+		"phoxphp/log": "dev-master",
 		"php": ">=7.0.1"
 	},
 	"scripts": {
