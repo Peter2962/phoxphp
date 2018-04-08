@@ -73,8 +73,8 @@ class Config
 	public function get($config='', $key='', Array $parameters=[])
 	{
 		$path = $this->configPath;
-		
-		if ($this->config !== '') {
+			
+		if ($this->config !== '' && !is_array($this->config)) {
 
 			$key = $config;
 			
