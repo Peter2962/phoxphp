@@ -4,8 +4,42 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe7ebc4fdb4f84717d25dda0544a4e02",
+    "content-hash": "574fbad131d9e0a50a779ed678537af9",
     "packages": [
+        {
+            "name": "phoxphp/auth",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/Auth.git",
+                "reference": "2b3a547c512ef42af810c91092c34ee45b590b7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/Auth/zipball/2b3a547c512ef42af810c91092c34ee45b590b7b",
+                "reference": "2b3a547c512ef42af810c91092c34ee45b590b7b",
+                "shasum": ""
+            },
+            "require": {
+                "phoxphp/glider": "dev-master",
+                "phoxphp/prop": "dev-master",
+                "php": ">=7.0.6"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\Auth\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP Authentication Component",
+            "keywords": [
+                "Authentication",
+                "PHP7",
+                "php"
+            ],
+            "time": "2018-04-10T18:15:36+00:00"
+        },
         {
             "name": "phoxphp/cache",
             "version": "v1.0.2",
@@ -104,16 +138,16 @@
         },
         {
             "name": "phoxphp/glider",
-            "version": "v1.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
-                "reference": "9289cdc9f81acbc52978899e3ac5a7ad99bf8404"
+                "reference": "715a059849bf848bc70ab638302852f8de39e04d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/9289cdc9f81acbc52978899e3ac5a7ad99bf8404",
-                "reference": "9289cdc9f81acbc52978899e3ac5a7ad99bf8404",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/715a059849bf848bc70ab638302852f8de39e04d",
+                "reference": "715a059849bf848bc70ab638302852f8de39e04d",
                 "shasum": ""
             },
             "require": {
@@ -132,7 +166,7 @@
                 "database",
                 "php"
             ],
-            "time": "2018-04-05T22:53:13+00:00"
+            "time": "2018-04-10T18:37:01+00:00"
         },
         {
             "name": "phoxphp/http",
@@ -202,7 +236,7 @@
         },
         {
             "name": "phoxphp/prop",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Prop.git",
@@ -230,7 +264,7 @@
                 "php",
                 "support"
             ],
-            "time": "2018-01-17T18:38:16+00:00"
+            "time": "2018-01-19T17:44:42+00:00"
         },
         {
             "name": "phoxphp/translation",
@@ -301,7 +335,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "phoxphp/log": 20
+        "phoxphp/log": 20,
+        "phoxphp/auth": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
