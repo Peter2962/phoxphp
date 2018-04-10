@@ -130,3 +130,13 @@ if (!function_exists('getLogger')) {
 		return Logger::getLogger($logger, $options);
 	}
 }
+
+if (!function_exists('siteUrl')) {
+	/**
+	* @param 	$with <String>
+	* @return 	String
+	*/
+	function siteUrl(String $with=null) {
+		return config('app')->get('app_url') . $with;
+	}
+}
