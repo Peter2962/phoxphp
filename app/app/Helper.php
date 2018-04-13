@@ -1,4 +1,5 @@
 <?php
+use Kit\Auth\Auth;
 use App\AppManager;
 use Kit\Log\Logger;
 
@@ -138,5 +139,14 @@ if (!function_exists('siteUrl')) {
 	*/
 	function siteUrl(String $with=null) {
 		return config('app')->get('app_url') . $with;
+	}
+}
+
+if (!function_exists('user')) {
+	/**
+	* @return 	Obejct
+	*/
+	function user() {
+		return (new Auth())->user();
 	}
 }

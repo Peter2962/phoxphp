@@ -12,16 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Auth.git",
-                "reference": "2b3a547c512ef42af810c91092c34ee45b590b7b"
+                "reference": "ae60edcb5e3bb0843a7f3449c428dc692b1de8a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Auth/zipball/2b3a547c512ef42af810c91092c34ee45b590b7b",
-                "reference": "2b3a547c512ef42af810c91092c34ee45b590b7b",
+                "url": "https://api.github.com/repos/PhoxPHP/Auth/zipball/ae60edcb5e3bb0843a7f3449c428dc692b1de8a7",
+                "reference": "ae60edcb5e3bb0843a7f3449c428dc692b1de8a7",
                 "shasum": ""
             },
             "require": {
-                "phoxphp/glider": "dev-master",
+                "phoxphp/glider": ">=1.0.2",
                 "phoxphp/prop": "dev-master",
                 "php": ">=7.0.6"
             },
@@ -38,7 +38,7 @@
                 "PHP7",
                 "php"
             ],
-            "time": "2018-04-10T18:15:36+00:00"
+            "time": "2018-04-13T05:24:26+00:00"
         },
         {
             "name": "phoxphp/cache",
@@ -138,7 +138,7 @@
         },
         {
             "name": "phoxphp/glider",
-            "version": "dev-master",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
