@@ -4,7 +4,7 @@
 ##########################################
 
 return [
-	'default' => [
+	'mysql' => [
 		'provider' => Kit\Glider\Platform\Mysqli\MysqliProvider::class,
 		'host' => 'localhost',
 		'alias' => 'mysqli',
@@ -13,12 +13,12 @@ return [
 		'database' => 'test',
 		'charset' => 'utf8',
 		'collation' => '',
-		'domain' => ['phoxphp.site'],
+		'domain' => ['localhost'],
 		'auto_commit' => false,
 		'prefix' => '',
 		'alt' => null
 	],
-	'dev' => [
+	'default' => [
 		'provider' => Kit\Glider\Platform\Pdo\PdoProvider::class,
 		'host' => 'localhost',
 		'alias' => 'pdo',
@@ -27,7 +27,7 @@ return [
 		'database' => 'test',
 		'charset' => 'utf8',
 		'collation' => 'utf8',
-		'domain' => ['phoxphp.site'],
+		'domain' => ['localhost'],
 		'prefix' => '',
 		'auto_commit' => true,
 		'alt' => null,

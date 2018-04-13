@@ -8,6 +8,8 @@ $service->register('cache', Kit\Cache\CacheManager::class);
 
 $service->register('config', App\Config::class);
 
+$service->register('auth', Kit\Auth\Auth::class);
+
 $service->register('request', Kit\Http\Request\RequestManager::class);
 
 $service->register('session', Kit\Http\Session\Factory::class);
