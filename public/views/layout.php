@@ -4,6 +4,6 @@
 	<title>PhoxPHP</title>
 </head>
 <body>
-	<?php echo $this->content(); ?>
+	#contain<"content">
 </body>
 </html>
