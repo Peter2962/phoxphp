@@ -31,16 +31,19 @@
 		"phoxphp/dependency-injection": "~1.0.0",
 		"phoxphp/log": "dev-master",
 		"phoxphp/auth": "dev-develop",
+		"phoxphp/phoxengine": "dev-develop",
 		"php": ">=7.0.1"
 	},
 	"scripts": {
 		"post-install-cmd": [
 			"Kit\\Glider\\Configurator::fixConfiguration",
-			"Kit\\Auth\\Configurator::fixConfiguration"
+			"Kit\\Auth\\Configurator::fixConfiguration",
+			"Kit\\PhoxEngine\\Configurator::fixConfiguration"
 		],
 		"post-update-cmd": [
 			"Kit\\Glider\\Configurator::fixConfiguration",
-			"Kit\\Auth\\Configurator::fixConfiguration"
+			"Kit\\Auth\\Configurator::fixConfiguration",
+			"Kit\\PhoxEngine\\Configurator::fixConfiguration"
 		]
 	},
 	"minimum-stability": "dev",

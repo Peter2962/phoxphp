@@ -19,7 +19,7 @@ class DefaultController extends Controller
 	public function index()
 	{
 		$this->setVariable('site_url', config('app')->get('app_url'));
-		$this->render('default', 'default');	
+		$this->render('home');
 	}
 
 	/**
