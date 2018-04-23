@@ -38,7 +38,7 @@ return [
 	####################################
 	# auth redirect url after logging in
 	####################################
-	'auth_login_url' => 'http://phoxphp-docs.site',
+	'auth_login_url' => '/',
 
 	############################################
 	# set automatic redirection after logging in
