@@ -28,7 +28,7 @@
 		"phoxphp/http": "1.0.3",
 		"phoxphp/translation": "1.0.3",
 		"phoxphp/view": ">=1.0.0",
-		"phoxphp/dependency-injection": "~1.0.0",
+		"phoxphp/dependency-injection": "dev-develop",
 		"phoxphp/log": "dev-master",
 		"phoxphp/auth": "dev-develop",
 		"phoxphp/phoxengine": "dev-develop",
