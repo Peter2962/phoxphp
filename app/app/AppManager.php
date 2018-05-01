@@ -74,7 +74,7 @@ class AppManager extends Container
 	public function __construct()
 	{
 		$servicesConfig = AppManager::appLibExt('public'.DS.'config'.DS.'services');
-		$service = $this;
+		$di = $this;
 
 		// loading configured services...
 		include $servicesConfig;
