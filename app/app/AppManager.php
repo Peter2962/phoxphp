@@ -32,10 +32,9 @@ use App\Config;
 use View\Manager;
 use RuntimeException;
 use Kit\View\ArgResolver;
-use App\Service\Container;
-use Kit\DependencyInjection\Factory as ContainerRepository;
+use Kit\DependencyInjection\Factory as Container;
 
-class AppManager extends ContainerRepository
+class AppManager extends Container
 {
 
 	/**
@@ -75,7 +74,7 @@ class AppManager extends ContainerRepository
 	public function __construct()
 	{
 		$servicesConfig = AppManager::appLibExt('public'.DS.'config'.DS.'services');
-		$service = $this;
+		$di = $this;
 
 		// loading configured services...
 		include $servicesConfig;

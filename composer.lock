@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1dd285f8ea281a38e9f738ec1bbfa28b",
+    "content-hash": "835436e9d4be73bf163a3d0ecb702dea",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -74,16 +74,16 @@
         },
         {
             "name": "phoxphp/dependency-injection",
-            "version": "v1.0.0",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/DependencyInjection.git",
-                "reference": "5344f6c14013d734d3ecb62306bb534ce77cab41"
+                "reference": "32d15f8625a82f25652a40c2c3264454f7e5d459"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/5344f6c14013d734d3ecb62306bb534ce77cab41",
-                "reference": "5344f6c14013d734d3ecb62306bb534ce77cab41",
+                "url": "https://api.github.com/repos/PhoxPHP/DependencyInjection/zipball/32d15f8625a82f25652a40c2c3264454f7e5d459",
+                "reference": "32d15f8625a82f25652a40c2c3264454f7e5d459",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
                 "dependencyinjection",
                 "php"
             ],
-            "time": "2018-02-12T06:35:45+00:00"
+            "time": "2018-04-28T17:26:04+00:00"
         },
         {
             "name": "phoxphp/filesystem",
@@ -240,12 +240,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/PhoxEngine.git",
-                "reference": "58196d24b34474c158798117efdae71b2528a1fd"
+                "reference": "ac800bfcda37a20913a8096a6da2a4f639892e47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/PhoxEngine/zipball/58196d24b34474c158798117efdae71b2528a1fd",
-                "reference": "58196d24b34474c158798117efdae71b2528a1fd",
+                "url": "https://api.github.com/repos/PhoxPHP/PhoxEngine/zipball/ac800bfcda37a20913a8096a6da2a4f639892e47",
+                "reference": "ac800bfcda37a20913a8096a6da2a4f639892e47",
                 "shasum": ""
             },
             "type": "library",
@@ -264,7 +264,7 @@
                 "php",
                 "template-engine"
             ],
-            "time": "2018-04-22T18:22:13+00:00"
+            "time": "2018-04-22T18:47:24+00:00"
         },
         {
             "name": "phoxphp/prop",
@@ -367,6 +367,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "phoxphp/dependency-injection": 20,
         "phoxphp/log": 20,
         "phoxphp/auth": 20,
         "phoxphp/phoxengine": 20
