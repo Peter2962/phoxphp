@@ -157,12 +157,7 @@ class AppManager extends Container
 
 			$errorId = basicHash($errorNumber . '_' . $errorString . '_' . $errorFile . '_' . $errorLine);
 			$devMode = config('app')->get('devMode');
-
-			if ($devMode == 'production') {
-
-				$errorString = config('app')->get('production_error_message');
-
-			}
+			$prodErrorMessage  = config('app')->get('production_error_message');			
 
 			$logger = getLogger('FileLogger', [
 				'extension' => 'log',
@@ -182,6 +177,7 @@ class AppManager extends Container
 			if ($isException == true && $context !== null) {
 				$trace = $context->getTraceAsString();
 			}
+
 			$logger->log($errorString . "\n" . 'Debug Trace: ' . "\n" . $trace);
 
 			$errorTemplatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates') . 'default');
