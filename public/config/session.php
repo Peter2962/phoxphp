@@ -7,10 +7,9 @@ return [
 	##########################################
 	# Session driver
 	# ---------------------------------------
-	# Native driver uses php's default session
-	# functions.
+	# Set default session driver to use. 
 	###########################################
-	'driver' => 'native',
+	'driver' => \Kit\Http\Session\Drivers\File\FileDriver::class,
 
 	#############################################
 	# Session storage (For native session driver)
