@@ -25,7 +25,7 @@
 		"phoxphp/cache": ">=1.0.2",
 		"phoxphp/glider": ">=1.0.2",
 		"phoxphp/filesystem": "^1.0.1",
-		"phoxphp/http": "1.0.3",
+		"phoxphp/http": ">=1.0.3",
 		"phoxphp/translation": "1.0.3",
 		"phoxphp/view": ">=1.0.0",
 		"phoxphp/dependency-injection": "dev-develop",

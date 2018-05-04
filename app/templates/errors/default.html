@@ -129,11 +129,8 @@
 		top: 46%;
 		transform: translate(-50%, -50%);
 		font-size: 30px;
-		background: #fff;
 		padding: 40px;
 		border-radius: 5px;
-		border: 1px solid #ddd;
-		box-shadow: 0px 1px 2px #d6d6d6;
 	}
 </style>
 <body>
@@ -142,7 +139,7 @@
 	?>
 	<div class="apd_info">
 		<span>
-			<?php echo $errorString; ?>
+			<?php echo $prodErrorMessage; ?>
 		</span>
 	</div>
 	<?php }elseif ($devMode == 'dev') { ?>

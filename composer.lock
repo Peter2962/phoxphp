@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "835436e9d4be73bf163a3d0ecb702dea",
+    "content-hash": "b551680df8d973938dcfa767629118ca",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -170,16 +170,16 @@
         },
         {
             "name": "phoxphp/http",
-            "version": "v1.0.3",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "81b9ee227b78d3fcd1f402338fba151ba7ce9924"
+                "reference": "4ab86a4963dd3767a0acd036906bc9bfe7c7be8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/81b9ee227b78d3fcd1f402338fba151ba7ce9924",
-                "reference": "81b9ee227b78d3fcd1f402338fba151ba7ce9924",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/4ab86a4963dd3767a0acd036906bc9bfe7c7be8a",
+                "reference": "4ab86a4963dd3767a0acd036906bc9bfe7c7be8a",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-04-09T21:50:36+00:00"
+            "time": "2018-05-04T16:44:32+00:00"
         },
         {
             "name": "phoxphp/log",
