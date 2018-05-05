@@ -20,7 +20,3 @@ It is recommended to install this framework using composer. Simply run the compo
 ~~~
     composer create-project phoxphp/phoxphp
 ~~~
-
-## Todo
-
-Finish documentation at https://docs.phoxphp.com
