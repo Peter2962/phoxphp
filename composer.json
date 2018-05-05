@@ -28,10 +28,10 @@
 		"phoxphp/http": ">=1.0.3",
 		"phoxphp/translation": "1.0.3",
 		"phoxphp/view": ">=1.0.0",
-		"phoxphp/dependency-injection": "dev-develop",
-		"phoxphp/log": "dev-master",
-		"phoxphp/auth": "dev-develop",
-		"phoxphp/phoxengine": "dev-develop",
+		"phoxphp/dependency-injection": ">=1.1.0",
+		"phoxphp/log": ">=1.0.2",
+		"phoxphp/auth": ">=1.0.0",
+		"phoxphp/phoxengine": ">=1.0.0",
 		"php": ">=7.0.1"
 	},
 	"scripts": {
