@@ -212,6 +212,6 @@ if (!function_exists('publicDir')) {
 	*/
 	function publicDir(String $with=null)
 	{
-		return appDir('public' . '/' . $with);
+		return baseDir('public' . '/' . $with);
 	}
 }

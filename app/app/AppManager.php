@@ -73,7 +73,10 @@ class AppManager extends Container
 	*/
 	public function __construct()
 	{
-		$servicesConfig = AppManager::appLibExt(baseDir('public' . DS . 'config' . DS . 'services'));
+		$servicesConfig = AppManager::appLibExt(
+			baseDir('public' . DS . 'config' . DS . 'services')
+		);
+
 		$di = $this;
 
 		// loading configured services...
@@ -160,7 +163,7 @@ class AppManager extends Container
 
 			$logger = getLogger('FileLogger', [
 				'extension' => 'log',
-				'file' => config('app')->get('log_path') . 'app'
+				'file' => baseDir(config('app')->get('log_path') . 'app')
 			]);
 
 			$responseCode = 500;
@@ -180,7 +183,7 @@ class AppManager extends Container
 			$logger->log($errorString . "\n" . 'Debug Trace: ' . "\n" . $trace);
 
 			$errorTemplatePath = ArgResolver::getResolvedTemplatePath(
-				realpath('app/templates/errors') . '/default'
+				appDir('templates/errors/default')
 			);
 			include $errorTemplatePath;
 
@@ -255,11 +258,11 @@ class AppManager extends Container
 	*/
 	private function startApplication()
 	{
-
 		$router = new \Kit\Http\Router\Repository(new \Kit\Http\Request\RequestManager());
-		include $this->load('config')->get('app', 'app_routes');
-		$router->run(AppManager::$errors);
+		$routesFile = baseDir(config('app')->get('app_routes'));
 
+		include $routesFile;
+		$router->run(AppManager::$errors);
 	}
 
 	/**

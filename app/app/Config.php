@@ -43,7 +43,7 @@ class Config
 	* @var 		$configPath
 	* @access 	private
 	*/
-	private 	$configPath = 'public'.DS.'config'.DS;
+	private 	$configPath = 'public' . DS . 'config' . DS;
 
 	/**
 	* @var 		$config
@@ -73,7 +73,7 @@ class Config
 	*/
 	public function get($config='', $key='', Array $parameters=[])
 	{
-		$path = $this->configPath;
+		$path = baseDir($this->configPath);
 			
 		if ($this->config !== '' && !is_array($this->config)) {
 			$key = $config;
