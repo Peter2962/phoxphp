@@ -170,16 +170,16 @@
         },
         {
             "name": "phoxphp/http",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "4ab86a4963dd3767a0acd036906bc9bfe7c7be8a"
+                "reference": "ef519a6be3740cb69fea9c0c1bd2e1b9663bae78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/4ab86a4963dd3767a0acd036906bc9bfe7c7be8a",
-                "reference": "4ab86a4963dd3767a0acd036906bc9bfe7c7be8a",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/ef519a6be3740cb69fea9c0c1bd2e1b9663bae78",
+                "reference": "ef519a6be3740cb69fea9c0c1bd2e1b9663bae78",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-05-04T16:44:32+00:00"
+            "time": "2018-05-12T12:54:36+00:00"
         },
         {
             "name": "phoxphp/log",
@@ -236,16 +236,16 @@
         },
         {
             "name": "phoxphp/phoxengine",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/PhoxEngine.git",
-                "reference": "ec96700569f9cb53971543c4d7119b98f7750bc0"
+                "reference": "ac800bfcda37a20913a8096a6da2a4f639892e47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/PhoxEngine/zipball/ec96700569f9cb53971543c4d7119b98f7750bc0",
-                "reference": "ec96700569f9cb53971543c4d7119b98f7750bc0",
+                "url": "https://api.github.com/repos/PhoxPHP/PhoxEngine/zipball/ac800bfcda37a20913a8096a6da2a4f639892e47",
+                "reference": "ac800bfcda37a20913a8096a6da2a4f639892e47",
                 "shasum": ""
             },
             "type": "library",
@@ -264,7 +264,7 @@
                 "php",
                 "template-engine"
             ],
-            "time": "2018-04-22T17:49:07+00:00"
+            "time": "2018-04-22T18:47:24+00:00"
         },
         {
             "name": "phoxphp/prop",

@@ -28,6 +28,7 @@
 namespace App;
 
 use App\AppManager;
+use RuntimeException;
 
 class Config
 {
@@ -42,7 +43,7 @@ class Config
 	* @var 		$configPath
 	* @access 	private
 	*/
-	private 	$configPath = 'public'.DS.'config'.DS;
+	private 	$configPath = 'public' . DS . 'config' . DS;
 
 	/**
 	* @var 		$config
@@ -72,38 +73,33 @@ class Config
 	*/
 	public function get($config='', $key='', Array $parameters=[])
 	{
-		$path = $this->configPath;
+		$path = baseDir($this->configPath);
 			
 		if ($this->config !== '' && !is_array($this->config)) {
-
 			$key = $config;
-			
 			$config = $this->config;
-		
 		}
 
 		if (!file_exists(AppManager::appLibExt($path . $config))) {
-
-			return;
-		
+			throw new RuntimeException(
+				sprintf(
+					'Configuration file %s does not exist in %s',
+					$config,
+					$path . $config
+				)
+			);
 		}
 
 		if (sizeof(array_keys($parameters)) > 0) {
-
 			foreach(array_keys($parameters) as $key) {
-
 				$$key = $parameters[$key];
-
 			}
-
 		}
 		
 		$loadedConfig = include AppManager::appLibExt($path . $config);
 
 		if (gettype($loadedConfig) !== 'array') {
-		
 			return;
-		
 		}
 
 		return ($loadedConfig[$key]) ?? $loadedConfig;

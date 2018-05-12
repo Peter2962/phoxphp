@@ -212,7 +212,7 @@ class Packagist implements PackagistInterface
 		(Array) $containables = [];
 
 		$type = $package->type;
-		$path = $package->lib;
+		$path = baseDir($package->lib);
 
 		$this->checkLibrary($path);
 
@@ -264,10 +264,10 @@ class Packagist implements PackagistInterface
 	{
 		$type = $package->type;
 		$library = $this->lib($package->lib);
-		$this->checkLibrary($library);
+		$this->checkLibrary(baseDir($library));
 
 		clearstatcache();
-		include $library;
+		include baseDir($library);
 
 		if (isset($package->strict) && intval($package->strict) == 1) {
 			$this->checkObject($library);

@@ -3,7 +3,7 @@ return [
 	########################
 	# Path to messages files
 	########################
-	'resources_path' => 'public/messages/',
+	'resources_path' => publicDir('messages/'),
 
 	###############################################################
 	# Throw error for missing message or missing message parameter.

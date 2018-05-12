@@ -27,6 +27,6 @@ return [
 	#################################
 	# Cache storage location 		#
 	#################################
-	'storage' => 'app/storage/cache/'
+	'storage' => appDir('storage/cache/')
 
 ];

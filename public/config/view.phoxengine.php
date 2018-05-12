@@ -4,7 +4,7 @@ return [
 	#############################
 	# Base template path
 	#############################
-	'path' => dirname(__DIR__) . '/views',
+	'path' => publicDir('views'),
 
 	####################
 	# Template extension
@@ -21,7 +21,7 @@ return [
 	##############################
 	'cache' => [
 		// Where cached views will be saved
-		'path' => dirname(__DIR__) . '/views/cache/',
+		'path' => publicDir('views/cache/'),
 
 		// Cache timeout
 		'timeout' => 60
