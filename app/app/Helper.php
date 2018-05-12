@@ -43,6 +43,8 @@ if (!function_exists('app')) {
 
 if (!function_exists('config')) {
 	/**
+	* Returns an instance of App\Config.
+	*
 	* @param 	$config <String>
 	* @return 	Object
 	*/
@@ -144,9 +146,33 @@ if (!function_exists('siteUrl')) {
 
 if (!function_exists('user')) {
 	/**
+	* Calls and returns user method from \Kit\Auth\Auth.
+	*
 	* @return 	Obejct
 	*/
 	function user() {
 		return (new Auth())->user();
+	}
+}
+
+if (!function_exists('randomString')) {
+	/**
+	* Generates and returns random string.
+	*
+	* @param 	$length <Integer>
+	* @access 	public
+	* @return 	String
+	*/
+	function randomString(Int $length=30)
+	{
+		$key = str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$!@');
+		$bits = [];
+		$maxLength = mb_strlen($key, '8bit') - 1;
+
+		for ($i = 0; $i < $length; ++$i) {
+			$bits[] = $key[random_int(0, $maxLength)];
+		}
+
+		return implode('', $bits);
 	}
 }

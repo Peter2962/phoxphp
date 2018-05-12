@@ -153,7 +153,6 @@ class AppManager extends Container
 
 			$this->registerResponse($errors);
 			$site_url = $this->load('config')->get('app_url');
-			$finder = new \App\Finder();
 
 			$errorId = basicHash($errorNumber . '_' . $errorString . '_' . $errorFile . '_' . $errorLine);
 			$devMode = config('app')->get('devMode');
@@ -180,7 +179,9 @@ class AppManager extends Container
 
 			$logger->log($errorString . "\n" . 'Debug Trace: ' . "\n" . $trace);
 
-			$errorTemplatePath = ArgResolver::getResolvedTemplatePath($finder->get('path.view.error.templates') . 'default');
+			$errorTemplatePath = ArgResolver::getResolvedTemplatePath(
+				realpath('app/templates/errors') . '/default'
+			);
 			include $errorTemplatePath;
 
 			$this->load('response')->setResponseCode($responseCode);
