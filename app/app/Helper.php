@@ -177,19 +177,6 @@ if (!function_exists('randomString')) {
 	}
 }
 
-if (!function_exists('appDir')) {
-	/**
-	* Returns base app directory.
-	*
-	* @param 	$with <String>
-	* @return 	String
-	*/
-	function appDir(String $with=null)
-	{
-		return BASEDIR . '/' . $with;
-	}
-}
-
 if (!function_exists('baseDir')) {
 	/**
 	* Returns base directory.
@@ -200,6 +187,19 @@ if (!function_exists('baseDir')) {
 	function baseDir(String $with=null)
 	{
 		return BASEDIR . '/' . $with;
+	}
+}
+
+if (!function_exists('appDir')) {
+	/**
+	* Returns app directory.
+	*
+	* @param 	$with <String>
+	* @return 	String
+	*/
+	function appDir(String $with=null)
+	{
+		return baseDir('app') . '/'. $with;
 	}
 }
 
