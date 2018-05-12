@@ -170,16 +170,16 @@
         },
         {
             "name": "phoxphp/http",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "4ab86a4963dd3767a0acd036906bc9bfe7c7be8a"
+                "reference": "ef519a6be3740cb69fea9c0c1bd2e1b9663bae78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/4ab86a4963dd3767a0acd036906bc9bfe7c7be8a",
-                "reference": "4ab86a4963dd3767a0acd036906bc9bfe7c7be8a",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/ef519a6be3740cb69fea9c0c1bd2e1b9663bae78",
+                "reference": "ef519a6be3740cb69fea9c0c1bd2e1b9663bae78",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-05-04T16:44:32+00:00"
+            "time": "2018-05-12T12:54:36+00:00"
         },
         {
             "name": "phoxphp/log",
