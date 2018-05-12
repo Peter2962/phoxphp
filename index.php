@@ -20,9 +20,12 @@
 * SOFTWARE.
 */
 
+$baseDir = realpath(dirname(__FILE__));
+
 define('DS', DIRECTORY_SEPARATOR);
-define('BOOTSTRAP', 'app' . DS . 'bootstrap.php');
-define('AUTOLOADER', 'app' . DS . 'autoloader' . DS . 'autoload.php');
+define('BASEDIR', $baseDir);
+define('BOOTSTRAP', BASEDIR . DS . 'app' . DS . 'bootstrap.php');
+define('AUTOLOADER', BASEDIR . DS . 'app' . DS . 'autoloader' . DS . 'autoload.php');
 
 if(file_exists(BOOTSTRAP)){
 	require(BOOTSTRAP);

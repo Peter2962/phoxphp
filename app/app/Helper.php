@@ -176,3 +176,42 @@ if (!function_exists('randomString')) {
 		return implode('', $bits);
 	}
 }
+
+if (!function_exists('appDir')) {
+	/**
+	* Returns base app directory.
+	*
+	* @param 	$with <String>
+	* @return 	String
+	*/
+	function appDir(String $with=null)
+	{
+		return BASEDIR . '/' . $with;
+	}
+}
+
+if (!function_exists('baseDir')) {
+	/**
+	* Returns base directory.
+	*
+	* @param 	$with <String>
+	* @return 	String
+	*/
+	function baseDir(String $with=null)
+	{
+		return BASEDIR . '/' . $with;
+	}
+}
+
+if (!function_exists('publicDir')) {
+	/**
+	* Returns public directory.
+	*
+	* @param 	$with <String>
+	* @return 	String
+	*/
+	function publicDir(String $with=null)
+	{
+		return appDir('public' . '/' . $with);
+	}
+}
