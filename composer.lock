@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ada8bec043d9f978ec1e5b6e1c40321",
+    "content-hash": "1c488f7f5bab1e1b5cfb8e40b8616648",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -138,16 +138,16 @@
         },
         {
             "name": "phoxphp/glider",
-            "version": "v1.0.2",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
-                "reference": "715a059849bf848bc70ab638302852f8de39e04d"
+                "reference": "27f0f002e4ab7c3197cbe52917e39e529dfaf31b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/715a059849bf848bc70ab638302852f8de39e04d",
-                "reference": "715a059849bf848bc70ab638302852f8de39e04d",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/27f0f002e4ab7c3197cbe52917e39e529dfaf31b",
+                "reference": "27f0f002e4ab7c3197cbe52917e39e529dfaf31b",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +166,7 @@
                 "database",
                 "php"
             ],
-            "time": "2018-04-10T18:37:01+00:00"
+            "time": "2018-05-13T13:35:26+00:00"
         },
         {
             "name": "phoxphp/http",
@@ -268,16 +268,16 @@
         },
         {
             "name": "phoxphp/prop",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Prop.git",
-                "reference": "0e7f069e67afb25985ec72f9c696d4feeb8a9cbd"
+                "reference": "8a1dbebd97219baa7896c26df5d8334ccab239d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/0e7f069e67afb25985ec72f9c696d4feeb8a9cbd",
-                "reference": "0e7f069e67afb25985ec72f9c696d4feeb8a9cbd",
+                "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/8a1dbebd97219baa7896c26df5d8334ccab239d7",
+                "reference": "8a1dbebd97219baa7896c26df5d8334ccab239d7",
                 "shasum": ""
             },
             "require": {
@@ -296,7 +296,7 @@
                 "php",
                 "support"
             ],
-            "time": "2018-01-19T17:44:42+00:00"
+            "time": "2018-05-13T23:04:10+00:00"
         },
         {
             "name": "phoxphp/translation",

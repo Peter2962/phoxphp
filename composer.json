@@ -30,6 +30,7 @@
 		"phoxphp/view": ">=1.0.0",
 		"phoxphp/dependency-injection": ">=1.1.0",
 		"phoxphp/log": ">=1.0.2",
+		"phoxphp/prop": ">=1.0.0",
 		"phoxphp/auth": ">=1.0.0",
 		"phoxphp/phoxengine": ">=1.0.0",
 		"php": ">=7.0.1"
