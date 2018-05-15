@@ -14,7 +14,7 @@ return [
 	##########################################
 	# If set to true, caching will be enabled.
 	#########################################
-	'enable_caching' => true,
+	'enable_caching' => false,
 
 	##############################
 	# Cache configurations
