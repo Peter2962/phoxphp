@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c488f7f5bab1e1b5cfb8e40b8616648",
+    "content-hash": "441665cb919da582faf7dd8e0768c482",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -138,16 +138,16 @@
         },
         {
             "name": "phoxphp/glider",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
-                "reference": "27f0f002e4ab7c3197cbe52917e39e529dfaf31b"
+                "reference": "81198fb78a4dd8a5f552f31019cca302ca859038"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/27f0f002e4ab7c3197cbe52917e39e529dfaf31b",
-                "reference": "27f0f002e4ab7c3197cbe52917e39e529dfaf31b",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/81198fb78a4dd8a5f552f31019cca302ca859038",
+                "reference": "81198fb78a4dd8a5f552f31019cca302ca859038",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +166,7 @@
                 "database",
                 "php"
             ],
-            "time": "2018-05-13T13:35:26+00:00"
+            "time": "2018-05-18T16:18:20+00:00"
         },
         {
             "name": "phoxphp/http",
@@ -266,16 +266,16 @@
         },
         {
             "name": "phoxphp/prop",
-            "version": "v1.0.3",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Prop.git",
-                "reference": "e165174213a8a4bc2f587c7d3c4bb476fb382ef9"
+                "reference": "81d57ea9c623570a2964bda9139a3679023f1f53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/e165174213a8a4bc2f587c7d3c4bb476fb382ef9",
-                "reference": "e165174213a8a4bc2f587c7d3c4bb476fb382ef9",
+                "url": "https://api.github.com/repos/PhoxPHP/Prop/zipball/81d57ea9c623570a2964bda9139a3679023f1f53",
+                "reference": "81d57ea9c623570a2964bda9139a3679023f1f53",
                 "shasum": ""
             },
             "require": {
@@ -294,20 +294,20 @@
                 "php",
                 "support"
             ],
-            "time": "2018-05-14T08:17:52+00:00"
+            "time": "2018-05-18T22:51:51+00:00"
         },
         {
             "name": "phoxphp/translation",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Translation.git",
-                "reference": "aef0c23e61c245e968166fc7de07430c84fb64d2"
+                "reference": "3dcb473f733ecf832e890141ad0c2a412a58a8b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Translation/zipball/aef0c23e61c245e968166fc7de07430c84fb64d2",
-                "reference": "aef0c23e61c245e968166fc7de07430c84fb64d2",
+                "url": "https://api.github.com/repos/PhoxPHP/Translation/zipball/3dcb473f733ecf832e890141ad0c2a412a58a8b8",
+                "reference": "3dcb473f733ecf832e890141ad0c2a412a58a8b8",
                 "shasum": ""
             },
             "require": {
@@ -326,7 +326,7 @@
                 "php",
                 "translation"
             ],
-            "time": "2018-04-09T06:01:29+00:00"
+            "time": "2018-05-18T23:44:08+00:00"
         },
         {
             "name": "phoxphp/view",

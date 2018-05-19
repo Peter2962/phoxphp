@@ -21,4 +21,4 @@
 # Application route configuration file
 ######################################
 
-$route->get('/', 'Common\\Controllers\\DefaultController@index');
+$route->get('/', 'DefaultController@index')->attachMiddleware('app');

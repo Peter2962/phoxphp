@@ -1,6 +1,4 @@
 <?php
-namespace Common\Controllers;
-
 use App\Controller;
 
 class DefaultController extends Controller
@@ -27,7 +25,7 @@ class DefaultController extends Controller
 	*/
 	public function registerModel()
 	{
-		return \Common\Models\DefaultModel::class;
+		return DefaultModel::class;
 	}
 
 }

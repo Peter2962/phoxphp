@@ -24,16 +24,6 @@ return [
 	#########################
 	'app_services' => 'public/config/services.php',
 
-	###########################################
-	# Namespace to use when loading controllers
-	###########################################
-	'controller_namespace' => 'Common\\Controllers\\',
-
-	######################################
-	# Namespace to use when loading models
-	######################################
-	'model_namespace' => 'Common\\Models\\',
-
 	#########################
 	# Default layout
 	#########################

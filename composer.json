@@ -26,7 +26,7 @@
 		"phoxphp/glider": ">=1.0.2",
 		"phoxphp/filesystem": "^1.0.1",
 		"phoxphp/http": ">=1.0.3",
-		"phoxphp/translation": "1.0.3",
+		"phoxphp/translation": ">=1.0.3",
 		"phoxphp/view": ">=1.0.0",
 		"phoxphp/dependency-injection": ">=1.1.0",
 		"phoxphp/log": ">=1.0.2",
@@ -39,12 +39,14 @@
 		"post-install-cmd": [
 			"Kit\\Glider\\Configurator::fixConfiguration",
 			"Kit\\Auth\\Configurator::fixConfiguration",
-			"Kit\\PhoxEngine\\Configurator::fixConfiguration"
+			"Kit\\PhoxEngine\\Configurator::fixConfiguration",
+			"Kit\\Translation\\Configurator::fixConfiguration"
 		],
 		"post-update-cmd": [
 			"Kit\\Glider\\Configurator::fixConfiguration",
 			"Kit\\Auth\\Configurator::fixConfiguration",
-			"Kit\\PhoxEngine\\Configurator::fixConfiguration"
+			"Kit\\PhoxEngine\\Configurator::fixConfiguration",
+			"Kit\\Translation\\Configurator::fixConfiguration"
 		]
 	},
 	"minimum-stability": "dev",
