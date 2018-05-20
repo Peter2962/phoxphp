@@ -1,6 +1,4 @@
 <?php
-namespace Common\Controllers;
-
 use App\Controller;
 
 class DefaultController extends Controller
@@ -18,8 +16,8 @@ class DefaultController extends Controller
 	*/
 	public function index()
 	{
-		$this->setVariable('site_url', config('app')->get('app_url'));
-		$this->render('home');
+		$view = $this->setVariable('site_url', config('app')->get('app_url'));
+		$view->render('home');
 	}
 
 	/**
@@ -27,7 +25,7 @@ class DefaultController extends Controller
 	*/
 	public function registerModel()
 	{
-		return \Common\Models\DefaultModel::class;
+		return DefaultModel::class;
 	}
 
 }

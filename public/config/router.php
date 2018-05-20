@@ -14,11 +14,6 @@ return [
 	################################################################
 	'404_error_exception' => Kit\Http\Router\Exceptions\RouteNotFoundException::class,
 
-	#######################################
-	# Path to middleware configuration file
-	#######################################
-	'middleware_config_path' => 'src/Config/Middleware/',
-
 	###########################################################
 	# Setting this to true will allow us to be able to validate
 	# route slugs.
@@ -32,5 +27,12 @@ return [
 		'fallback_method_default_arguments' => [
 			Kit\Http\Router\Factory::class
 		]
-	]
+	],
+
+	####################
+	# Controller filters
+	####################
+	'filters' => [
+		'app' => AppFilter::class
+	],
 ];

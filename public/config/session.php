@@ -14,7 +14,7 @@ return [
 	#############################################
 	# Session storage (For native session driver)
 	#############################################
-	'storage' => 'app/storage/session',
+	'storage' => appDir('storage/session'),
 
 	###################################################
 	# Session timeout

@@ -229,21 +229,15 @@ class AppManager extends Container
 	*/
 	public function boot($boot=false)
 	{
-
 		if (true === boolval($boot)) {
-
 			try {
-				
 				if (boolval(AppManager::$init) == true) {
 					throw new Exception("Application is already running.");
 				}
 
 				AppManager::$init = true;
-
 			}catch(Exception $e) {
-
 				exit($e->getMessage());
-
 			}
 
 			$this->startApplication();
@@ -258,11 +252,11 @@ class AppManager extends Container
 	*/
 	private function startApplication()
 	{
-		$router = new \Kit\Http\Router\Repository(new \Kit\Http\Request\RequestManager());
+		$route = new \Kit\Http\Router\Repository(new \Kit\Http\Request\RequestManager());
 		$routesFile = baseDir(config('app')->get('app_routes'));
 
 		include $routesFile;
-		$router->run(AppManager::$errors);
+		$route->run(AppManager::$errors);
 	}
 
 	/**

@@ -7,5 +7,10 @@
 		"type": "repo",
 		"lib": "public/models",
 		"except": ["empty"] 
+	},
+	{
+		"type": "repo",
+		"lib": "public/filters",
+		"except": ["empty"] 
 	}
 ]
