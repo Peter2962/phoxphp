@@ -10,7 +10,7 @@
 	},
 	{
 		"type": "repo",
-		"lib": "public/middlewares",
+		"lib": "public/filters",
 		"except": ["empty"] 
 	}
 ]

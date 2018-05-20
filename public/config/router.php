@@ -29,10 +29,10 @@ return [
 		]
 	],
 
-	######################
-	# Middlewares 
-	######################
-	'middlewares' => [
-		'app' => AppMiddleware::class
-	]
+	####################
+	# Controller filters
+	####################
+	'filters' => [
+		'app' => AppFilter::class
+	],
 ];

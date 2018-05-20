@@ -19,3 +19,5 @@ $di->register('response', Kit\Http\Response::class)
 
 $di->register('en_msg', Kit\Translation\Factory::class)
 ->setDefaultParameters(new Kit\Translation\Locale\LocaleManager('en', 'us'));
+
+$di->register('loader', Kit\Prop\ClassLoader::class);
