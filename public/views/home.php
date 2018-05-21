@@ -1,5 +1,10 @@
 #parent<"layout">
 
 #viewAs<"content">
-	<h1>PhoxPHP Framework</h1>
+	<div class="home">
+		<img src="/assets/img/logo-2018-05.png" alt="PhoxPHP logo">
+		<h1>PhoxPHP Framework</h1>
+		<a href="https://www.phoxphp.com/docs/latest" target="_blank">View documentation</a>
+		<a href="https://www.github.com/PhoxPHP" target="_blank">Contribute</a>
+	</div>
 #stopView
