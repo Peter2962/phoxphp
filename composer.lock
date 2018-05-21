@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "441665cb919da582faf7dd8e0768c482",
+    "content-hash": "948b214f0783e3067af3dd723a86dc11",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -106,16 +106,16 @@
         },
         {
             "name": "phoxphp/filesystem",
-            "version": "v1.0.1",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/FileSystem.git",
-                "reference": "3543b401fed6d535159e21efd04517e54dce847e"
+                "reference": "5fab5b4ffe1ca19778fe6add7884f2df9c43119f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/3543b401fed6d535159e21efd04517e54dce847e",
-                "reference": "3543b401fed6d535159e21efd04517e54dce847e",
+                "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/5fab5b4ffe1ca19778fe6add7884f2df9c43119f",
+                "reference": "5fab5b4ffe1ca19778fe6add7884f2df9c43119f",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "filesystem",
                 "php"
             ],
-            "time": "2018-04-07T15:03:55+00:00"
+            "time": "2018-05-21T07:02:14+00:00"
         },
         {
             "name": "phoxphp/glider",
