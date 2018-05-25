@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "441665cb919da582faf7dd8e0768c482",
+    "content-hash": "e6fe64da4843bfb8d057c426fc85f3ed",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -106,16 +106,16 @@
         },
         {
             "name": "phoxphp/filesystem",
-            "version": "v1.0.1",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/FileSystem.git",
-                "reference": "3543b401fed6d535159e21efd04517e54dce847e"
+                "reference": "5fab5b4ffe1ca19778fe6add7884f2df9c43119f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/3543b401fed6d535159e21efd04517e54dce847e",
-                "reference": "3543b401fed6d535159e21efd04517e54dce847e",
+                "url": "https://api.github.com/repos/PhoxPHP/FileSystem/zipball/5fab5b4ffe1ca19778fe6add7884f2df9c43119f",
+                "reference": "5fab5b4ffe1ca19778fe6add7884f2df9c43119f",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "filesystem",
                 "php"
             ],
-            "time": "2018-04-07T15:03:55+00:00"
+            "time": "2018-05-21T07:02:14+00:00"
         },
         {
             "name": "phoxphp/glider",
@@ -170,16 +170,16 @@
         },
         {
             "name": "phoxphp/http",
-            "version": "v1.3.2",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "34153ee6d89d96ea3c8380adb0c23d34a04579da"
+                "reference": "aa727c2814e3f36ce57aa3bb70b872a0fc4a8921"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/34153ee6d89d96ea3c8380adb0c23d34a04579da",
-                "reference": "34153ee6d89d96ea3c8380adb0c23d34a04579da",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/aa727c2814e3f36ce57aa3bb70b872a0fc4a8921",
+                "reference": "aa727c2814e3f36ce57aa3bb70b872a0fc4a8921",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-05-19T11:38:41+00:00"
+            "time": "2018-05-21T20:59:57+00:00"
         },
         {
             "name": "phoxphp/log",
@@ -327,6 +327,38 @@
                 "translation"
             ],
             "time": "2018-05-18T23:44:08+00:00"
+        },
+        {
+            "name": "phoxphp/validator",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/Validator.git",
+                "reference": "1cfba2144627123e7604065bd617c2b87bd8de71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/Validator/zipball/1cfba2144627123e7604065bd617c2b87bd8de71",
+                "reference": "1cfba2144627123e7604065bd617c2b87bd8de71",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\Validator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP validation component",
+            "keywords": [
+                "PHP7",
+                "php",
+                "validation"
+            ],
+            "time": "2018-05-23T21:59:25+00:00"
         },
         {
             "name": "phoxphp/view",

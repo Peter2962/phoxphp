@@ -20,12 +20,4 @@ class DefaultController extends Controller
 		$view->render('home');
 	}
 
-	/**
-	* {@inheritDOc}
-	*/
-	public function registerModel()
-	{
-		return DefaultModel::class;
-	}
-
 }

@@ -1,2 +1,3 @@
 app/vendor
-app/storage/log
+app/storage/log/app.log
+prepros-6.config
