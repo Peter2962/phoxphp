@@ -27,6 +27,12 @@ return [
 	###################################################
 	'timeout' => 90,
 
+	#######################################################
+	# Csrf token input name. This will be the name of your
+	# input name that will contain the generated csrf token.  
+	########################################################
+	'csrf_token_input_name' => 'token',
+
 	##################################
 	# Disable certain session drivers
 	##################################
