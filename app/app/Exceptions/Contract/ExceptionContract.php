@@ -42,7 +42,7 @@ interface ExceptionContract
 	* @access 	public
 	* @return 	void
 	*/
-	public function setView(String $view);
+	// public function setView(String $view);
 
 	/**
 	* Returns response code.
@@ -50,7 +50,7 @@ interface ExceptionContract
 	* @access 	public
 	* @return 	Integer
 	*/
-	public function getExceptionCode() : int;
+	// public function getExceptionCode() : int;
 
 	/**
 	* Returns exception message.
@@ -58,7 +58,7 @@ interface ExceptionContract
 	* @access 	public
 	* @return 	String
 	*/
-	public function getExceptionMessage() : String;
+	// public function getExceptionMessage() : String;
 
 	/**
 	* Returns exception view.
@@ -66,6 +66,6 @@ interface ExceptionContract
 	* @access 	public
 	* @return 	String
 	*/
-	public function getView();
+	// public function getView();
 
 }

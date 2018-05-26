@@ -33,6 +33,7 @@ return [
 	# Controller filters
 	####################
 	'filters' => [
-		'app' => AppFilter::class
+		'app' => AppFilter::class,
+		'csrf' => Kit\Http\Router\Filters\CsrfTokenFilter::class
 	],
 ];

@@ -145,13 +145,10 @@ class AppManager extends Container
 			'line'	  => $errorLine,
 		];
 
-
-		$acceptableCode = [8, 2, 512, 1024];
-
 		if (!empty($errors)) {
 			/** 
 			* Since we cannot pass any values outside of this method's scope, we will store the
-			* generated errors in a session and display them in the constructor.
+			* generated errors and display them in the constructor.
 			*/
 
 			$this->registerResponse($errors);
@@ -181,10 +178,10 @@ class AppManager extends Container
 			}
 
 			$logger->log($errorString . "\n" . 'Debug Trace: ' . "\n" . $trace);
-
 			$errorTemplatePath = ArgResolver::getResolvedTemplatePath(
 				appDir('templates/errors/default')
 			);
+
 			include $errorTemplatePath;
 
 			$this->load('response')->setResponseCode($responseCode);
@@ -198,10 +195,16 @@ class AppManager extends Container
 	public function fatalShutdown()
 	{
 		$error = @error_get_last();
+		
 		if($error) {
-
-			$this->shutdown($error["type"], $error["message"], $error["file"], $error["line"], false, $error);
-
+			$this->shutdown(
+				$error['type'],
+				$error['message'],
+				$error['file'],
+				$error['line'],
+				false,
+				$error
+			);
 		}
 	}
 

@@ -50,5 +50,10 @@ return [
 	#######################
 	# Storage for log files
 	#######################
-	'log_path' => 'app/storage/log/'
+	'log_path' => 'app/storage/log/',
+
+	####################################################
+	# random string key used in randomString function
+	####################################################
+	'random_string_key' => '$.1.al10123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$!@'
 ];

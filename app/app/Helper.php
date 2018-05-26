@@ -165,7 +165,7 @@ if (!function_exists('randomString')) {
 	*/
 	function randomString(Int $length=30)
 	{
-		$key = str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$!@');
+		$key = str_shuffle(config('app')->get('random_string_key'));
 		$bits = [];
 		$maxLength = mb_strlen($key, '8bit') - 1;
 
