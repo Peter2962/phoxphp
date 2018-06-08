@@ -15,6 +15,11 @@
 	},
 	{
 		"type": "repo",
+		"lib": "public/mappers",
+		"except": ["empty"] 
+	},
+	{
+		"type": "repo",
 		"lib": "public/validators",
 		"except": ["empty"] 
 	}

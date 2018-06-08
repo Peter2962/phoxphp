@@ -7,8 +7,7 @@
 	"author": [
 		{
 			"name":"Peter Taiwo",
-			"email":"taiwop3@gmail.com",
-			"role":"creator"
+			"email":"peter@phoxphp.com"
 		}
 	],
 	"autoload": {
@@ -23,9 +22,9 @@
 	},
 	"require": {
 		"phoxphp/cache": ">=1.0.2",
-		"phoxphp/glider": ">=1.0.2",
-		"phoxphp/filesystem": ">=1.0.1",
-		"phoxphp/http": ">=1.5.0",
+		"phoxphp/glider": ">=1.2.2",
+		"phoxphp/filesystem": ">=1.2.1",
+		"phoxphp/http": ">=1.5.1",
 		"phoxphp/translation": ">=1.0.3",
 		"phoxphp/view": ">=1.0.0",
 		"phoxphp/dependency-injection": ">=1.1.0",
@@ -37,15 +36,8 @@
 		"php": ">=7.0.1"
 	},
 	"scripts": {
-		"post-install-cmd": [
-			"Kit\\Glider\\Configurator::fixConfiguration",
-			"Kit\\Auth\\Configurator::fixConfiguration",
-			"Kit\\PhoxEngine\\Configurator::fixConfiguration",
-			"Kit\\Translation\\Configurator::fixConfiguration",
-			"Kit\\Validator\\Configurator::fixConfiguration"
-		],
-		"post-update-cmd": [
-			"Kit\\Glider\\Configurator::fixConfiguration",
+		"post-create-project-cmd": [
+			"Kit\\Glider\\Composer::postInstall",
 			"Kit\\Auth\\Configurator::fixConfiguration",
 			"Kit\\PhoxEngine\\Configurator::fixConfiguration",
 			"Kit\\Translation\\Configurator::fixConfiguration",
