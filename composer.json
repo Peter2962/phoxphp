@@ -37,11 +37,7 @@
 	},
 	"scripts": {
 		"post-create-project-cmd": [
-			"Kit\\Glider\\Composer::postInstall",
-			"Kit\\Auth\\Configurator::fixConfiguration",
-			"Kit\\PhoxEngine\\Configurator::fixConfiguration",
-			"Kit\\Translation\\Configurator::fixConfiguration",
-			"Kit\\Validator\\Configurator::fixConfiguration"
+			"App\\Composer\\::postCreateProjectCmd"
 		]
 	},
 	"minimum-stability": "dev",
