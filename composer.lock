@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "baa9f94252a18a550a1b40436c334bc4",
+    "content-hash": "6f4b69cdd585c17c7202e4c2f524c82c",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -71,6 +71,38 @@
                 "php"
             ],
             "time": "2018-05-19T12:26:21+00:00"
+        },
+        {
+            "name": "phoxphp/console",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhoxPHP/Console.git",
+                "reference": "8e6fa66e89d5185513e7bf833025120f8001d9ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhoxPHP/Console/zipball/8e6fa66e89d5185513e7bf833025120f8001d9ef",
+                "reference": "8e6fa66e89d5185513e7bf833025120f8001d9ef",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kit\\Console\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PhoxPHP console component",
+            "keywords": [
+                "PHP7",
+                "console",
+                "php"
+            ],
+            "time": "2018-06-10T15:32:02+00:00"
         },
         {
             "name": "phoxphp/dependency-injection",

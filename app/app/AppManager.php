@@ -76,9 +76,11 @@ class AppManager extends Container
 		// loading configured services...
 		include $servicesConfig;
 		
-		register_shutdown_function([$this, 'fatalShutdown']);
-		set_error_handler([$this, 'shutdown'], E_ALL);
-		set_exception_handler([$this, 'exceptionShutdown']);
+		if (php_sapi_name() !== 'cli') {
+			register_shutdown_function([$this, 'fatalShutdown']);
+			set_error_handler([$this, 'shutdown'], E_ALL);
+			set_exception_handler([$this, 'exceptionShutdown']);
+		}
 	}
 
 	/**
@@ -237,7 +239,9 @@ class AppManager extends Container
 				exit($e->getMessage());
 			}
 
-			$this->startApplication();
+			if (php_sapi_name() !== 'cli') {
+				$this->startApplication();
+			}
 		}
 	}
 
@@ -273,11 +277,11 @@ class AppManager extends Container
 	* `getenv` function.
 	*
 	* @param 	$configurable <Closure>
-	* @param 	$autoloader
+	* @param 	$autoloader <Mixed>
 	* @access 	public
 	* @return 	void
 	*/
-	public function configure($configurable, $autoloader)
+	public function configure($configurable, $autoloader=null)
 	{
 		if ($configurable instanceof Closure) {
 
@@ -320,7 +324,9 @@ class AppManager extends Container
 			}
 		}
 
-		include $autoloader;
+		if ($autoloader !== null) {
+			include $autoloader;
+		}
 	}
 
 	/**

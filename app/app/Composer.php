@@ -25,7 +25,6 @@ namespace App;
 use Kit\Glider\Composer as GliderConfigResolver;
 use Kit\Console\Composer as ConsoleConfigResolver;
 use Kit\Auth\Composer as AuthConfigResolver;
-use Kit\Glider\Composer as GliderConfigResolver;
 use Kit\Translation\Composer as TranslationConfigResolver;
 use Kit\Validator\Composer as ValidatorConfigResolver;
 use Kit\PhoxEngine\Composer as PhoxEngineConfigResolver;
