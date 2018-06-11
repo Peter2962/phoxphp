@@ -33,15 +33,15 @@
 		"phoxphp/auth": ">=1.0.0",
 		"phoxphp/validator": ">=1.0.1",
 		"phoxphp/phoxengine": ">=1.0.0",
+		"phoxphp/console": ">=1.0.0",
 		"php": ">=7.0.1"
 	},
 	"scripts": {
 		"post-create-project-cmd": [
-			"Kit\\Glider\\Composer::postInstall",
-			"Kit\\Auth\\Configurator::fixConfiguration",
-			"Kit\\PhoxEngine\\Configurator::fixConfiguration",
-			"Kit\\Translation\\Configurator::fixConfiguration",
-			"Kit\\Validator\\Configurator::fixConfiguration"
+			"App\\Composer::postCreateProjectCmd"
+		],
+		"post-update-cmd": [
+			"App\\Composer::postCreateProjectCmd"
 		]
 	},
 	"minimum-stability": "dev",

@@ -22,5 +22,10 @@
 		"type": "repo",
 		"lib": "public/validators",
 		"except": ["empty"] 
+	},
+	{
+		"type": "repo",
+		"lib": "public/commands",
+		"except": ["empty"] 
 	}
 ]

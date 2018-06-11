@@ -1,7 +1,7 @@
 <?php
 /**
 * @author 		Peter Taiwo <peter@phoxphp.com>
-* @package 		App\BaseException
+* @package 		App\Composer
 * @license 		MIT License
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,39 +22,44 @@
 
 namespace App;
 
-use Exception;
+use Kit\Glider\Composer as GliderConfigResolver;
+use Kit\Console\Composer as ConsoleConfigResolver;
+use Kit\Auth\Composer as AuthConfigResolver;
+use Kit\Translation\Composer as TranslationConfigResolver;
+use Kit\Validator\Composer as ValidatorConfigResolver;
+use Kit\PhoxEngine\Composer as PhoxEngineConfigResolver;
 
-abstract class BaseException extends Exception
+class Composer
 {
 
 	/**
-	* @var 		$template
-	* @access 	protected
-	*/
-	protected 	$template;
-
-	/**
-	* @var 		$name
-	* @access 	protected
-	*/
-	protected 	$name;
-
-	/**
+	* Runs after framework has been installed.
+	*
 	* @access 	public
 	* @return 	<void>
+	* @static
 	*/
-	public function __construct()
+	public static function postCreateProjectCmd()
 	{
-		trigger_error($this->getExceptionClass() . ': ' . $this->getMessage(), E_USER_ERROR);
+		foreach(Composer::getConfigResolvers() as $configResolver) {
+			$configResolver::postCreateProjectCmd();
+		}
 	}
 
 	/**
-	* @access 	private
-	* @return 	<String>
+	* Returns an array of configuration resolver class.
+	*
+	* @access 	protected
+	* @return 	<Array>
+	* @static
 	*/
-	private function getExceptionClass()
+	protected static function getConfigResolvers() : Array
 	{
-		return get_class($this);
+		return [
+			GliderConfigResolver::class, ConsoleConfigResolver::class, AuthConfigResolver::class,
+			GliderConfigResolver::class, TranslationConfigResolver::class, ValidatorConfigResolver::class,
+			PhoxEngineConfigResolver::class
+		];
 	}
 
 }

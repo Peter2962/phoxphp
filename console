@@ -1,0 +1,98 @@
+#!/usr/bin/env php
+<?php
+/**
+* @author 		Peter Taiwo <peter@phoxphp.com>
+* @license 		MIT License
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*/
+
+use App\AppManager;
+use Kit\Console\Command;
+use Kit\Console\Environment;
+use Kit\Console\ErrorHandler;
+
+$baseDir = __DIR__;
+
+define('DS', DIRECTORY_SEPARATOR);
+define('BASEDIR', $baseDir);
+define('BOOTSTRAP', BASEDIR . DS . 'app' . DS . 'bootstrap.php');
+define('AUTOLOADER', BASEDIR . DS . 'app' . DS . 'autoloader' . DS . 'autoload.php');
+
+include 'app/app/Helper.php';
+
+$time = microtime();
+$time = explode(' ', $time);
+$time = $time[1] + $time[0];
+$startTime = $time;
+
+// Application initialization time.
+define('APP_INIT_TIME', $startTime);
+
+#################################
+# Load packages via composer.
+################################
+include 'app/vendor/autoload.php';
+
+#########################################
+# Create new AppManager instance
+# Note that an instance of the AppManager
+# cannot be created again. If it is, an
+# error will be thrown.
+#########################################
+
+$app = new AppManager();
+
+$app->configure(function($config) {
+	return array(
+		'sys' => array(
+			'date.timezone' => $config->get('app', 'timezone')
+		),
+		'env_push' => array('app', 'cache')
+	);
+}, AUTOLOADER);
+
+##################################################################################
+# We're booting our application now.
+# The boot method accepts a boolean type parameter. The application will only boot
+# if the boolean value is set to true.
+##################################################################################
+
+$app->boot(true);
+
+$env = new Environment();
+
+// Validate environment to make sure it's either cli or cgi.
+$env->validate();
+
+$cmd = new Command($env);
+
+// Registeres default runnables.
+$cmd->registerDefaults();
+
+$runnables = $cmd->getConfigOpt('runnables');
+
+// Register runnables provided in configuration file.
+if (sizeof($runnables) > 0) {
+	foreach($runnables as $runnable) {
+		$cmd->registerCommand(new $runnable($env, $cmd));
+	}
+}
+
+$errorHandler = new ErrorHandler($env, $cmd);
+set_error_handler([$errorHandler, 'handleError'], E_ALL);
+
+$cmd->watchOutput();
