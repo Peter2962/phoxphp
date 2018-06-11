@@ -49,7 +49,7 @@ class Config
 	/**
 	* @param 	$config <String>
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function __construct($config='')
 	{
@@ -64,7 +64,7 @@ class Config
 	* @param 	$key <String>
 	* @param 	$parameters <Array>
 	* @access 	public
-	* @return 	Mixed
+	* @return 	<Mixed>
 	*/
 	public function get($config='', $key='', Array $parameters=[])
 	{

@@ -17,7 +17,7 @@ return [
 	####################################################
 	# Default path where runnable objects will be stored.
 	####################################################
-	'runnables_path' => realpath(dirname(__DIR__)) . '/src/Command/',
+	'runnables_path' => publicDir('commands'),
 
 	#######################
 	# Runnables to register

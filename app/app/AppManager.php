@@ -63,7 +63,7 @@ class AppManager extends Container
 
 	/**
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function __construct()
 	{
@@ -89,6 +89,7 @@ class AppManager extends Container
 	*
 	* @see App::shutdown
 	* @access 	public
+	* @return 	<void>
 	*/
 	public function __call($methodName='', $arguments='')
 	{
@@ -105,7 +106,7 @@ class AppManager extends Container
 	* Note: Creating a new instance of app object might break the application state.
 	*
 	* @access 	public
-	* @return 	Object
+	* @return 	<Object> <App\AppManager>
 	*/
 	public static function getInstance()
 	{
@@ -115,7 +116,7 @@ class AppManager extends Container
 	/**
 	* @param 	$file <String>
 	* @access 	public
-	* @return 	String
+	* @return 	<String>
 	*/
 	public static function appLibExt($file='')
 	{
@@ -129,7 +130,7 @@ class AppManager extends Container
 	* @param 	$errorLine 	 <Integer>
 	* @param 	$context 	<Object>
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function shutdown($errorNumber, $errorString, $errorFile ='', $errorLine = 0, $isException=false, $context=null)
 	{
@@ -174,9 +175,7 @@ class AppManager extends Container
 			}
 
 			$logger->log($errorString . "\n" . 'Debug Trace: ' . "\n" . $trace);
-			$errorTemplatePath = ArgResolver::getResolvedTemplatePath(
-				appDir('templates/errors/default')
-			);
+			$errorTemplatePath = htmlFile(appDir('templates/errors/default'));
 
 			include $errorTemplatePath;
 
@@ -186,7 +185,7 @@ class AppManager extends Container
 
 	/**
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function fatalShutdown()
 	{
@@ -207,7 +206,7 @@ class AppManager extends Container
 	/**
 	* @param 	$exception <Object>
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function exceptionShutdown($exception)
 	{
@@ -224,7 +223,7 @@ class AppManager extends Container
 	/**
 	* @param 	$boot <Boolean>
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function boot($boot=false)
 	{
@@ -249,7 +248,7 @@ class AppManager extends Container
 	* Runs application.
 	*
 	* @access 	private
-	* @return 	void
+	* @return 	<void>
 	*/
 	private function startApplication()
 	{
@@ -264,7 +263,7 @@ class AppManager extends Container
 	* Returns an array of generated errors.
 	*
 	* @access 	public
-	* @return 	Array
+	* @return 	<Array>
 	*/
 	public static function getErrors()
 	{
@@ -279,7 +278,7 @@ class AppManager extends Container
 	* @param 	$configurable <Closure>
 	* @param 	$autoloader <Mixed>
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function configure($configurable, $autoloader=null)
 	{
@@ -334,7 +333,7 @@ class AppManager extends Container
 	*
 	* @param 	$controllerName <String>
 	* @access 	public
-	* @return 	Boolean
+	* @return 	<Boolean>
 	*/
 	public function hasController(String $controllerName=null) : Bool
 	{
@@ -351,7 +350,7 @@ class AppManager extends Container
 	*
 	* @param 	$modelName <String>
 	* @access 	public
-	* @return 	Boolean
+	* @return 	<Boolean>
 	*/
 	public function hasModel(String $modelName=null) : Bool
 	{
@@ -368,7 +367,7 @@ class AppManager extends Container
 	*
 	* @param 	$controllerName <String>
 	* @access 	public
-	* @return 	String
+	* @return 	<String>
 	*/
 	public function getControllerClassName(String $controllerName) : String
 	{
@@ -380,7 +379,7 @@ class AppManager extends Container
 	*
 	* @param 	$modelName <String>
 	* @access 	public
-	* @return 	String
+	* @return 	<String>
 	*/
 	public function getModelClassName(String $modelName) : String
 	{

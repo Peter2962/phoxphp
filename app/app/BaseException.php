@@ -41,7 +41,7 @@ abstract class BaseException extends Exception
 
 	/**
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function __construct()
 	{
@@ -50,46 +50,11 @@ abstract class BaseException extends Exception
 
 	/**
 	* @access 	private
-	* @return 	String
+	* @return 	<String>
 	*/
 	private function getExceptionClass()
 	{
 		return get_class($this);
-	}
-
-	/**
-	* @param 	$string <String>
-	* @access 	private
-	* @return 	Array
-	*/
-	private function getArrayFromStringLine($string='')
-	{
-		(String) $string = $string;
-		(Array) $stringLineArray = [];
-
-		foreach(explode("\n", $string) as $linedString) {
-
-			$stringLineArray[] = $linedString;
-		
-		}
-
-		return $stringLineArray;
-	}
-
-	/**
-	* @param 	$string <Mixed>
-	* @access 	private
-	* @return 	Boolean
-	*/
-	private function isObject($string='')
-	{
-		$response = false;
-		
-		if (gettype($string) == 'object') {
-			$response = $string;
-		}
-
-		return $response;
 	}
 
 }
