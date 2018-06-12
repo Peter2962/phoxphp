@@ -23,6 +23,6 @@ return [
 	# Runnables to register
 	#######################
 	'runnables' => [
-		// Kit\Console\Command\Example::class
+		ApplicationCommand::class
 	]
 ];

@@ -74,16 +74,16 @@
         },
         {
             "name": "phoxphp/console",
-            "version": "v1.0.1",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Console.git",
-                "reference": "8e6fa66e89d5185513e7bf833025120f8001d9ef"
+                "reference": "d01300977147b08e3bff28db60921b4a3224709a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Console/zipball/8e6fa66e89d5185513e7bf833025120f8001d9ef",
-                "reference": "8e6fa66e89d5185513e7bf833025120f8001d9ef",
+                "url": "https://api.github.com/repos/PhoxPHP/Console/zipball/d01300977147b08e3bff28db60921b4a3224709a",
+                "reference": "d01300977147b08e3bff28db60921b4a3224709a",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
                 "console",
                 "php"
             ],
-            "time": "2018-06-10T15:32:02+00:00"
+            "time": "2018-06-11T22:33:39+00:00"
         },
         {
             "name": "phoxphp/dependency-injection",
