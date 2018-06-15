@@ -215,3 +215,16 @@ if (!function_exists('publicDir')) {
 		return baseDir('public' . '/' . $with);
 	}
 }
+
+if (!function_exists('vendorDir')) {
+	/**
+	* Returns vendor directory.
+	*
+	* @param 	$with <String>
+	* @return 	String
+	*/
+	function vendorDir(String $with=null)
+	{
+		return appDir('vendor' . '/' . $with);
+	}
+}

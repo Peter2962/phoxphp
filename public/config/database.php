@@ -4,6 +4,16 @@
 ##########################################
 
 return [
+	##############################
+	# Sets migration files storage
+	##############################
+	'migrations_storage' => publicDir('migrations'),
+
+	##########################
+	# Sets seeds files storage
+	##########################
+	'seeds_storage' => publicDir('seeds'),
+
 	'mysql' => [
 		'provider' => Kit\Glider\Platform\Mysqli\MysqliProvider::class,
 		'host' => '',

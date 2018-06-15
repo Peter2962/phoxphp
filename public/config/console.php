@@ -23,6 +23,10 @@ return [
 	# Runnables to register
 	#######################
 	'runnables' => [
-		ApplicationCommand::class
+		ApplicationCommand::class,
+		Kit\Glider\Console\Command\Migration::class,
+		Kit\Glider\Console\Command\Seed::class,
+		Kit\Glider\Console\Command\Database::class,
+		Kit\Glider\Console\Command\Table::class
 	]
 ];
