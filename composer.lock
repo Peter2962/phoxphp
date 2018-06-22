@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f4b69cdd585c17c7202e4c2f524c82c",
+    "content-hash": "e11e80c5b9655bdaae7d59f2a70eb48d",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -170,16 +170,16 @@
         },
         {
             "name": "phoxphp/glider",
-            "version": "v1.3.3",
+            "version": "v1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
-                "reference": "ccaac4522fd69df1770e3462624544f1e26c9306"
+                "reference": "18046083553acc99ae6c931e4dc86b02fee74efb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/ccaac4522fd69df1770e3462624544f1e26c9306",
-                "reference": "ccaac4522fd69df1770e3462624544f1e26c9306",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/18046083553acc99ae6c931e4dc86b02fee74efb",
+                "reference": "18046083553acc99ae6c931e4dc86b02fee74efb",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
                 "database",
                 "php"
             ],
-            "time": "2018-06-10T15:37:33+00:00"
+            "time": "2018-06-21T17:46:21+00:00"
         },
         {
             "name": "phoxphp/http",

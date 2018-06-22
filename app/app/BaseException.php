@@ -23,21 +23,29 @@
 namespace App;
 
 use Exception;
+use RuntimeException;
+use App\Exceptions\Contract\ExceptionContract;
 
 abstract class BaseException extends Exception
 {
 
 	/**
-	* @var 		$template
-	* @access 	protected
+	* @var 		$code
+	* @access 	public
 	*/
-	protected 	$template;
+	public 		$code;
 
 	/**
-	* @var 		$name
-	* @access 	protected
+	* @var 		$message
+	* @access 	public
 	*/
-	protected 	$name;
+	public 		$message;
+
+	/**
+	* @var 		$view
+	* @access 	public
+	*/
+	public 		$view;
 
 	/**
 	* @access 	public
@@ -45,16 +53,48 @@ abstract class BaseException extends Exception
 	*/
 	public function __construct()
 	{
-		trigger_error($this->getExceptionClass() . ': ' . $this->getMessage(), E_USER_ERROR);
+		if (!$this instanceof ExceptionContract) {
+			throw new RuntimeException(
+				sprintf(
+					'[%s] must implement [%s] interface',
+					$this->getExceptionClass(),
+					App\Exceptions\Contract\ExceptionContract::class	
+				)
+			);
+		}
 	}
 
 	/**
-	* @access 	private
-	* @return 	<String>
+	* Returns response code passed from child exception object.
+	*
+	* @access 	public
+	* @return 	Integer
 	*/
-	private function getExceptionClass()
+	public function getResponseCode() : int
 	{
-		return get_class($this);
+		return $this->code;
+	}
+
+	/**
+	* Returns exception message passed from child exception object.
+	*
+	* @access 	public
+	* @return 	String
+	*/
+	public function getExceptionMessage() : String
+	{
+		return $this->message;
+	}
+
+	/**
+	* Returns view to be rendered.
+	*
+	* @access 	public
+	* @return 	String
+	*/
+	public function getView() : String
+	{
+		return $this->view;
 	}
 
 }

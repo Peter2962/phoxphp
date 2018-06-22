@@ -26,7 +26,15 @@ return [
 		ApplicationCommand::class,
 		Kit\Glider\Console\Command\Migration::class,
 		Kit\Glider\Console\Command\Seed::class,
-		Kit\Glider\Console\Command\Database::class,
-		Kit\Glider\Console\Command\Table::class
-	]
+	],
+
+	##############################
+	# Sets migration files storage
+	##############################
+	'migrations_storage' => config('database')->get('migrations_storage'),
+
+	##########################
+	# Sets seeds files storage
+	##########################
+	'seeds_storage' => config('database')->get('seeds_storage')	
 ];

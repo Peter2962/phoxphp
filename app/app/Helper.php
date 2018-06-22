@@ -14,7 +14,7 @@ if (!function_exists('htmlFile')) {
 	*/
 	function htmlFile($file='')
 	{
-		return $file.'.html';
+		return $file . '.html';
 	}
 }
 
@@ -25,7 +25,7 @@ if (!function_exists('phpFile')) {
 	*/
 	function phpFile($file='')
 	{
-		return $file.'.php';
+		return $file . '.php';
 	}
 }
 

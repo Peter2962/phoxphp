@@ -33,7 +33,7 @@
 		"phoxphp/auth": ">=1.0.0",
 		"phoxphp/validator": ">=1.0.1",
 		"phoxphp/phoxengine": ">=1.0.0",
-		"phoxphp/console": ">=1.0.0",
+		"phoxphp/console": "1.0.3",
 		"php": ">=7.0.1"
 	},
 	"scripts": {
