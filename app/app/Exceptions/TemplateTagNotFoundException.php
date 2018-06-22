@@ -1,7 +1,7 @@
 <?php
 /**
 * @author 		Peter Taiwo <peter@phoxphp.com>
-* @package 		App\Exceptions\Contract\ExceptionContract
+* @package 		App\Exceptions\TemplateTagNotFoundException
 * @license 		MIT License
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,45 +20,11 @@
 * SOFTWARE.
 */
 
-namespace App\Exceptions\Contract;
+namespace App\Exceptions;
 
-interface ExceptionContract
+use Exception;
+
+class TemplateTagNotFoundException extends Exception
 {
-
-	/**
-	* ExceptionContract constructor.
-	*
-	* @param 	$arguments Array
-	* @access 	public
-	* @return 	void
-	*/
-	public function __construct(...$arguments);
-
-	/**
-	* Sets response code.
-	*
-	* @param 	$code Integer
-	* @access 	public
-	* @return 	void
-	*/
-	public function setCode(int $code);
-
-	/**
-	* Sets exception message.
-	*
-	* @param 	$message String
-	* @access 	public
-	* @return 	void
-	*/
-	public function setMessage(String $message);
-
-	/**
-	* Sets exception view.
-	*
-	* @param 	$view String
-	* @access 	public
-	* @return 	void
-	*/
-	public function setView(String $view);
-
+	//
 }

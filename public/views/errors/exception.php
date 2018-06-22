@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Application Error</title>
+	<title>#{ "Unknown error encountered" }</title>
 </head>
 
 <style type="text/css">
@@ -106,24 +106,22 @@
 	}
 </style>
 <body>
-	<?php
-		if ($devMode == 'production') {
-	?>
+	#if<$devMode == 'production'>
 		<div class="apd_info">
 			<span>
 				<?php echo $productionMessage; ?>
 			</span>
 		</div>
-	<?php }else if($devMode == 'dev') { ?>
+	#elseif<$devMode == 'dev'>
 		<div class="app_error">
 			<div class="app_error_title">
 				<h3>Error</h3>
 			</div>
 			<div class="app_error_block">
 				<div class="content">
-					<h3 class="panel"><?php echo $name; ?></h3>
+					<h3 class="panel">#{ $message }</h3>
 					<h3 style="font-size: 14px;padding:10px 20px;margin-bottom:0px;color: #6f6f6f;">
-						<b>Error in</b> <?php echo $file; ?> - <b>Message</b> : <?php echo $message; ?> - <b>Line</b> : <?php echo $line; ?>
+						<b>Error in</b> #{ $file } - <b>Message</b> : #{ $message } - <b>Line</b> : #{ $line }
 					</h3>
 					<h3 class="stack">Stack</h3>
 					<h3 style="padding: 10px 20px;font-size: 14px;">
@@ -136,29 +134,29 @@
 								$string = "";
 								$key = $i;
 								$stack = $trace[$i];
-								$file = $stack['file'];
-								$line = $stack['line'];
+								$file = $errorFile;
+								$line = $errorLine;
 								$function = $stack['function'];
 								$argument = array();
 
 								if (isset($stack['args'])) {
 									foreach($stack['args'] as $arg) {
 										if (gettype($arg) == 'string') {
-											$arg = '<i class="app_string_stapler">String</i> '.$arg;
+											$arg = '<i class="app_string_stapler">String</i> ' . $arg;
 										}
 
 										if (gettype($arg) == 'array') {
 											if (sizeof($arg) > 1) {
-												$arg = implode(',', $arg);
+												$arg = implode(',', array_keys($arg));
 											}else{		
 												$arg = 'array(.....)';
 											}
 											$arg = '<i class="app_string_stapler">Array</i> '.$arg;
-										}					
+										}
 
 										if (is_object($arg)) {
 											$class = new ReflectionClass($arg);
-											$argument[] = '<i class="app_string_stapler">Object</i> \\'.$class->getName();
+											$argument[] = '<i class="app_string_stapler">Object</i> \\' . $class->getName();
 											break;
 										}
 
@@ -166,9 +164,14 @@
 									}
 								}
 
-								$argument = implode(', ', $argument);
-								$string = 'at ' . $file . ' : (' . $line . ') : call ---- ' . $function . '(' . $argument . ')';
+								if (!isset($val['file'])) {
+									$val['file'] = $errorFile;
+								}
 
+								$argument = implode(', ', $argument);
+								$line = (isset($val['line'])) ? $val['line'] : '';
+
+								$string = 'at '. $val['file'] .' : (' . $line . ') : call ---- ' . $function . '(' . $argument . ')';
 								echo '<span>' . $string . '</span>';
 							}
 						?>
@@ -176,6 +179,6 @@
 				</div>
 			</div>
 		</div>
-	<?php } ?>
+	#stopIf
 </body>
 </html>

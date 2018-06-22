@@ -1,7 +1,7 @@
 <?php
 /**
 * @author 		Peter Taiwo <peter@phoxphp.com>
-* @package 		App\Exceptions\Contract\ExceptionContract
+* @package 		App\CommandTemplateParser
 * @license 		MIT License
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,45 +20,29 @@
 * SOFTWARE.
 */
 
-namespace App\Exceptions\Contract;
+namespace App;
 
-interface ExceptionContract
+use App\Exceptions\TemplateTagNotFoundException;
+
+class CommandTemplateParser
 {
 
 	/**
-	* ExceptionContract constructor.
+	* Checks for phx:* tags in a string.
 	*
-	* @param 	$arguments Array
+	* @param 	$tags <Array>
+	* @param 	$string <String>
 	* @access 	public
-	* @return 	void
+	* @return 	<Mixed>
+	* @static
 	*/
-	public function __construct(...$arguments);
-
-	/**
-	* Sets response code.
-	*
-	* @param 	$code Integer
-	* @access 	public
-	* @return 	void
-	*/
-	public function setCode(int $code);
-
-	/**
-	* Sets exception message.
-	*
-	* @param 	$message String
-	* @access 	public
-	* @return 	void
-	*/
-	public function setMessage(String $message);
-
-	/**
-	* Sets exception view.
-	*
-	* @param 	$view String
-	* @access 	public
-	* @return 	void
-	*/
-	public function setView(String $view);
+	public static function checkTags(Array $tags, String $string)
+	{
+		foreach($tags as $tag) {
+			if (!preg_match_all($tag, $string)) {
+				throw new TemplateTagNotFoundException(sprintf('template tag [`%s`] does not exist.', $tag));
+			}
+		}
+	}
 
 }

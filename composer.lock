@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f4b69cdd585c17c7202e4c2f524c82c",
+    "content-hash": "e11e80c5b9655bdaae7d59f2a70eb48d",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -74,16 +74,16 @@
         },
         {
             "name": "phoxphp/console",
-            "version": "v1.0.1",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Console.git",
-                "reference": "8e6fa66e89d5185513e7bf833025120f8001d9ef"
+                "reference": "d01300977147b08e3bff28db60921b4a3224709a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Console/zipball/8e6fa66e89d5185513e7bf833025120f8001d9ef",
-                "reference": "8e6fa66e89d5185513e7bf833025120f8001d9ef",
+                "url": "https://api.github.com/repos/PhoxPHP/Console/zipball/d01300977147b08e3bff28db60921b4a3224709a",
+                "reference": "d01300977147b08e3bff28db60921b4a3224709a",
                 "shasum": ""
             },
             "require": {
@@ -102,7 +102,7 @@
                 "console",
                 "php"
             ],
-            "time": "2018-06-10T15:32:02+00:00"
+            "time": "2018-06-11T22:33:39+00:00"
         },
         {
             "name": "phoxphp/dependency-injection",
@@ -170,16 +170,16 @@
         },
         {
             "name": "phoxphp/glider",
-            "version": "v1.3.3",
+            "version": "v1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Glider.git",
-                "reference": "ccaac4522fd69df1770e3462624544f1e26c9306"
+                "reference": "18046083553acc99ae6c931e4dc86b02fee74efb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/ccaac4522fd69df1770e3462624544f1e26c9306",
-                "reference": "ccaac4522fd69df1770e3462624544f1e26c9306",
+                "url": "https://api.github.com/repos/PhoxPHP/Glider/zipball/18046083553acc99ae6c931e4dc86b02fee74efb",
+                "reference": "18046083553acc99ae6c931e4dc86b02fee74efb",
                 "shasum": ""
             },
             "require": {
@@ -198,20 +198,20 @@
                 "database",
                 "php"
             ],
-            "time": "2018-06-10T15:37:33+00:00"
+            "time": "2018-06-21T17:46:21+00:00"
         },
         {
             "name": "phoxphp/http",
-            "version": "v1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/Http.git",
-                "reference": "7b6206cbfa77102fe9d86b19fea7ef552a9570f1"
+                "reference": "007fcb5dcffb9d53219c9393223800d9938a61b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/7b6206cbfa77102fe9d86b19fea7ef552a9570f1",
-                "reference": "7b6206cbfa77102fe9d86b19fea7ef552a9570f1",
+                "url": "https://api.github.com/repos/PhoxPHP/Http/zipball/007fcb5dcffb9d53219c9393223800d9938a61b9",
+                "reference": "007fcb5dcffb9d53219c9393223800d9938a61b9",
                 "shasum": ""
             },
             "require": {
@@ -230,7 +230,7 @@
                 "http",
                 "php"
             ],
-            "time": "2018-06-05T14:43:01+00:00"
+            "time": "2018-06-22T21:24:10+00:00"
         },
         {
             "name": "phoxphp/log",
@@ -266,16 +266,16 @@
         },
         {
             "name": "phoxphp/phoxengine",
-            "version": "v1.1.4",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/PhoxEngine.git",
-                "reference": "a95af5b979ac88292e05f1666e23229801e5284a"
+                "reference": "f8ee17efebf73fdf897a5025c9a28725d4940ff0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/PhoxEngine/zipball/a95af5b979ac88292e05f1666e23229801e5284a",
-                "reference": "a95af5b979ac88292e05f1666e23229801e5284a",
+                "url": "https://api.github.com/repos/PhoxPHP/PhoxEngine/zipball/f8ee17efebf73fdf897a5025c9a28725d4940ff0",
+                "reference": "f8ee17efebf73fdf897a5025c9a28725d4940ff0",
                 "shasum": ""
             },
             "type": "library",
@@ -294,7 +294,7 @@
                 "php",
                 "template-engine"
             ],
-            "time": "2018-06-10T16:12:00+00:00"
+            "time": "2018-06-22T21:40:47+00:00"
         },
         {
             "name": "phoxphp/prop",

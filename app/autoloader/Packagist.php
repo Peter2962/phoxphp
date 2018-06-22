@@ -32,19 +32,19 @@ trait Messages
 	* @var 		$undefinedTypeKey
 	* @access 	private
 	*/
-	private 	$undefinedTypekey 	= "Warning [Required key `type` not defined in package list.]";
+	private 	$undefinedTypekey = "Warning [Required key `type` not defined in package list.]";
 
 	/**
 	* @var 		$invalidType
 	* @access 	private
 	*/
-	private 	$invalidType 		= "Warning[`Type` value %s is not a valid type.]";
+	private 	$invalidType = "Warning[`Type` value %s is not a valid type.]";
 	
 	/**
 	* @var 		$packageNotFound
 	* @access 	private
 	*/
-	private 	$packageNotFound 	= "Warning[Package %s was not found.]";
+	private 	$packageNotFound = "Warning[Package %s was not found.]";
 
 	/**
 	* @var 		$fileLibCheckMessage

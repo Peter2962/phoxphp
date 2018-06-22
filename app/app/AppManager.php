@@ -26,22 +26,11 @@ use App\Config;
 use View\Manager;
 use RuntimeException;
 use Kit\View\ArgResolver;
+use App\ExceptionHandler;
 use Kit\DependencyInjection\Factory as Container;
 
 class AppManager extends Container
 {
-
-	/**
-	* @var 		$container
-	* @access 	protected
-	*/
-	protected 	$container;
-
-	/**
-	* @var 		$errors
-	* @access 	private
-	*/
-	private static $errors=[];
 
 	/**
 	* @var 		$services
@@ -78,26 +67,9 @@ class AppManager extends Container
 		
 		if (php_sapi_name() !== 'cli') {
 			register_shutdown_function([$this, 'fatalShutdown']);
-			set_error_handler([$this, 'shutdown'], E_ALL);
-			set_exception_handler([$this, 'exceptionShutdown']);
+			set_error_handler([$this, 'shutdown']);
+			set_exception_handler([new ExceptionHandler(), 'handleException']);
 		}
-	}
-
-	/**
-	* The main purpose of this __call megic method is to output the generated errors
-	* from the handler because there is not way of getting errors out of the handler scope.
-	*
-	* @see App::shutdown
-	* @access 	public
-	* @return 	<void>
-	*/
-	public function __call($methodName='', $arguments='')
-	{
-		if ($methodName !== 'registerResponse') {
-			throw new RuntimeException($this->load('en_msg')->getMessage('invalid_call_method', ['method' => $methodName]));
-		}
-
-		AppManager::$errors[] = $arguments[0];
 	}
 
 	/**
@@ -134,7 +106,6 @@ class AppManager extends Container
 	*/
 	public function shutdown($errorNumber, $errorString, $errorFile ='', $errorLine = 0, $isException=false, $context=null)
 	{
-		$errorId = \basicHash($errorNumber . '_' . $errorString . '_' . $errorFile . '_' . $errorLine);
 		$errors = [
 			'number'  => $errorNumber,
 			'message' => $errorString,
@@ -143,15 +114,7 @@ class AppManager extends Container
 		];
 
 		if (!empty($errors)) {
-			/** 
-			* Since we cannot pass any values outside of this method's scope, we will store the
-			* generated errors and display them in the constructor.
-			*/
-
-			$this->registerResponse($errors);
 			$site_url = config('app')->get('app_url');
-
-			$errorId = basicHash($errorNumber . '_' . $errorString . '_' . $errorFile . '_' . $errorLine);
 			$devMode = config('app')->get('devMode');
 			$prodErrorMessage  = config('app')->get('production_error_message');			
 
@@ -175,11 +138,7 @@ class AppManager extends Container
 			}
 
 			$logger->log($errorString . "\n" . 'Debug Trace: ' . "\n" . $trace);
-			$errorTemplatePath = htmlFile(appDir('templates/errors/default'));
-
-			include $errorTemplatePath;
-
-			$this->load('response')->setResponseCode($responseCode);
+			include htmlFile(appDir('templates/errors/default'));
 		}
 	}
 
@@ -201,23 +160,6 @@ class AppManager extends Container
 				$error
 			);
 		}
-	}
-
-	/**
-	* @param 	$exception <Object>
-	* @access 	public
-	* @return 	<void>
-	*/
-	public function exceptionShutdown($exception)
-	{
-		return $this->shutdown(
-			$exception->getCode(),
-			$exception->getMessage(),
-			$exception->getFile(),
-			$exception->getLine(),
-			true,
-			$exception
-		);
 	}
 
 	/**
@@ -256,18 +198,7 @@ class AppManager extends Container
 		$routesFile = baseDir(config('app')->get('app_routes'));
 
 		include $routesFile;
-		$route->run(AppManager::$errors);
-	}
-
-	/**
-	* Returns an array of generated errors.
-	*
-	* @access 	public
-	* @return 	<Array>
-	*/
-	public static function getErrors()
-	{
-		return AppManager::$errors;
+		$route->run();
 	}
 
 	/**

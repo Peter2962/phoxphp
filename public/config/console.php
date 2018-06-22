@@ -23,6 +23,18 @@ return [
 	# Runnables to register
 	#######################
 	'runnables' => [
-		// Kit\Console\Command\Example::class
-	]
+		ApplicationCommand::class,
+		Kit\Glider\Console\Command\Migration::class,
+		Kit\Glider\Console\Command\Seed::class,
+	],
+
+	##############################
+	# Sets migration files storage
+	##############################
+	'migrations_storage' => config('database')->get('migrations_storage'),
+
+	##########################
+	# Sets seeds files storage
+	##########################
+	'seeds_storage' => config('database')->get('seeds_storage')	
 ];

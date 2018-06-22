@@ -14,7 +14,7 @@ if (!function_exists('htmlFile')) {
 	*/
 	function htmlFile($file='')
 	{
-		return $file.'.html';
+		return $file . '.html';
 	}
 }
 
@@ -25,7 +25,7 @@ if (!function_exists('phpFile')) {
 	*/
 	function phpFile($file='')
 	{
-		return $file.'.php';
+		return $file . '.php';
 	}
 }
 
@@ -213,5 +213,18 @@ if (!function_exists('publicDir')) {
 	function publicDir(String $with=null)
 	{
 		return baseDir('public' . '/' . $with);
+	}
+}
+
+if (!function_exists('vendorDir')) {
+	/**
+	* Returns vendor directory.
+	*
+	* @param 	$with <String>
+	* @return 	String
+	*/
+	function vendorDir(String $with=null)
+	{
+		return appDir('vendor' . '/' . $with);
 	}
 }
