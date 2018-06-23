@@ -139,6 +139,9 @@ class AppManager extends Container
 
 			$logger->log($errorString . "\n" . 'Debug Trace: ' . "\n" . $trace);
 			include htmlFile(appDir('templates/errors/default'));
+
+			http_response_code(500);
+			exit;
 		}
 	}
 
