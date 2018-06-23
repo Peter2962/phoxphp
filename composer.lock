@@ -270,12 +270,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/PhoxEngine.git",
-                "reference": "d9f0201bcaf37b01b39953f2b55e01b35fbc1c17"
+                "reference": "1705df5d16947d7bf1ea6321a1a3cbbb852f7a6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhoxPHP/PhoxEngine/zipball/d9f0201bcaf37b01b39953f2b55e01b35fbc1c17",
-                "reference": "d9f0201bcaf37b01b39953f2b55e01b35fbc1c17",
+                "url": "https://api.github.com/repos/PhoxPHP/PhoxEngine/zipball/1705df5d16947d7bf1ea6321a1a3cbbb852f7a6a",
+                "reference": "1705df5d16947d7bf1ea6321a1a3cbbb852f7a6a",
                 "shasum": ""
             },
             "type": "library",
@@ -294,7 +294,7 @@
                 "php",
                 "template-engine"
             ],
-            "time": "2018-06-23T10:57:23+00:00"
+            "time": "2018-06-23T14:22:10+00:00"
         },
         {
             "name": "phoxphp/prop",
