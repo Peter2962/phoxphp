@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3adc9cad1891ceccacc071cdb1b375d9",
+    "content-hash": "cffbe931b9c433d238c126b40962b2a4",
     "packages": [
         {
             "name": "phoxphp/auth",
@@ -266,7 +266,7 @@
         },
         {
             "name": "phoxphp/phoxengine",
-            "version": "dev-develop",
+            "version": "v1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhoxPHP/PhoxEngine.git",
@@ -429,9 +429,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "phoxphp/phoxengine": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
