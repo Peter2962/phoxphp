@@ -51,6 +51,11 @@ class AppManager extends Container
 	protected 	$responseCode = 500;
 
 	/**
+	* @constant APP_VERSION
+	*/
+	const 		APP_VERSION = '2.0.4';
+
+	/**
 	* @access 	public
 	* @return 	<void>
 	*/
@@ -318,6 +323,18 @@ class AppManager extends Container
 	public function getModelClassName(String $modelName) : String
 	{
 		return config('app')->get('model_namespace') . $modelName;
+	}
+
+	/**
+	* Returns application version.
+	*
+	* @access 	public
+	* @return 	String
+	* @static
+	*/
+	public static function version()
+	{
+		return self::APP_VERSION;
 	}
 
 }
